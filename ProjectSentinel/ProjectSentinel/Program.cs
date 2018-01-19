@@ -16,7 +16,9 @@ namespace ProjectSentinel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+        //update with if(Defualt.Settings.User.Logged == 1)
             Application.Run(new LoginActivity());
+        //update with else Run RegisterActivity()
         }
     }
 }
