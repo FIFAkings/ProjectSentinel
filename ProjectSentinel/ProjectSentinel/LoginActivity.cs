@@ -26,5 +26,12 @@ namespace ProjectSentinel
         {
 
         }
+
+        private void userRegisterButtonLoginActivity_Click(object sender, EventArgs e)
+        {
+            RegisterActivity ra = new RegisterActivity();
+            ra.Show();
+            this.Hide();
+        }
     }
 }

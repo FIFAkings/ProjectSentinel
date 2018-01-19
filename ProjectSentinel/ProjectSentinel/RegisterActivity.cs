@@ -26,5 +26,46 @@ namespace ProjectSentinel
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterActivity_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userHouseNumberNumericRegisterActivity_ValueChanged(object sender, EventArgs e)
+        {
+            var t = new Timer() { Interval = 333 };
+            if (userHouseNumberNumericRegisterActivity.Value >= 1000000000) {
+                SiliconValleyReferenceLabelRegisterActivity.Text = "Woah dude, this is hardly \na three comma club!";
+                t.Tick += (s, ea) =>
+                {
+                    SiliconValleyReferenceLabelRegisterActivity.Hide();
+                    t.Stop();
+                };
+                t.Start();
+            }
+                
+
+        }
     }
 }

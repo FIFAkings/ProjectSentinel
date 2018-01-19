@@ -28,146 +28,302 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterActivity));
+            this.userFirstNameInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userLastNameInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userAddressStreetInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userAddressCityInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userAddressZipcodeInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userAddressCountryInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userPhoneNumberInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userFirstNameLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userLastNameLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userPhoneNumberLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userAddressCityLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userAddressStreetLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userAddressHouseNumberLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userAddressCountryLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userAddressZipcodeLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userDOBLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userDOBInputRegisterActivity = new System.Windows.Forms.DateTimePicker();
+            this.userAcademicInstitutionLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userUserNameLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userPasswordLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userInstitutionComboBoxRegisterActivity = new System.Windows.Forms.ComboBox();
+            this.userUserNameInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userPasswordInputRegisterActivity = new System.Windows.Forms.TextBox();
+            this.userRegisterButtonRegisterActivity = new System.Windows.Forms.Button();
+            this.userHouseNumberNumericRegisterActivity = new System.Windows.Forms.NumericUpDown();
+            this.SiliconValleyReferenceLabelRegisterActivity = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.userHouseNumberNumericRegisterActivity)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // userFirstNameInputRegisterActivity
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.userFirstNameInputRegisterActivity.Location = new System.Drawing.Point(95, 23);
+            this.userFirstNameInputRegisterActivity.Name = "userFirstNameInputRegisterActivity";
+            this.userFirstNameInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userFirstNameInputRegisterActivity.TabIndex = 0;
             // 
-            // textBox2
+            // userLastNameInputRegisterActivity
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.userLastNameInputRegisterActivity.Location = new System.Drawing.Point(95, 56);
+            this.userLastNameInputRegisterActivity.Name = "userLastNameInputRegisterActivity";
+            this.userLastNameInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userLastNameInputRegisterActivity.TabIndex = 1;
             // 
-            // textBox3
+            // userAddressStreetInputRegisterActivity
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.userAddressStreetInputRegisterActivity.Location = new System.Drawing.Point(95, 82);
+            this.userAddressStreetInputRegisterActivity.Name = "userAddressStreetInputRegisterActivity";
+            this.userAddressStreetInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressStreetInputRegisterActivity.TabIndex = 2;
             // 
-            // textBox4
+            // userAddressCityInputRegisterActivity
             // 
-            this.textBox4.Location = new System.Drawing.Point(151, 207);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.userAddressCityInputRegisterActivity.Location = new System.Drawing.Point(95, 111);
+            this.userAddressCityInputRegisterActivity.Name = "userAddressCityInputRegisterActivity";
+            this.userAddressCityInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressCityInputRegisterActivity.TabIndex = 3;
             // 
-            // textBox5
+            // userAddressZipcodeInputRegisterActivity
             // 
-            this.textBox5.Location = new System.Drawing.Point(159, 215);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.userAddressZipcodeInputRegisterActivity.Location = new System.Drawing.Point(95, 137);
+            this.userAddressZipcodeInputRegisterActivity.Name = "userAddressZipcodeInputRegisterActivity";
+            this.userAddressZipcodeInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressZipcodeInputRegisterActivity.TabIndex = 4;
             // 
-            // textBox6
+            // userAddressCountryInputRegisterActivity
             // 
-            this.textBox6.Location = new System.Drawing.Point(167, 223);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.userAddressCountryInputRegisterActivity.Location = new System.Drawing.Point(95, 167);
+            this.userAddressCountryInputRegisterActivity.Name = "userAddressCountryInputRegisterActivity";
+            this.userAddressCountryInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressCountryInputRegisterActivity.TabIndex = 5;
             // 
-            // textBox7
+            // userPhoneNumberInputRegisterActivity
             // 
-            this.textBox7.Location = new System.Drawing.Point(306, 220);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.userPhoneNumberInputRegisterActivity.Location = new System.Drawing.Point(111, 225);
+            this.userPhoneNumberInputRegisterActivity.Name = "userPhoneNumberInputRegisterActivity";
+            this.userPhoneNumberInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userPhoneNumberInputRegisterActivity.TabIndex = 6;
             // 
-            // label1
+            // userFirstNameLabelRegisterActivity
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Name: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.userFirstNameLabelRegisterActivity.AutoSize = true;
+            this.userFirstNameLabelRegisterActivity.Location = new System.Drawing.Point(24, 30);
+            this.userFirstNameLabelRegisterActivity.Name = "userFirstNameLabelRegisterActivity";
+            this.userFirstNameLabelRegisterActivity.Size = new System.Drawing.Size(63, 13);
+            this.userFirstNameLabelRegisterActivity.TabIndex = 7;
+            this.userFirstNameLabelRegisterActivity.Text = "First Name: ";
+            this.userFirstNameLabelRegisterActivity.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // userLastNameLabelRegisterActivity
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.userLastNameLabelRegisterActivity.AutoSize = true;
+            this.userLastNameLabelRegisterActivity.Location = new System.Drawing.Point(24, 56);
+            this.userLastNameLabelRegisterActivity.Name = "userLastNameLabelRegisterActivity";
+            this.userLastNameLabelRegisterActivity.Size = new System.Drawing.Size(61, 13);
+            this.userLastNameLabelRegisterActivity.TabIndex = 8;
+            this.userLastNameLabelRegisterActivity.Text = "Last Name:";
+            this.userLastNameLabelRegisterActivity.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // userPhoneNumberLabelRegisterActivity
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(176, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.userPhoneNumberLabelRegisterActivity.AutoSize = true;
+            this.userPhoneNumberLabelRegisterActivity.Location = new System.Drawing.Point(24, 225);
+            this.userPhoneNumberLabelRegisterActivity.Name = "userPhoneNumberLabelRegisterActivity";
+            this.userPhoneNumberLabelRegisterActivity.Size = new System.Drawing.Size(81, 13);
+            this.userPhoneNumberLabelRegisterActivity.TabIndex = 9;
+            this.userPhoneNumberLabelRegisterActivity.Text = "Phone Number:";
             // 
-            // label4
+            // userAddressCityLabelRegisterActivity
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(184, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
+            this.userAddressCityLabelRegisterActivity.AutoSize = true;
+            this.userAddressCityLabelRegisterActivity.Location = new System.Drawing.Point(24, 109);
+            this.userAddressCityLabelRegisterActivity.Name = "userAddressCityLabelRegisterActivity";
+            this.userAddressCityLabelRegisterActivity.Size = new System.Drawing.Size(27, 13);
+            this.userAddressCityLabelRegisterActivity.TabIndex = 11;
+            this.userAddressCityLabelRegisterActivity.Text = "City:";
             // 
-            // label5
+            // userAddressStreetLabelRegisterActivity
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(192, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.userAddressStreetLabelRegisterActivity.AutoSize = true;
+            this.userAddressStreetLabelRegisterActivity.Location = new System.Drawing.Point(24, 87);
+            this.userAddressStreetLabelRegisterActivity.Name = "userAddressStreetLabelRegisterActivity";
+            this.userAddressStreetLabelRegisterActivity.Size = new System.Drawing.Size(38, 13);
+            this.userAddressStreetLabelRegisterActivity.TabIndex = 12;
+            this.userAddressStreetLabelRegisterActivity.Text = "Street:";
+            this.userAddressStreetLabelRegisterActivity.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label6
+            // userAddressHouseNumberLabelRegisterActivity
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(200, 227);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.userAddressHouseNumberLabelRegisterActivity.AutoSize = true;
+            this.userAddressHouseNumberLabelRegisterActivity.Location = new System.Drawing.Point(239, 56);
+            this.userAddressHouseNumberLabelRegisterActivity.Name = "userAddressHouseNumberLabelRegisterActivity";
+            this.userAddressHouseNumberLabelRegisterActivity.Size = new System.Drawing.Size(81, 13);
+            this.userAddressHouseNumberLabelRegisterActivity.TabIndex = 14;
+            this.userAddressHouseNumberLabelRegisterActivity.Text = "House Number:";
+            // 
+            // userAddressCountryLabelRegisterActivity
+            // 
+            this.userAddressCountryLabelRegisterActivity.AutoSize = true;
+            this.userAddressCountryLabelRegisterActivity.Location = new System.Drawing.Point(24, 170);
+            this.userAddressCountryLabelRegisterActivity.Name = "userAddressCountryLabelRegisterActivity";
+            this.userAddressCountryLabelRegisterActivity.Size = new System.Drawing.Size(46, 13);
+            this.userAddressCountryLabelRegisterActivity.TabIndex = 15;
+            this.userAddressCountryLabelRegisterActivity.Text = "Country:";
+            // 
+            // userAddressZipcodeLabelRegisterActivity
+            // 
+            this.userAddressZipcodeLabelRegisterActivity.AutoSize = true;
+            this.userAddressZipcodeLabelRegisterActivity.Location = new System.Drawing.Point(24, 134);
+            this.userAddressZipcodeLabelRegisterActivity.Name = "userAddressZipcodeLabelRegisterActivity";
+            this.userAddressZipcodeLabelRegisterActivity.Size = new System.Drawing.Size(49, 13);
+            this.userAddressZipcodeLabelRegisterActivity.TabIndex = 16;
+            this.userAddressZipcodeLabelRegisterActivity.Text = "Zipcode:";
+            // 
+            // userDOBLabelRegisterActivity
+            // 
+            this.userDOBLabelRegisterActivity.AutoSize = true;
+            this.userDOBLabelRegisterActivity.Location = new System.Drawing.Point(25, 200);
+            this.userDOBLabelRegisterActivity.Name = "userDOBLabelRegisterActivity";
+            this.userDOBLabelRegisterActivity.Size = new System.Drawing.Size(69, 13);
+            this.userDOBLabelRegisterActivity.TabIndex = 17;
+            this.userDOBLabelRegisterActivity.Text = "Date of Birth:";
+            // 
+            // userDOBInputRegisterActivity
+            // 
+            this.userDOBInputRegisterActivity.Location = new System.Drawing.Point(100, 193);
+            this.userDOBInputRegisterActivity.Name = "userDOBInputRegisterActivity";
+            this.userDOBInputRegisterActivity.Size = new System.Drawing.Size(132, 20);
+            this.userDOBInputRegisterActivity.TabIndex = 18;
+            // 
+            // userAcademicInstitutionLabelRegisterActivity
+            // 
+            this.userAcademicInstitutionLabelRegisterActivity.AutoSize = true;
+            this.userAcademicInstitutionLabelRegisterActivity.Location = new System.Drawing.Point(24, 264);
+            this.userAcademicInstitutionLabelRegisterActivity.Name = "userAcademicInstitutionLabelRegisterActivity";
+            this.userAcademicInstitutionLabelRegisterActivity.Size = new System.Drawing.Size(105, 13);
+            this.userAcademicInstitutionLabelRegisterActivity.TabIndex = 19;
+            this.userAcademicInstitutionLabelRegisterActivity.Text = "Academic Institution:";
+            this.userAcademicInstitutionLabelRegisterActivity.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // userUserNameLabelRegisterActivity
+            // 
+            this.userUserNameLabelRegisterActivity.AutoSize = true;
+            this.userUserNameLabelRegisterActivity.Location = new System.Drawing.Point(238, 118);
+            this.userUserNameLabelRegisterActivity.Name = "userUserNameLabelRegisterActivity";
+            this.userUserNameLabelRegisterActivity.Size = new System.Drawing.Size(118, 13);
+            this.userUserNameLabelRegisterActivity.TabIndex = 20;
+            this.userUserNameLabelRegisterActivity.Text = "Choose your username:";
+            this.userUserNameLabelRegisterActivity.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // userPasswordLabelRegisterActivity
+            // 
+            this.userPasswordLabelRegisterActivity.AutoSize = true;
+            this.userPasswordLabelRegisterActivity.Location = new System.Drawing.Point(239, 170);
+            this.userPasswordLabelRegisterActivity.Name = "userPasswordLabelRegisterActivity";
+            this.userPasswordLabelRegisterActivity.Size = new System.Drawing.Size(117, 13);
+            this.userPasswordLabelRegisterActivity.TabIndex = 21;
+            this.userPasswordLabelRegisterActivity.Text = "Choose your password:";
+            // 
+            // userInstitutionComboBoxRegisterActivity
+            // 
+            this.userInstitutionComboBoxRegisterActivity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.userInstitutionComboBoxRegisterActivity.FormattingEnabled = true;
+            this.userInstitutionComboBoxRegisterActivity.Items.AddRange(new object[] {
+            "Sveučilište J. J. Strossmayera Osijek",
+            "Sveučilište Jurja Dobrile u Puli ",
+            "Sveučilište u Dubrovniku",
+            "Sveučilište u Rijeci ",
+            "Sveučilište u Splitu ",
+            "Sveučilište u Zadru ",
+            "Sveučilište u Zagrebu"});
+            this.userInstitutionComboBoxRegisterActivity.Location = new System.Drawing.Point(152, 255);
+            this.userInstitutionComboBoxRegisterActivity.Name = "userInstitutionComboBoxRegisterActivity";
+            this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(121, 21);
+            this.userInstitutionComboBoxRegisterActivity.TabIndex = 23;
+            // 
+            // userUserNameInputRegisterActivity
+            // 
+            this.userUserNameInputRegisterActivity.Location = new System.Drawing.Point(241, 137);
+            this.userUserNameInputRegisterActivity.Name = "userUserNameInputRegisterActivity";
+            this.userUserNameInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userUserNameInputRegisterActivity.TabIndex = 24;
+            // 
+            // userPasswordInputRegisterActivity
+            // 
+            this.userPasswordInputRegisterActivity.Location = new System.Drawing.Point(242, 196);
+            this.userPasswordInputRegisterActivity.Name = "userPasswordInputRegisterActivity";
+            this.userPasswordInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userPasswordInputRegisterActivity.TabIndex = 25;
+            // 
+            // userRegisterButtonRegisterActivity
+            // 
+            this.userRegisterButtonRegisterActivity.Location = new System.Drawing.Point(152, 298);
+            this.userRegisterButtonRegisterActivity.Name = "userRegisterButtonRegisterActivity";
+            this.userRegisterButtonRegisterActivity.Size = new System.Drawing.Size(75, 23);
+            this.userRegisterButtonRegisterActivity.TabIndex = 26;
+            this.userRegisterButtonRegisterActivity.Text = "Register";
+            this.userRegisterButtonRegisterActivity.UseVisualStyleBackColor = true;
+            // 
+            // userHouseNumberNumericRegisterActivity
+            // 
+            this.userHouseNumberNumericRegisterActivity.Location = new System.Drawing.Point(242, 72);
+            this.userHouseNumberNumericRegisterActivity.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.userHouseNumberNumericRegisterActivity.Name = "userHouseNumberNumericRegisterActivity";
+            this.userHouseNumberNumericRegisterActivity.Size = new System.Drawing.Size(87, 20);
+            this.userHouseNumberNumericRegisterActivity.TabIndex = 27;
+            this.userHouseNumberNumericRegisterActivity.ValueChanged += new System.EventHandler(this.userHouseNumberNumericRegisterActivity_ValueChanged);
+            // 
+            // SiliconValleyReferenceLabelRegisterActivity
+            // 
+            this.SiliconValleyReferenceLabelRegisterActivity.AutoSize = true;
+            this.SiliconValleyReferenceLabelRegisterActivity.Location = new System.Drawing.Point(241, 102);
+            this.SiliconValleyReferenceLabelRegisterActivity.Name = "SiliconValleyReferenceLabelRegisterActivity";
+            this.SiliconValleyReferenceLabelRegisterActivity.Size = new System.Drawing.Size(0, 13);
+            this.SiliconValleyReferenceLabelRegisterActivity.TabIndex = 28;
             // 
             // RegisterActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 402);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SiliconValleyReferenceLabelRegisterActivity);
+            this.Controls.Add(this.userHouseNumberNumericRegisterActivity);
+            this.Controls.Add(this.userRegisterButtonRegisterActivity);
+            this.Controls.Add(this.userPasswordInputRegisterActivity);
+            this.Controls.Add(this.userUserNameInputRegisterActivity);
+            this.Controls.Add(this.userInstitutionComboBoxRegisterActivity);
+            this.Controls.Add(this.userPasswordLabelRegisterActivity);
+            this.Controls.Add(this.userUserNameLabelRegisterActivity);
+            this.Controls.Add(this.userAcademicInstitutionLabelRegisterActivity);
+            this.Controls.Add(this.userDOBInputRegisterActivity);
+            this.Controls.Add(this.userDOBLabelRegisterActivity);
+            this.Controls.Add(this.userAddressZipcodeLabelRegisterActivity);
+            this.Controls.Add(this.userAddressCountryLabelRegisterActivity);
+            this.Controls.Add(this.userAddressHouseNumberLabelRegisterActivity);
+            this.Controls.Add(this.userAddressStreetLabelRegisterActivity);
+            this.Controls.Add(this.userAddressCityLabelRegisterActivity);
+            this.Controls.Add(this.userPhoneNumberLabelRegisterActivity);
+            this.Controls.Add(this.userLastNameLabelRegisterActivity);
+            this.Controls.Add(this.userFirstNameLabelRegisterActivity);
+            this.Controls.Add(this.userPhoneNumberInputRegisterActivity);
+            this.Controls.Add(this.userAddressCountryInputRegisterActivity);
+            this.Controls.Add(this.userAddressZipcodeInputRegisterActivity);
+            this.Controls.Add(this.userAddressCityInputRegisterActivity);
+            this.Controls.Add(this.userAddressStreetInputRegisterActivity);
+            this.Controls.Add(this.userLastNameInputRegisterActivity);
+            this.Controls.Add(this.userFirstNameInputRegisterActivity);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterActivity";
-            this.Text = "Register";
+            this.Text = "User Registration | Project Sentinel";
+            this.Load += new System.EventHandler(this.RegisterActivity_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.userHouseNumberNumericRegisterActivity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,18 +331,31 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox userFirstNameInputRegisterActivity;
+        private System.Windows.Forms.TextBox userLastNameInputRegisterActivity;
+        private System.Windows.Forms.TextBox userAddressStreetInputRegisterActivity;
+        private System.Windows.Forms.TextBox userAddressCityInputRegisterActivity;
+        private System.Windows.Forms.TextBox userAddressZipcodeInputRegisterActivity;
+        private System.Windows.Forms.TextBox userAddressCountryInputRegisterActivity;
+        private System.Windows.Forms.TextBox userPhoneNumberInputRegisterActivity;
+        private System.Windows.Forms.Label userFirstNameLabelRegisterActivity;
+        private System.Windows.Forms.Label userLastNameLabelRegisterActivity;
+        private System.Windows.Forms.Label userPhoneNumberLabelRegisterActivity;
+        private System.Windows.Forms.Label userAddressCityLabelRegisterActivity;
+        private System.Windows.Forms.Label userAddressStreetLabelRegisterActivity;
+        private System.Windows.Forms.Label userAddressHouseNumberLabelRegisterActivity;
+        private System.Windows.Forms.Label userAddressCountryLabelRegisterActivity;
+        private System.Windows.Forms.Label userAddressZipcodeLabelRegisterActivity;
+        private System.Windows.Forms.Label userDOBLabelRegisterActivity;
+        private System.Windows.Forms.DateTimePicker userDOBInputRegisterActivity;
+        private System.Windows.Forms.Label userAcademicInstitutionLabelRegisterActivity;
+        private System.Windows.Forms.Label userUserNameLabelRegisterActivity;
+        private System.Windows.Forms.Label userPasswordLabelRegisterActivity;
+        private System.Windows.Forms.ComboBox userInstitutionComboBoxRegisterActivity;
+        private System.Windows.Forms.TextBox userUserNameInputRegisterActivity;
+        private System.Windows.Forms.TextBox userPasswordInputRegisterActivity;
+        private System.Windows.Forms.Button userRegisterButtonRegisterActivity;
+        private System.Windows.Forms.NumericUpDown userHouseNumberNumericRegisterActivity;
+        private System.Windows.Forms.Label SiliconValleyReferenceLabelRegisterActivity;
     }
 }
