@@ -92,6 +92,7 @@
             this.userLoginButtonLoginActivity.TabIndex = 5;
             this.userLoginButtonLoginActivity.Text = "Log In";
             this.userLoginButtonLoginActivity.UseVisualStyleBackColor = true;
+            this.userLoginButtonLoginActivity.Click += new System.EventHandler(this.userLoginButtonLoginActivity_Click);
             // 
             // userRegisterButtonLoginActivity
             // 
