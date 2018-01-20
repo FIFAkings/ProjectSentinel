@@ -7,44 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mono.Data.Sqlite;
+using System.Data.SQLite;
+using System.Security.Cryptography;
 
 namespace ProjectSentinel
 {
     public partial class RegisterActivity : Form
     {
+        String cn = "URI=file:ProjectSentinel.db";
         public RegisterActivity()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void RegisterActivity_Load(object sender, EventArgs e)
@@ -68,21 +42,19 @@ namespace ProjectSentinel
 
         }
 
-        private void userPasswordInputRegisterActivity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void userInstitutionComboBoxRegisterActivity_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void userRegisterButtonBack_Click(object sender, EventArgs e)
+        private void userRegisterButtonRegisterActivity_Click(object sender, EventArgs e)
         {
-            LoginActivity ra = new LoginActivity();
-            ra.Show();
-            this.Close();
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlUserTableCommand = databaseConnection.CreateCommand();
+            //sqlUserTableCommand = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) not null, firstName varchar(100), lastName varchar(300), "
+
+            databaseConnection.Close();
         }
     }
 }
