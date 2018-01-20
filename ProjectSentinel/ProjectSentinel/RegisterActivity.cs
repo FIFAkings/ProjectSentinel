@@ -47,6 +47,13 @@ namespace ProjectSentinel
 
         }
 
+        private void userRegisterButtonBack_Click(object sender, EventArgs e)
+        {
+            LoginActivity ra = new LoginActivity();
+            ra.Show();
+            this.Close();
+        }
+
         private void userRegisterButtonRegisterActivity_Click(object sender, EventArgs e)
         {
             SqliteConnection databaseConnection = new SqliteConnection(cn);

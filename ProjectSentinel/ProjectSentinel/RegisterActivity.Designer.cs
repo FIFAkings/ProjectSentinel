@@ -254,7 +254,7 @@
             this.userPasswordInputRegisterActivity.Name = "userPasswordInputRegisterActivity";
             this.userPasswordInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
             this.userPasswordInputRegisterActivity.TabIndex = 25;
-           
+           //this.userPasswordInputRegisterActivity.TextChanged += new System.EventHandler(this.userPasswordInputRegisterActivity_TextChanged);
             // 
             // userRegisterButtonRegisterActivity
             // 
