@@ -115,7 +115,6 @@
             this.userFirstNameLabelRegisterActivity.Size = new System.Drawing.Size(63, 13);
             this.userFirstNameLabelRegisterActivity.TabIndex = 7;
             this.userFirstNameLabelRegisterActivity.Text = "First Name: ";
-            this.userFirstNameLabelRegisterActivity.Click += new System.EventHandler(this.label1_Click);
             // 
             // userLastNameLabelRegisterActivity
             // 
@@ -125,7 +124,6 @@
             this.userLastNameLabelRegisterActivity.Size = new System.Drawing.Size(61, 13);
             this.userLastNameLabelRegisterActivity.TabIndex = 8;
             this.userLastNameLabelRegisterActivity.Text = "Last Name:";
-            this.userLastNameLabelRegisterActivity.Click += new System.EventHandler(this.label2_Click);
             // 
             // userPhoneNumberLabelRegisterActivity
             // 
@@ -153,7 +151,6 @@
             this.userAddressStreetLabelRegisterActivity.Size = new System.Drawing.Size(38, 13);
             this.userAddressStreetLabelRegisterActivity.TabIndex = 12;
             this.userAddressStreetLabelRegisterActivity.Text = "Street:";
-            this.userAddressStreetLabelRegisterActivity.Click += new System.EventHandler(this.label6_Click);
             // 
             // userAddressHouseNumberLabelRegisterActivity
             // 
@@ -206,7 +203,6 @@
             this.userAcademicInstitutionLabelRegisterActivity.Size = new System.Drawing.Size(105, 13);
             this.userAcademicInstitutionLabelRegisterActivity.TabIndex = 19;
             this.userAcademicInstitutionLabelRegisterActivity.Text = "Academic Institution:";
-            this.userAcademicInstitutionLabelRegisterActivity.Click += new System.EventHandler(this.label12_Click);
             // 
             // userUserNameLabelRegisterActivity
             // 
@@ -216,7 +212,6 @@
             this.userUserNameLabelRegisterActivity.Size = new System.Drawing.Size(118, 13);
             this.userUserNameLabelRegisterActivity.TabIndex = 20;
             this.userUserNameLabelRegisterActivity.Text = "Choose your username:";
-            this.userUserNameLabelRegisterActivity.Click += new System.EventHandler(this.label13_Click);
             // 
             // userPasswordLabelRegisterActivity
             // 
@@ -243,6 +238,7 @@
             this.userInstitutionComboBoxRegisterActivity.Name = "userInstitutionComboBoxRegisterActivity";
             this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(121, 21);
             this.userInstitutionComboBoxRegisterActivity.TabIndex = 23;
+            this.userInstitutionComboBoxRegisterActivity.SelectedIndexChanged += new System.EventHandler(this.userInstitutionComboBoxRegisterActivity_SelectedIndexChanged);
             // 
             // userUserNameInputRegisterActivity
             // 
@@ -266,6 +262,7 @@
             this.userRegisterButtonRegisterActivity.TabIndex = 26;
             this.userRegisterButtonRegisterActivity.Text = "Register";
             this.userRegisterButtonRegisterActivity.UseVisualStyleBackColor = true;
+            this.userRegisterButtonRegisterActivity.Click += new System.EventHandler(this.userRegisterButtonRegisterActivity_Click);
             // 
             // userHouseNumberNumericRegisterActivity
             // 
