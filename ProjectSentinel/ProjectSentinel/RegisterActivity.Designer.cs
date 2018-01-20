@@ -54,7 +54,7 @@
             this.userPasswordInputRegisterActivity = new System.Windows.Forms.TextBox();
             this.userRegisterButtonRegisterActivity = new System.Windows.Forms.Button();
             this.userHouseNumberNumericRegisterActivity = new System.Windows.Forms.NumericUpDown();
-            this.SiliconValleyReferenceLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity = new System.Windows.Forms.Label();
             this.userRegisterButtonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userHouseNumberNumericRegisterActivity)).BeginInit();
             this.SuspendLayout();
@@ -230,6 +230,7 @@
             this.userInstitutionComboBoxRegisterActivity.Items.AddRange(new object[] {
             "Sveučilište J. J. Strossmayera Osijek",
             "Sveučilište Jurja Dobrile u Puli ",
+            "Sveučilište Sjever",
             "Sveučilište u Dubrovniku",
             "Sveučilište u Rijeci ",
             "Sveučilište u Splitu ",
@@ -254,7 +255,6 @@
             this.userPasswordInputRegisterActivity.Name = "userPasswordInputRegisterActivity";
             this.userPasswordInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
             this.userPasswordInputRegisterActivity.TabIndex = 25;
-           //this.userPasswordInputRegisterActivity.TextChanged += new System.EventHandler(this.userPasswordInputRegisterActivity_TextChanged);
             // 
             // userRegisterButtonRegisterActivity
             // 
@@ -270,7 +270,7 @@
             // 
             this.userHouseNumberNumericRegisterActivity.Location = new System.Drawing.Point(280, 88);
             this.userHouseNumberNumericRegisterActivity.Maximum = new decimal(new int[] {
-            1000000000,
+            65535,
             0,
             0,
             0});
@@ -279,13 +279,13 @@
             this.userHouseNumberNumericRegisterActivity.TabIndex = 27;
             this.userHouseNumberNumericRegisterActivity.ValueChanged += new System.EventHandler(this.userHouseNumberNumericRegisterActivity_ValueChanged);
             // 
-            // SiliconValleyReferenceLabelRegisterActivity
+            // mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity
             // 
-            this.SiliconValleyReferenceLabelRegisterActivity.AutoSize = true;
-            this.SiliconValleyReferenceLabelRegisterActivity.Location = new System.Drawing.Point(241, 102);
-            this.SiliconValleyReferenceLabelRegisterActivity.Name = "SiliconValleyReferenceLabelRegisterActivity";
-            this.SiliconValleyReferenceLabelRegisterActivity.Size = new System.Drawing.Size(0, 13);
-            this.SiliconValleyReferenceLabelRegisterActivity.TabIndex = 28;
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.AutoSize = true;
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Location = new System.Drawing.Point(241, 102);
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Name = "mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity";
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Size = new System.Drawing.Size(0, 13);
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.TabIndex = 28;
             // 
             // userRegisterButtonBack
             // 
@@ -303,7 +303,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 351);
             this.Controls.Add(this.userRegisterButtonBack);
-            this.Controls.Add(this.SiliconValleyReferenceLabelRegisterActivity);
+            this.Controls.Add(this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity);
             this.Controls.Add(this.userHouseNumberNumericRegisterActivity);
             this.Controls.Add(this.userRegisterButtonRegisterActivity);
             this.Controls.Add(this.userPasswordInputRegisterActivity);
@@ -366,7 +366,7 @@
         private System.Windows.Forms.TextBox userPasswordInputRegisterActivity;
         private System.Windows.Forms.Button userRegisterButtonRegisterActivity;
         private System.Windows.Forms.NumericUpDown userHouseNumberNumericRegisterActivity;
-        private System.Windows.Forms.Label SiliconValleyReferenceLabelRegisterActivity;
+        private System.Windows.Forms.Label mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity;
         private System.Windows.Forms.Button userRegisterButtonBack;
     }
 }

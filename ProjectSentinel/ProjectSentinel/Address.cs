@@ -14,13 +14,12 @@ namespace ProjectSentinel
         private string street, city, country;
         private ushort houseNumber;
         private uint zipcode;
-        private ulong addressId;
 
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-        public ushort HouseNumber { get; set; }
-        public uint Zipcode { get; set; }
+        public string Street { get { return this.street; } set { this.street = value; } }
+        public string City { get { return this.city; } set { this.city = value; } }
+        public string Country { get { return this.country; } set { this.country = value; } }
+        public ushort HouseNumber { get { return this.houseNumber; } set { this.houseNumber = value; } }
+        public uint Zipcode { get { return this.zipcode; } set { this.zipcode = value; } }
 
 
         public Address(string str, string cty, string ctry, ushort numb, uint zip)
@@ -42,19 +41,19 @@ namespace ProjectSentinel
             this.zipcode = zip;
         }
 
-        public void addUserToDatabase()
+        public void addAddressToDatabase()
         {
             String cn = "URI=file:ProjectSentinel.db";
             SqliteConnection databaseConnection = new SqliteConnection(cn);
             databaseConnection.Open();
-            SqliteCommand sqlUserTableCommand = databaseConnection.CreateCommand();
-            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS ADDRESS (id integer primary key autoincrement, street varchar(33) not null, city varchar(58) not null, country varchar(111) not null, houseNumber integer not null, zipcode integer not null);";
-            sqlUserTableCommand.ExecuteNonQuery();
-            sqlUserTableCommand.Dispose();
-            SqliteCommand sqlInsertUserCommand = databaseConnection.CreateCommand();
-            sqlInsertUserCommand.CommandText = "INSERT INTO ADDRESS (street, city, country, houseNumber, zipcode) VALUES ('"+this.street+"', '"+this.city+"', '"+this.country+"', '"+this.houseNumber+"', '"+this.zipcode+"');";
-            sqlInsertUserCommand.ExecuteNonQuery();
-            sqlInsertUserCommand.Dispose();
+            SqliteCommand sqlAddressTableCommand = databaseConnection.CreateCommand();
+            sqlAddressTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS ADDRESS (id integer primary key autoincrement, street varchar(33) not null, city varchar(58) not null, country varchar(111) not null, houseNumber integer not null, zipcode integer not null);";
+            sqlAddressTableCommand.ExecuteNonQuery();
+            sqlAddressTableCommand.Dispose();
+            SqliteCommand sqlInsertAddressCommand = databaseConnection.CreateCommand();
+            sqlInsertAddressCommand.CommandText = "INSERT INTO ADDRESS (street, city, country, houseNumber, zipcode) VALUES ('"+this.street+"', '"+this.city+"', '"+this.country+"', '"+this.houseNumber+"', '"+this.zipcode+"');";
+            sqlInsertAddressCommand.ExecuteNonQuery();
+            sqlInsertAddressCommand.Dispose();
             databaseConnection.Close();
         }
 
