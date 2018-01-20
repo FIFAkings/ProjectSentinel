@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mono.Data.Sqlite;
+using System.Data.SQLite;
+using System.Security.Cryptography;
 
 namespace ProjectSentinel
 {
@@ -59,5 +62,22 @@ namespace ProjectSentinel
             if (dateOfBirth > today.AddYears(-age)) age = age - 1;
             return age;
         }
+
+        public void addUserToDatabase()
+        {
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlUserTableCommand = databaseConnection.CreateCommand();
+            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) not null, userEmail varchar(77) not null, userFirstName varchar(111), userLastName varchar(333), userPhoneNumber varchar(21), userDateOfBirth datetime, address_id integer, institution_id integer, foreign key (address_id) references address(id), foreign key (institution_id) references institution(id);";
+            sqlUserTableCommand.ExecuteNonQuery();
+            sqlUserTableCommand.Dispose();
+            SqliteCommand sqlInsertUserCommand = databaseConnection.CreateCommand();
+            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id integer, institution_id integer) VALUES ();";
+            sqlInsertUserCommand.ExecuteNonQuery();
+            sqlInsertUserCommand.Dispose();
+            databaseConnection.Close();
+        }
+        
     }
 }
