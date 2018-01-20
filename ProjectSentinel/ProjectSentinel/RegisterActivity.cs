@@ -67,5 +67,22 @@ namespace ProjectSentinel
                 
 
         }
+
+        private void userPasswordInputRegisterActivity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userInstitutionComboBoxRegisterActivity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userRegisterButtonBack_Click(object sender, EventArgs e)
+        {
+            LoginActivity ra = new LoginActivity();
+            ra.Show();
+            this.Close();
+        }
     }
 }
