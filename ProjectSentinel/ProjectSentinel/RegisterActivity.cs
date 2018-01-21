@@ -81,6 +81,13 @@ namespace ProjectSentinel
             //userAcademicInstitution.addInstitutionToDatabase(2);
             user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, userPasswordInputRegisterActivity.Text, userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);
+
+            this.Close();
+            user.LoggedIn = true;
+            Properties.Settings.Default.UserLoggedInBetweenSessions = true;
+            Properties.Settings.Default.Save();
+            MainScreenActivity activity = new MainScreenActivity(user, userAcademicInstitution, userAddress);
+            activity.Show();
         }
     }
 }

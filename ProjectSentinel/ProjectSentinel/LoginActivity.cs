@@ -36,9 +36,9 @@ namespace ProjectSentinel
 
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
-            MainScreenActivity ma = new MainScreenActivity();
+           /* MainScreenActivity ma = new MainScreenActivity();
             ma.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
 }

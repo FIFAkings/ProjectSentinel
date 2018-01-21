@@ -17,6 +17,14 @@ namespace ProjectSentinel
             InitializeComponent();
         }
 
+        public MainScreenActivity(User user, Institution institution, Address userAddress)
+        {
+            User appUser = user;
+            Institution userInstitution = institution;
+            Address address = userAddress;
+            InitializeComponent();
+        }
+
 
 
         private void MainScreenActivity_Load(object sender, EventArgs e)
@@ -38,23 +46,23 @@ namespace ProjectSentinel
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            SettingsActivity sa = new SettingsActivity();
+            /*SettingsActivity sa = new SettingsActivity();
             sa.Show();
-            this.Close();
+            this.Close();*/
         }
 
         private void MyProfileButon_Click(object sender, EventArgs e)
         {
-            MyProfileActivity mpa = new MyProfileActivity();
+           /* MyProfileActivity mpa = new MyProfileActivity();
             mpa.Show();
-            this.Close();
+            this.Close();*/
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
-            NewsActivity n = new NewsActivity();
+           /* NewsActivity n = new NewsActivity();
             n.Show();
-            this.Close();
+            this.Close();*/
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
