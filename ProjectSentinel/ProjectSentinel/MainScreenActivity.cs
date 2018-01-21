@@ -16,5 +16,19 @@ namespace ProjectSentinel
         {
             InitializeComponent();
         }
+
+     
+
+        private void MainScreenActivity_Load(object sender, EventArgs e)
+        {
+
+        }
+     
+        private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
+        {
+            LoginActivity ma = new LoginActivity();
+            ma.Show();
+            this.Close();
+        }
     }
 }

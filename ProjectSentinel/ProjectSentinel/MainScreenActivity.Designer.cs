@@ -28,51 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreenActivity));
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.userLogoutbuttonMainScreenActivity = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // panel5
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "My Profile",
-            "Activity Log",
-            "Messeges",
-            "Settings",
-            "Log Of"});
-            this.comboBox1.Location = new System.Drawing.Point(930, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(89, 21);
-            this.comboBox1.TabIndex = 0;
+            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.button6);
+            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.userLogoutbuttonMainScreenActivity);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Location = new System.Drawing.Point(-3, -2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1005, 58);
+            this.panel5.TabIndex = 0;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 574);
-            this.panel1.TabIndex = 1;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(568, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 58);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "News";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 45);
-            this.panel2.TabIndex = 2;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(747, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 58);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Settings";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(656, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 58);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "MyProfile";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // userLogoutbuttonMainScreenActivity
+            // 
+            this.userLogoutbuttonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(838, 0);
+            this.userLogoutbuttonMainScreenActivity.Name = "userLogoutbuttonMainScreenActivity";
+            this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 58);
+            this.userLogoutbuttonMainScreenActivity.TabIndex = 1;
+            this.userLogoutbuttonMainScreenActivity.Text = "Log Out";
+            this.userLogoutbuttonMainScreenActivity.UseVisualStyleBackColor = true;
+            this.userLogoutbuttonMainScreenActivity.Click += new System.EventHandler(this.userLogoutbuttonMainScreenActivity_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(948, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // MainScreenActivity
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 572);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1002, 603);
+            this.Controls.Add(this.panel5);
             this.Name = "MainScreenActivity";
-            this.Text = "MainScreenActivity";
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,5 +119,18 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button userLogoutbuttonMainScreenActivity;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
