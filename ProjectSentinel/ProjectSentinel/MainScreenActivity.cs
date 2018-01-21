@@ -56,5 +56,15 @@ namespace ProjectSentinel
             n.Show();
             this.Close();
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

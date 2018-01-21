@@ -37,8 +37,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -56,7 +61,7 @@
             this.userLogoutbuttonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(649, 0);
             this.userLogoutbuttonMainScreenActivity.Name = "userLogoutbuttonMainScreenActivity";
-            this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 58);
+            this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
             this.userLogoutbuttonMainScreenActivity.TabIndex = 1;
             this.userLogoutbuttonMainScreenActivity.Text = "Log Out";
             this.userLogoutbuttonMainScreenActivity.UseVisualStyleBackColor = true;
@@ -67,7 +72,7 @@
             this.MyProfileButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyProfileButon.Location = new System.Drawing.Point(461, 0);
             this.MyProfileButon.Name = "MyProfileButon";
-            this.MyProfileButon.Size = new System.Drawing.Size(94, 58);
+            this.MyProfileButon.Size = new System.Drawing.Size(94, 59);
             this.MyProfileButon.TabIndex = 2;
             this.MyProfileButon.Text = "MyProfile";
             this.MyProfileButon.UseVisualStyleBackColor = true;
@@ -78,7 +83,7 @@
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Location = new System.Drawing.Point(555, 0);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(94, 58);
+            this.SettingsButton.Size = new System.Drawing.Size(94, 59);
             this.SettingsButton.TabIndex = 3;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.UseVisualStyleBackColor = true;
@@ -89,7 +94,7 @@
             this.NewsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewsButton.Location = new System.Drawing.Point(367, 0);
             this.NewsButton.Name = "NewsButton";
-            this.NewsButton.Size = new System.Drawing.Size(94, 58);
+            this.NewsButton.Size = new System.Drawing.Size(94, 59);
             this.NewsButton.TabIndex = 3;
             this.NewsButton.Text = "News";
             this.NewsButton.UseVisualStyleBackColor = true;
@@ -97,7 +102,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DarkGray;
+            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.NewsButton);
             this.panel5.Controls.Add(this.SettingsButton);
@@ -106,7 +111,7 @@
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Location = new System.Drawing.Point(203, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(799, 59);
+            this.panel5.Size = new System.Drawing.Size(810, 59);
             this.panel5.TabIndex = 0;
             // 
             // label1
@@ -122,15 +127,57 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Location = new System.Drawing.Point(-3, -18);
+            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(229, 639);
+            this.panel6.Size = new System.Drawing.Size(206, 621);
             this.panel6.TabIndex = 1;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 62);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(0, 160);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(206, 62);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "button2";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(0, 222);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(206, 62);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "button3";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(0, 284);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(206, 62);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "button4";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // MainScreenActivity
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1002, 608);
+            this.ClientSize = new System.Drawing.Size(1013, 595);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -140,6 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -164,5 +212,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }
