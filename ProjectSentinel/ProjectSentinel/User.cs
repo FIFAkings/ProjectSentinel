@@ -31,11 +31,6 @@ namespace ProjectSentinel
         public Institution UserInstitution { get { return this.userInstitution; } set { this.userInstitution = value; } }
         public bool LoggedIn { get { return this.loggedIn; } set { this.loggedIn = value; } }
 
-        public User()
-        {
-            loggedIn = false;
-        }
-
         public User(String un, String ufn, String uln, String pw, String pn, String email, DateTime dob, Address address, Institution inst)
         {
             username = un;
@@ -66,11 +61,11 @@ namespace ProjectSentinel
             SqliteConnection databaseConnection = new SqliteConnection(cn);
             databaseConnection.Open();
             SqliteCommand sqlUserTableCommand = databaseConnection.CreateCommand();
-            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) not null, userEmail varchar(77) not null, userFirstName varchar(111), userLastName varchar(333), userPhoneNumber varchar(21), userDateOfBirth datetime, address_id integer not null, institution_id integer not null, foreign key (address_id) references address(id), foreign key (institution_id) references institution(id));";
+            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) unique not null, userEmail varchar(77) not null, userFirstName varchar(111), userLastName varchar(333), userPhoneNumber varchar(21), userDateOfBirth datetime, address_id integer not null, institution_id integer not null, foreign key (address_id) references address(id), foreign key (institution_id) references institution(id));";
             sqlUserTableCommand.ExecuteNonQuery();
             sqlUserTableCommand.Dispose();
             SqliteCommand sqlInsertUserCommand = databaseConnection.CreateCommand();
-            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+addressId+"', '"+institutionId+"');";
+            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+this.userDateOfBirth+"', '"+addressId+"', '"+institutionId+"');";
             sqlInsertUserCommand.ExecuteNonQuery();
             sqlInsertUserCommand.Dispose();
             databaseConnection.Close();

@@ -9,16 +9,24 @@ namespace ProjectSentinel
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Welcome to Project Sentinel v0.1! We've been procrastinating on developing it for a long time, but we're doing our best to make up for it.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            if (Properties.Settings.Default.ApplicationFirstRun)
+            {
+                DefaultDatabaseValues.fillDatabaseWithDefaultInstitutionAddresses();
+                DefaultDatabaseValues.fillDatabaseWithDefaultInstituions();
+                Properties.Settings.Default.ApplicationFirstRun = false;
+                Properties.Settings.Default.Save();
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-        //update with if(Defualt.Settings.User.Logged == 1)
-            Application.Run(new LoginActivity());
-        //update with else Run RegisterActivity()
+            if (Properties.Settings.Default.UserLoggedInBetweenSessions)
+                Application.Run(new MainScreenActivity());
+            else
+                Application.Run(new LoginActivity());
         }
     }
 }

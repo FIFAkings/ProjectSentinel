@@ -18,7 +18,8 @@ namespace ProjectSentinel.Properties
     {
 
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
+        internal bool ApplicationFirstRun = true;
+        internal bool UserLoggedInBetweenSessions = false;
         public static Settings Default
         {
             get

@@ -57,5 +57,19 @@ namespace ProjectSentinel
             databaseConnection.Close();
         }
 
+       public int getAddressDatabaseRecordID() {
+            int id = 0;
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT ID FROM ADDRESS WHERE ID=(SELECT MAX(ID) FROM ADDRESS);";
+            SqliteDataReader reader = sqlReadCommand.ExecuteReader();
+            while (reader.Read()) { id = Convert.ToInt32(reader.GetValue(0)); }
+            sqlReadCommand.Dispose();
+            databaseConnection.Close();
+            return id;
+        }
+
     }
 }

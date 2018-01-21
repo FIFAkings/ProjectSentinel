@@ -48,7 +48,7 @@ namespace ProjectSentinel
 
         }
 
-        private void userInstitutionComboBoxRegisterActivity_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void userInstitutionComboBoxRegisterActivity_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (userInstitutionComboBoxRegisterActivity.Text == "Sveučilište u Zagrebu") { userAcademicInstitution.InstitutionName = "Sveučilište u Zagrebu"; userAcademicInstitution.InstitutionAddress.City = "Zagreb"; userAcademicInstitution.InstitutionAddress.Country = "Croatia"; userAcademicInstitution.InstitutionAddress.Street = "Trg Republike Hrvatske"; userAcademicInstitution.InstitutionAddress.HouseNumber = 14; userAcademicInstitution.InstitutionAddress.Zipcode = 10000; userAcademicInstitution.InstitutionEstablished = new DateTime(1669, 9, 23);}
             else if (userInstitutionComboBoxRegisterActivity.Text == "Sveučilište J. J. Strossmayera Osijek") { userAcademicInstitution.InstitutionName = "Sveučilište J. J. Strossmayera Osijek"; userAcademicInstitution.InstitutionAddress.City = "Osijek"; userAcademicInstitution.InstitutionAddress.Country = "Croatia"; userAcademicInstitution.InstitutionAddress.Street = "Trg Svetog Trojstva"; userAcademicInstitution.InstitutionAddress.HouseNumber = 3; userAcademicInstitution.InstitutionAddress.Zipcode = 31000; userAcademicInstitution.InstitutionEstablished = new DateTime(1975, 5, 31);}
@@ -58,7 +58,7 @@ namespace ProjectSentinel
             else if (userInstitutionComboBoxRegisterActivity.Text == "Sveučilište u Zadru") { userAcademicInstitution.InstitutionName = "Sveučilište u Zadru"; userAcademicInstitution.InstitutionAddress.City = "Zadar"; userAcademicInstitution.InstitutionAddress.Country = "Croatia"; userAcademicInstitution.InstitutionAddress.Street = "Ulica Mihovila Pavlinovića"; userAcademicInstitution.InstitutionAddress.HouseNumber = 1; userAcademicInstitution.InstitutionAddress.Zipcode = 23000; userAcademicInstitution.InstitutionEstablished = new DateTime(2002, 7, 4); }
             else if (userInstitutionComboBoxRegisterActivity.Text == "Sveučilište u Splitu") { userAcademicInstitution.InstitutionName = "Sveučilište u Splitu"; userAcademicInstitution.InstitutionAddress.City = "Split"; userAcademicInstitution.InstitutionAddress.Country = "Croatia"; userAcademicInstitution.InstitutionAddress.Street = "Livanjska ulica"; userAcademicInstitution.InstitutionAddress.HouseNumber = 5; userAcademicInstitution.InstitutionAddress.Zipcode = 21000; userAcademicInstitution.InstitutionEstablished = new DateTime(1974, 6, 15); }
             else { userAcademicInstitution.InstitutionName = "Sveučilište Sjever"; userAcademicInstitution.InstitutionAddress.City = "Koprivnica"; userAcademicInstitution.InstitutionAddress.Country = "Croatia"; userAcademicInstitution.InstitutionAddress.Street = "Trg doktora Žarka Dolinara"; userAcademicInstitution.InstitutionAddress.HouseNumber = 1; userAcademicInstitution.InstitutionAddress.Zipcode = 48000; userAcademicInstitution.InstitutionEstablished = new DateTime(2015, 5, 29); }
-        }
+        }*/
 
         private void userRegisterButtonBack_Click(object sender, EventArgs e)
         {
@@ -86,7 +86,11 @@ namespace ProjectSentinel
             user.UserInstitution.InstitutionEstablished = userAcademicInstitution.InstitutionEstablished;*/
             userAddress = new Address(userAddressStreetInputRegisterActivity.Text, userAddressCityInputRegisterActivity.Text, userAddressCountryInputRegisterActivity.Text, (ushort)Int32.Parse(userHouseNumberNumericRegisterActivity.Value.ToString()), (uint)Int32.Parse(userAddressZipcodeInputRegisterActivity.Text.ToString()));
             userAddress.addAddressToDatabase();
-
+            //userAcademicInstitution.setInstitutionName(Convert.ToInt32(userInstitutionComboBoxRegisterActivity.SelectedIndex));
+            userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), /* TO UPDATE */ userAddress, new DateTime(2006, 9, 29));
+            //userAcademicInstitution.addInstitutionToDatabase(2);
+            user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, userPasswordInputRegisterActivity.Text, userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
+            user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);
         }
     }
 }

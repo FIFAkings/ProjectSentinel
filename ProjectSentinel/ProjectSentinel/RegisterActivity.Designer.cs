@@ -56,6 +56,8 @@
             this.userHouseNumberNumericRegisterActivity = new System.Windows.Forms.NumericUpDown();
             this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity = new System.Windows.Forms.Label();
             this.userRegisterButtonBack = new System.Windows.Forms.Button();
+            this.userEmailLabelRegisterActivity = new System.Windows.Forms.Label();
+            this.userEmailInputRegisterActivity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.userHouseNumberNumericRegisterActivity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,7 +242,7 @@
             this.userInstitutionComboBoxRegisterActivity.Name = "userInstitutionComboBoxRegisterActivity";
             this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(150, 21);
             this.userInstitutionComboBoxRegisterActivity.TabIndex = 23;
-            this.userInstitutionComboBoxRegisterActivity.SelectedIndexChanged += new System.EventHandler(this.userInstitutionComboBoxRegisterActivity_SelectedIndexChanged);
+            //this.userInstitutionComboBoxRegisterActivity.SelectedIndexChanged += new System.EventHandler(this.userInstitutionComboBoxRegisterActivity_SelectedIndexChanged);
             // 
             // userUserNameInputRegisterActivity
             // 
@@ -297,11 +299,29 @@
             this.userRegisterButtonBack.UseVisualStyleBackColor = true;
             this.userRegisterButtonBack.Click += new System.EventHandler(this.userRegisterButtonBack_Click);
             // 
+            // userEmailLabelRegisterActivity
+            // 
+            this.userEmailLabelRegisterActivity.AutoSize = true;
+            this.userEmailLabelRegisterActivity.Location = new System.Drawing.Point(280, 244);
+            this.userEmailLabelRegisterActivity.Name = "userEmailLabelRegisterActivity";
+            this.userEmailLabelRegisterActivity.Size = new System.Drawing.Size(35, 13);
+            this.userEmailLabelRegisterActivity.TabIndex = 30;
+            this.userEmailLabelRegisterActivity.Text = "Email:";
+            // 
+            // userEmailInputRegisterActivity
+            // 
+            this.userEmailInputRegisterActivity.Location = new System.Drawing.Point(280, 260);
+            this.userEmailInputRegisterActivity.Name = "userEmailInputRegisterActivity";
+            this.userEmailInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userEmailInputRegisterActivity.TabIndex = 31;
+            // 
             // RegisterActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 351);
+            this.Controls.Add(this.userEmailInputRegisterActivity);
+            this.Controls.Add(this.userEmailLabelRegisterActivity);
             this.Controls.Add(this.userRegisterButtonBack);
             this.Controls.Add(this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity);
             this.Controls.Add(this.userHouseNumberNumericRegisterActivity);
@@ -368,5 +388,7 @@
         private System.Windows.Forms.NumericUpDown userHouseNumberNumericRegisterActivity;
         private System.Windows.Forms.Label mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity;
         private System.Windows.Forms.Button userRegisterButtonBack;
+        private System.Windows.Forms.Label userEmailLabelRegisterActivity;
+        private System.Windows.Forms.TextBox userEmailInputRegisterActivity;
     }
 }

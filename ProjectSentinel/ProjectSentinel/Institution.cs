@@ -44,5 +44,47 @@ namespace ProjectSentinel
             sqlInsertInstitutionCommand.Dispose();
             databaseConnection.Close();
         }
+
+        public static string getInstitutionName(int registerComboBoxIndex) {
+            string institutionName;
+            switch (registerComboBoxIndex)
+            {
+                case 1:
+                    institutionName = "Sveučilište Jurja Dobrile u Puli";
+                    return institutionName;
+                case 2:
+                    institutionName = "Sveučilište Sjever";
+                    return institutionName; 
+                case 3:
+                    institutionName = "Sveučilište u Dubrovniku";
+                    return institutionName;
+                case 4:
+                    institutionName = "Sveučilište u Rijeci";
+                    return institutionName;
+                case 5:
+                    institutionName = "Sveučilište u Splitu";
+                    return institutionName;
+                case 6:
+                    institutionName = "Sveučilište u Zadru";
+                    return institutionName;
+                case 7:
+                    institutionName = "Sveučilište u Zagrebu";
+                    return institutionName;
+                default:
+                    institutionName = "Sveučilište J. J. Strossmayera Osijek";
+                    return institutionName;
+            }
+        /*
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT ID FROM INSTITUTION WHERE ID=(SELECT MAX(ID) FROM INSTITUTION);";
+            SqliteDataReader reader = sqlReadCommand.ExecuteReader();
+            while (reader.Read()) { id = Convert.ToInt32(reader.GetValue(0)); }
+            sqlReadCommand.Dispose();
+            databaseConnection.Close();
+        */
+        }
     }
 }
