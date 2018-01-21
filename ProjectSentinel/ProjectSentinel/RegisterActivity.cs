@@ -53,7 +53,10 @@ namespace ProjectSentinel
         private void userRegisterButtonBack_Click(object sender, EventArgs e)
         {
             LoginActivity ra = new LoginActivity();
-            ra.Show();
+            Application.ThreadExit += (s, es) =>
+            {
+                Application.Run(ra);
+            };
             this.Close();
         }
 
@@ -87,7 +90,11 @@ namespace ProjectSentinel
             Properties.Settings.Default.UserLoggedInBetweenSessions = true;
             Properties.Settings.Default.Save();
             MainScreenActivity activity = new MainScreenActivity(user, userAcademicInstitution, userAddress);
-            activity.Show();
+            Application.ThreadExit += (s, es) =>
+            {
+                Application.Run(activity);
+            };
+            this.Close();
         }
     }
 }

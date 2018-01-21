@@ -17,16 +17,6 @@ namespace ProjectSentinel
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void userRegisterButtonLoginActivity_Click(object sender, EventArgs e)
         {
             RegisterActivity ra = new RegisterActivity();
