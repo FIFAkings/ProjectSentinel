@@ -115,6 +115,18 @@
     <Compile Include="MainScreenActivity.Designer.cs">
       <DependentUpon>MainScreenActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyProfileActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfileActivity.Designer.cs">
+      <DependentUpon>MyProfileActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsActivity.Designer.cs">
+      <DependentUpon>NewsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,13 +136,28 @@
     <Compile Include="Institution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsActivity.Designer.cs">
+      <DependentUpon>SettingsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToDo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginActivity.resx">
       <DependentUpon>LoginActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreenActivity.resx">
       <DependentUpon>MainScreenActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsActivity.resx">
+      <DependentUpon>NewsActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -143,6 +170,12 @@
     </Compile>
     <EmbeddedResource Include="RegisterActivity.resx">
       <DependentUpon>RegisterActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsActivity.resx">
+      <DependentUpon>SettingsActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

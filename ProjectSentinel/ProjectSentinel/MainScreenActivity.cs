@@ -16,5 +16,45 @@ namespace ProjectSentinel
         {
             InitializeComponent();
         }
+
+
+
+        private void MainScreenActivity_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
+        {
+            LoginActivity ma = new LoginActivity();
+            ma.Show();
+            this.Close();
+        }
+
+        private void MainScreenActivity_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsActivity sa = new SettingsActivity();
+            sa.Show();
+            this.Close();
+        }
+
+        private void MyProfileButon_Click(object sender, EventArgs e)
+        {
+            MyProfileActivity mpa = new MyProfileActivity();
+            mpa.Show();
+            this.Close();
+        }
+
+        private void NewsButton_Click(object sender, EventArgs e)
+        {
+            NewsActivity n = new NewsActivity();
+            n.Show();
+            this.Close();
+        }
     }
 }
