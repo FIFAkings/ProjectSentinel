@@ -19,7 +19,7 @@ namespace ProjectSentinel
 
         Institution userAcademicInstitution;
         Address userAddress;
-        private User user = new User();
+        User user;
 
         public RegisterActivity()
         {
@@ -84,10 +84,10 @@ namespace ProjectSentinel
             user.UserInstitution.InstitutionAddress = userAcademicInstitution.InstitutionAddress;
             user.UserInstitution.InstitutionName = userAcademicInstitution.InstitutionName;
             user.UserInstitution.InstitutionEstablished = userAcademicInstitution.InstitutionEstablished;*/
-            userAddress = new Address(userAddressStreetInputRegisterActivity.Text, userAddressCityInputRegisterActivity.Text, userAddressCountryInputRegisterActivity.Text, (ushort)Int32.Parse(userHouseNumberNumericRegisterActivity.Value.ToString()), (uint)Int32.Parse(userAddressZipcodeInputRegisterActivity.Text.ToString()));
+            userAddress = new Address(userAddressStreetInputRegisterActivity.Text, userAddressCityInputRegisterActivity.Text, userAddressCountryInputRegisterActivity.Text, (ushort)Int32.Parse(userHouseNumberNumericRegisterActivity.Value.ToString()), Int32.Parse(userAddressZipcodeInputRegisterActivity.Text.ToString()));
             userAddress.addAddressToDatabase();
             //userAcademicInstitution.setInstitutionName(Convert.ToInt32(userInstitutionComboBoxRegisterActivity.SelectedIndex));
-            userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionAddress(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionFoundingDate(userInstitutionComboBoxRegisterActivity.SelectedIndex);
+            userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionAddress(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionFoundingDate(userInstitutionComboBoxRegisterActivity.SelectedIndex));
             //userAcademicInstitution.addInstitutionToDatabase(2);
             user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, userPasswordInputRegisterActivity.Text, userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);

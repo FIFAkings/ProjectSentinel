@@ -76,7 +76,8 @@ namespace ProjectSentinel
                     return institutionName;
             }
         }
-            public static Address getInstitutionAddress(int registerComboBoxIndex)
+
+        public static Address getInstitutionAddress(int registerComboBoxIndex)
             {
                 Address institutionAddress;
                 switch (registerComboBoxIndex)
@@ -106,7 +107,7 @@ namespace ProjectSentinel
                         institutionAddress = new Address("Trg Svetog Trojstva", "Osijek", "Croatia", 3, 31000);
                         return institutionAddress;
                 }
-            }
+        }
 
         public static DateTime getInstitutionFoundingDate(int registerComboBoxIndex)
         {
@@ -151,5 +152,5 @@ namespace ProjectSentinel
             databaseConnection.Close();
         */
     }
-    }
+    
 }
