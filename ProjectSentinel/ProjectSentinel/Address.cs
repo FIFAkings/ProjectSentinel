@@ -11,18 +11,17 @@ namespace ProjectSentinel
     public class Address
     {
 
-        private string street, city, country;
-        private ushort houseNumber;
-        private uint zipcode;
+        private string street, city, country; 
+        private int zipcode, houseNumber;
 
         public string Street { get { return this.street; } set { this.street = value; } }
         public string City { get { return this.city; } set { this.city = value; } }
         public string Country { get { return this.country; } set { this.country = value; } }
-        public ushort HouseNumber { get { return this.houseNumber; } set { this.houseNumber = value; } }
-        public uint Zipcode { get { return this.zipcode; } set { this.zipcode = value; } }
+        public int HouseNumber { get { return this.houseNumber; } set { this.houseNumber = value; } }
+        public int Zipcode { get { return this.zipcode; } set { this.zipcode = value; } }
 
 
-        public Address(string str, string cty, string ctry, ushort numb, uint zip)
+        public Address(string str, string cty, string ctry, int numb, int zip)
         {
             // this.addressId = Ovaj dio koda ću nadopuniti naknadno
             this.street = str;
@@ -32,7 +31,7 @@ namespace ProjectSentinel
             this.zipcode = zip;
         }
 
-        public void changeAddress(string str, string cty, string ctry, ushort numb, uint zip)
+        public void changeAddress(string str, string cty, string ctry, int numb, int zip)
         {
             this.street = str;
             this.city = cty;

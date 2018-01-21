@@ -87,7 +87,7 @@ namespace ProjectSentinel
             userAddress = new Address(userAddressStreetInputRegisterActivity.Text, userAddressCityInputRegisterActivity.Text, userAddressCountryInputRegisterActivity.Text, (ushort)Int32.Parse(userHouseNumberNumericRegisterActivity.Value.ToString()), (uint)Int32.Parse(userAddressZipcodeInputRegisterActivity.Text.ToString()));
             userAddress.addAddressToDatabase();
             //userAcademicInstitution.setInstitutionName(Convert.ToInt32(userInstitutionComboBoxRegisterActivity.SelectedIndex));
-            userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), /* TO UPDATE */ userAddress, new DateTime(2006, 9, 29));
+            userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionAddress(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionFoundingDate(userInstitutionComboBoxRegisterActivity.SelectedIndex);
             //userAcademicInstitution.addInstitutionToDatabase(2);
             user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, userPasswordInputRegisterActivity.Text, userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);
