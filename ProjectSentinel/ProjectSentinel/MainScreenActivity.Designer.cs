@@ -41,6 +41,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -49,7 +50,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(748, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(842, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,8 +59,10 @@
             // 
             // userLogoutbuttonMainScreenActivity
             // 
+            this.userLogoutbuttonMainScreenActivity.FlatAppearance.BorderSize = 0;
             this.userLogoutbuttonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(649, 0);
+            this.userLogoutbuttonMainScreenActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(743, 0);
             this.userLogoutbuttonMainScreenActivity.Name = "userLogoutbuttonMainScreenActivity";
             this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
             this.userLogoutbuttonMainScreenActivity.TabIndex = 1;
@@ -69,8 +72,10 @@
             // 
             // MyProfileButon
             // 
+            this.MyProfileButon.FlatAppearance.BorderSize = 0;
             this.MyProfileButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyProfileButon.Location = new System.Drawing.Point(461, 0);
+            this.MyProfileButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MyProfileButon.Location = new System.Drawing.Point(555, 0);
             this.MyProfileButon.Name = "MyProfileButon";
             this.MyProfileButon.Size = new System.Drawing.Size(94, 59);
             this.MyProfileButon.TabIndex = 2;
@@ -80,8 +85,10 @@
             // 
             // SettingsButton
             // 
+            this.SettingsButton.FlatAppearance.BorderSize = 0;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Location = new System.Drawing.Point(555, 0);
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SettingsButton.Location = new System.Drawing.Point(649, 0);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(94, 59);
             this.SettingsButton.TabIndex = 3;
@@ -91,8 +98,10 @@
             // 
             // NewsButton
             // 
+            this.NewsButton.FlatAppearance.BorderSize = 0;
             this.NewsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewsButton.Location = new System.Drawing.Point(367, 0);
+            this.NewsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NewsButton.Location = new System.Drawing.Point(461, 0);
             this.NewsButton.Name = "NewsButton";
             this.NewsButton.Size = new System.Drawing.Size(94, 59);
             this.NewsButton.TabIndex = 3;
@@ -102,7 +111,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(15)))), ((int)(((byte)(51)))));
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.NewsButton);
             this.panel5.Controls.Add(this.SettingsButton);
@@ -111,8 +120,9 @@
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Location = new System.Drawing.Point(203, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(810, 59);
+            this.panel5.Size = new System.Drawing.Size(905, 59);
             this.panel5.TabIndex = 0;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label1
             // 
@@ -126,7 +136,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel6.Controls.Add(this.button8);
             this.panel6.Controls.Add(this.button7);
             this.panel6.Controls.Add(this.button6);
@@ -174,10 +184,18 @@
             this.button8.Text = "button4";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(15)))), ((int)(((byte)(51)))));
+            this.panel7.Location = new System.Drawing.Point(275, 80);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 100);
+            this.panel7.TabIndex = 2;
+            // 
             // MainScreenActivity
             // 
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1013, 595);
+            this.ClientSize = new System.Drawing.Size(1108, 601);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -216,5 +234,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel7;
     }
 }
