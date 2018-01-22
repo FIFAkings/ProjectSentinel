@@ -37,6 +37,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.SidePanel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ScheduleButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.Sentinel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,23 +52,20 @@
             this.FlashcardButton = new System.Windows.Forms.Button();
             this.ToDoButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.ScheduleButton = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.ToDoControl = new ProjectSentinel.ToDoControl();
+            this.HomeControl = new ProjectSentinel.HomeControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -154,7 +158,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.SidePanel1);
             this.panel6.Controls.Add(this.pictureBox8);
             this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Controls.Add(this.pictureBox6);
@@ -171,6 +175,77 @@
             this.panel6.Size = new System.Drawing.Size(206, 621);
             this.panel6.TabIndex = 1;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // SidePanel1
+            // 
+            this.SidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(15)))), ((int)(((byte)(51)))));
+            this.SidePanel1.Location = new System.Drawing.Point(0, 172);
+            this.SidePanel1.Name = "SidePanel1";
+            this.SidePanel1.Size = new System.Drawing.Size(10, 62);
+            this.SidePanel1.TabIndex = 2;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(26, 435);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(26, 373);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox7.TabIndex = 10;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(26, 249);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(26, 311);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(26, 186);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // ScheduleButton
+            // 
+            this.ScheduleButton.FlatAppearance.BorderSize = 0;
+            this.ScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScheduleButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ScheduleButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ScheduleButton.Location = new System.Drawing.Point(0, 420);
+            this.ScheduleButton.Name = "ScheduleButton";
+            this.ScheduleButton.Size = new System.Drawing.Size(206, 62);
+            this.ScheduleButton.TabIndex = 7;
+            this.ScheduleButton.Text = "   Schedule";
+            this.ScheduleButton.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -270,80 +345,33 @@
             this.HomeButton.UseVisualStyleBackColor = true;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // ScheduleButton
+            // panel9
             // 
-            this.ScheduleButton.FlatAppearance.BorderSize = 0;
-            this.ScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScheduleButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ScheduleButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ScheduleButton.Location = new System.Drawing.Point(0, 420);
-            this.ScheduleButton.Name = "ScheduleButton";
-            this.ScheduleButton.Size = new System.Drawing.Size(206, 62);
-            this.ScheduleButton.TabIndex = 7;
-            this.ScheduleButton.Text = "   Schedule";
-            this.ScheduleButton.UseVisualStyleBackColor = true;
+            this.panel9.Controls.Add(this.HomeControl);
+            this.panel9.Controls.Add(this.ToDoControl);
+            this.panel9.Location = new System.Drawing.Point(206, 53);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(902, 549);
+            this.panel9.TabIndex = 2;
             // 
-            // pictureBox4
+            // ToDoControl
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(26, 186);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.ToDoControl.Location = new System.Drawing.Point(0, 0);
+            this.ToDoControl.Name = "ToDoControl";
+            this.ToDoControl.Size = new System.Drawing.Size(902, 549);
+            this.ToDoControl.TabIndex = 0;
             // 
-            // pictureBox5
+            // HomeControl
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(26, 311);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(26, 249);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(26, 373);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(26, 435);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(15)))), ((int)(((byte)(51)))));
-            this.panel8.Location = new System.Drawing.Point(0, 172);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 62);
-            this.panel8.TabIndex = 2;
+            this.HomeControl.Location = new System.Drawing.Point(-3, 0);
+            this.HomeControl.Name = "HomeControl";
+            this.HomeControl.Size = new System.Drawing.Size(902, 549);
+            this.HomeControl.TabIndex = 1;
             // 
             // MainScreenActivity
             // 
             this.ClientSize = new System.Drawing.Size(1108, 601);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -357,14 +385,15 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -398,11 +427,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button ScheduleButton;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel SidePanel1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel9;
+        private ToDoControl ToDoControl;
+        private HomeControl HomeControl;
     }
 }

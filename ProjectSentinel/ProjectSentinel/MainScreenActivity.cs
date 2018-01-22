@@ -23,6 +23,10 @@ namespace ProjectSentinel
             User appUser = user;
             Institution userInstitution = institution;
             Address address = userAddress;
+            SidePanel1.Height = HomeButton.Height;
+            SidePanel1.Top = HomeButton.Top;
+            HomeControl.BringToFront();
+
         }
 
 
@@ -82,12 +86,16 @@ namespace ProjectSentinel
 
         private void ToDoButton_Click(object sender, EventArgs e)
         {
-
+            SidePanel1.Height = ToDoButton.Height;
+            SidePanel1.Top = ToDoButton.Top;
+            ToDoControl.BringToFront();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-
+            SidePanel1.Height = HomeButton.Height;
+            SidePanel1.Top = HomeButton.Top;
+            HomeControl.BringToFront();
         }
     }
 }
