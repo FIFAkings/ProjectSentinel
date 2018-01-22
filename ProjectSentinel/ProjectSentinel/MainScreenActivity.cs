@@ -71,17 +71,22 @@ namespace ProjectSentinel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ToDoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
         {
 
         }
