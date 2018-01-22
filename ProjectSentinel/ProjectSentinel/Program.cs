@@ -20,6 +20,8 @@ namespace ProjectSentinel
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstituions();
                 Properties.Settings.Default.ApplicationFirstRun = false;
                 Properties.Settings.Default.Save();
+                Properties.Settings.Default.Upgrade();
+
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
