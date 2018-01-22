@@ -19,10 +19,10 @@ namespace ProjectSentinel
 
         public MainScreenActivity(User user, Institution institution, Address userAddress)
         {
+            InitializeComponent();
             User appUser = user;
             Institution userInstitution = institution;
             Address address = userAddress;
-            InitializeComponent();
         }
 
 
