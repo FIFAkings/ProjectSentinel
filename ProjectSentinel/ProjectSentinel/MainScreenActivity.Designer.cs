@@ -53,8 +53,8 @@
             this.ToDoButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.HomeControl = new ProjectSentinel.HomeControl();
             this.ToDoControl = new ProjectSentinel.ToDoControl();
+            this.homeControl1 = new ProjectSentinel.HomeControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -353,23 +353,12 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.HomeControl);
+            this.panel9.Controls.Add(this.homeControl1);
             this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(902, 549);
             this.panel9.TabIndex = 2;
-            // 
-            // HomeControl
-            // 
-            this.HomeControl.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HomeControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeControl.BackgroundImage")));
-            this.HomeControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.HomeControl.Location = new System.Drawing.Point(0, 0);
-            this.HomeControl.Name = "HomeControl";
-            this.HomeControl.Size = new System.Drawing.Size(912, 549);
-            this.HomeControl.TabIndex = 1;
-            this.HomeControl.Load += new System.EventHandler(this.HomeControl_Load);
             // 
             // ToDoControl
             // 
@@ -377,6 +366,15 @@
             this.ToDoControl.Name = "ToDoControl";
             this.ToDoControl.Size = new System.Drawing.Size(902, 549);
             this.ToDoControl.TabIndex = 0;
+            // 
+            // homeControl1
+            // 
+            this.homeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.homeControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeControl1.Location = new System.Drawing.Point(0, 0);
+            this.homeControl1.Name = "homeControl1";
+            this.homeControl1.Size = new System.Drawing.Size(902, 549);
+            this.homeControl1.TabIndex = 1;
             // 
             // MainScreenActivity
             // 
@@ -445,6 +443,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel9;
         private ToDoControl ToDoControl;
-        private HomeControl HomeControl;
+        private HomeControl homeControl1;
     }
 }

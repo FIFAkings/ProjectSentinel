@@ -84,7 +84,8 @@ namespace ProjectSentinel
         {
             SidePanel1.Height = HomeButton.Height;
             SidePanel1.Top = HomeButton.Top;
-            HomeControl.BringToFront();
+            homeControl1.BringToFront();
+            
         }
 
         private void HomeControl_Load(object sender, EventArgs e)
