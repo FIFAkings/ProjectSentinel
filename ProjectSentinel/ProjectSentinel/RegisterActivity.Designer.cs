@@ -242,7 +242,6 @@
             this.userInstitutionComboBoxRegisterActivity.Name = "userInstitutionComboBoxRegisterActivity";
             this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(150, 21);
             this.userInstitutionComboBoxRegisterActivity.TabIndex = 23;
-            //this.userInstitutionComboBoxRegisterActivity.SelectedIndexChanged += new System.EventHandler(this.userInstitutionComboBoxRegisterActivity_SelectedIndexChanged);
             // 
             // userUserNameInputRegisterActivity
             // 
@@ -302,7 +301,7 @@
             // userEmailLabelRegisterActivity
             // 
             this.userEmailLabelRegisterActivity.AutoSize = true;
-            this.userEmailLabelRegisterActivity.Location = new System.Drawing.Point(280, 244);
+            this.userEmailLabelRegisterActivity.Location = new System.Drawing.Point(277, 225);
             this.userEmailLabelRegisterActivity.Name = "userEmailLabelRegisterActivity";
             this.userEmailLabelRegisterActivity.Size = new System.Drawing.Size(35, 13);
             this.userEmailLabelRegisterActivity.TabIndex = 30;
@@ -310,7 +309,7 @@
             // 
             // userEmailInputRegisterActivity
             // 
-            this.userEmailInputRegisterActivity.Location = new System.Drawing.Point(280, 260);
+            this.userEmailInputRegisterActivity.Location = new System.Drawing.Point(280, 241);
             this.userEmailInputRegisterActivity.Name = "userEmailInputRegisterActivity";
             this.userEmailInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
             this.userEmailInputRegisterActivity.TabIndex = 31;
@@ -351,6 +350,7 @@
             this.Controls.Add(this.userFirstNameInputRegisterActivity);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterActivity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Registration | Project Sentinel";
             this.Load += new System.EventHandler(this.RegisterActivity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userHouseNumberNumericRegisterActivity)).EndInit();
