@@ -356,10 +356,11 @@
             // 
             // HomeControl
             // 
-            this.HomeControl.Location = new System.Drawing.Point(-3, 0);
+            this.HomeControl.Location = new System.Drawing.Point(0, 0);
             this.HomeControl.Name = "HomeControl";
-            this.HomeControl.Size = new System.Drawing.Size(902, 549);
+            this.HomeControl.Size = new System.Drawing.Size(912, 549);
             this.HomeControl.TabIndex = 1;
+            this.HomeControl.Load += new System.EventHandler(this.HomeControl_Load);
             // 
             // ToDoControl
             // 
