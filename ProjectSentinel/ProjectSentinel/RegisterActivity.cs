@@ -87,11 +87,8 @@ namespace ProjectSentinel
             user.LoggedIn = true;
             Properties.Settings.Default.UserLoggedInBetweenSessions = true;
             Properties.Settings.Default.Save();
-            //MainScreenActivity activity = new MainScreenActivity(/*user, userAcademicInstitution, userAddress*/);
-            Application.ThreadExit += (s, es) =>
-            {
-                Application.Run(new MainScreenActivity(user, userAcademicInstitution, userAddress));
-            };
+            MainScreenActivity activity = new MainScreenActivity(user, userAcademicInstitution, userAddress);
+            activity.Show();
             this.Hide();
         }
     }
