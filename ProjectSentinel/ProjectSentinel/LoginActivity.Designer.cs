@@ -58,7 +58,7 @@
             this.userPasswrodLabelLoginActivity.Size = new System.Drawing.Size(59, 13);
             this.userPasswrodLabelLoginActivity.TabIndex = 1;
             this.userPasswrodLabelLoginActivity.Text = "Password: ";
-            this.userPasswrodLabelLoginActivity.Click += new System.EventHandler(this.label2_Click);
+            //this.userPasswrodLabelLoginActivity.Click += new System.EventHandler(this.label2_Click);
             // 
             // userPasswordInputLoginActivity
             // 
@@ -82,7 +82,7 @@
             this.forgotPasswordLabelLoginActivity.Size = new System.Drawing.Size(117, 13);
             this.forgotPasswordLabelLoginActivity.TabIndex = 4;
             this.forgotPasswordLabelLoginActivity.Text = "Forgot your password ?";
-            this.forgotPasswordLabelLoginActivity.Click += new System.EventHandler(this.label3_Click);
+            //this.forgotPasswordLabelLoginActivity.Click += new System.EventHandler(this.label3_Click);
             // 
             // userLoginButtonLoginActivity
             // 

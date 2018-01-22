@@ -102,6 +102,7 @@
     <Compile Include="Address.cs" />
     <Compile Include="DefaultDatabaseValues.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="Faculty.cs" />
     <Compile Include="Flashcard.cs" />
     <Compile Include="LoginActivity.cs">
       <SubType>Form</SubType>
