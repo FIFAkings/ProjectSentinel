@@ -23,6 +23,7 @@ namespace ProjectSentinel
         {
             appUser = user;
             InitializeComponent();
+            homeControl1.BringToFront();
         }
 
         private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
@@ -77,7 +78,7 @@ namespace ProjectSentinel
         {
             SidePanel1.Height = ToDoButton.Height;
             SidePanel1.Top = ToDoButton.Top;
-            ToDoControl.BringToFront();
+            toDoControl1.BringToFront();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

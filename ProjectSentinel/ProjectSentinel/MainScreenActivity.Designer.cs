@@ -53,8 +53,8 @@
             this.ToDoButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.ToDoControl = new ProjectSentinel.ToDoControl();
             this.homeControl1 = new ProjectSentinel.HomeControl();
+            this.toDoControl1 = new ProjectSentinel.ToDoControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -353,19 +353,12 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.toDoControl1);
             this.panel9.Controls.Add(this.homeControl1);
-            this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(902, 549);
             this.panel9.TabIndex = 2;
-            // 
-            // ToDoControl
-            // 
-            this.ToDoControl.Location = new System.Drawing.Point(0, 0);
-            this.ToDoControl.Name = "ToDoControl";
-            this.ToDoControl.Size = new System.Drawing.Size(902, 549);
-            this.ToDoControl.TabIndex = 0;
             // 
             // homeControl1
             // 
@@ -375,6 +368,14 @@
             this.homeControl1.Name = "homeControl1";
             this.homeControl1.Size = new System.Drawing.Size(902, 549);
             this.homeControl1.TabIndex = 1;
+            // 
+            // toDoControl1
+            // 
+            this.toDoControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toDoControl1.Location = new System.Drawing.Point(0, -3);
+            this.toDoControl1.Name = "toDoControl1";
+            this.toDoControl1.Size = new System.Drawing.Size(902, 549);
+            this.toDoControl1.TabIndex = 2;
             // 
             // MainScreenActivity
             // 
@@ -442,7 +443,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel9;
-        private ToDoControl ToDoControl;
         private HomeControl homeControl1;
+        private ToDoControl toDoControl1;
     }
 }
