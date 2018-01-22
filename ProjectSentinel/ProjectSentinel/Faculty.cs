@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/*
+ * 
+ *  Auxiliary class (for future use)
+ * 
+ */
+
+
 namespace ProjectSentinel
 {
     class Faculty
