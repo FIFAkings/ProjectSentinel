@@ -20,14 +20,19 @@ namespace ProjectSentinel
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstituions();
                 Properties.Settings.Default.ApplicationFirstRun = false;
                 Properties.Settings.Default.Save();
+                Properties.Settings.Default.Upgrade();
+
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Properties.Settings.Default.UserLoggedInBetweenSessions) { Application.Run(new MainScreenActivity());}
+            if (Properties.Settings.Default.UserLoggedInBetweenSessions) { Application.Run(new MainScreenActivity(/*user*/));}
             else
             {
-                Application.Run(new LoginActivity());
-                //la.Show();
+                
+                LoginActivity la = new LoginActivity();
+                la.Show();
+                Application.Run();
+
             }
         }
     }

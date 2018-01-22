@@ -15,12 +15,13 @@ namespace ProjectSentinel
         public LoginActivity()
         {
             InitializeComponent();
+            this.Show();
         }
 
         private void userRegisterButtonLoginActivity_Click(object sender, EventArgs e)
         {
             RegisterActivity ra = new RegisterActivity();
-            this.Hide();
+            this.Close();
             ra.Show();
             
         }
@@ -28,7 +29,7 @@ namespace ProjectSentinel
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
             MainScreenActivity ma = new MainScreenActivity();
-            this.Hide();
+            this.Close();
             ma.Show();            
             }
         }

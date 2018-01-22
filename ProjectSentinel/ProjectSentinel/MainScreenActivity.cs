@@ -12,24 +12,17 @@ namespace ProjectSentinel
 {
     public partial class MainScreenActivity : Form
     {
+        User appUser;
         public MainScreenActivity()
         {
             InitializeComponent();
             this.Show();
         }
 
-        public MainScreenActivity(User user, Institution institution, Address userAddress)
+        public MainScreenActivity(User user)
         {
-            User appUser = user;
-            Institution userInstitution = institution;
-            Address address = userAddress;
-        }
-
-
-
-        private void MainScreenActivity_Load(object sender, EventArgs e)
-        {
-
+            appUser = user;
+            InitializeComponent();
         }
 
         private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
