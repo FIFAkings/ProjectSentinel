@@ -83,6 +83,7 @@
             this.userLogoutbuttonMainScreenActivity.FlatAppearance.BorderSize = 0;
             this.userLogoutbuttonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogoutbuttonMainScreenActivity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userLogoutbuttonMainScreenActivity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(743, 0);
             this.userLogoutbuttonMainScreenActivity.Name = "userLogoutbuttonMainScreenActivity";
             this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
@@ -96,6 +97,7 @@
             this.MyProfileButon.FlatAppearance.BorderSize = 0;
             this.MyProfileButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyProfileButon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MyProfileButon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MyProfileButon.Location = new System.Drawing.Point(555, 0);
             this.MyProfileButon.Name = "MyProfileButon";
             this.MyProfileButon.Size = new System.Drawing.Size(94, 59);
@@ -109,6 +111,7 @@
             this.SettingsButton.FlatAppearance.BorderSize = 0;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SettingsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SettingsButton.Location = new System.Drawing.Point(649, 0);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(94, 59);
@@ -122,6 +125,7 @@
             this.NewsButton.FlatAppearance.BorderSize = 0;
             this.NewsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NewsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.NewsButton.Location = new System.Drawing.Point(461, 0);
             this.NewsButton.Name = "NewsButton";
             this.NewsButton.Size = new System.Drawing.Size(94, 59);
@@ -149,6 +153,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(42, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 28);
@@ -316,6 +321,7 @@
             this.FlashcardButton.TabIndex = 5;
             this.FlashcardButton.Text = "   Flashcard";
             this.FlashcardButton.UseVisualStyleBackColor = true;
+            this.FlashcardButton.Click += new System.EventHandler(this.FlashcardButton_Click);
             // 
             // ToDoButton
             // 
@@ -356,6 +362,9 @@
             // 
             // HomeControl
             // 
+            this.HomeControl.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.HomeControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeControl.BackgroundImage")));
+            this.HomeControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeControl.Location = new System.Drawing.Point(0, 0);
             this.HomeControl.Name = "HomeControl";
             this.HomeControl.Size = new System.Drawing.Size(912, 549);

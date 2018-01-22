@@ -98,5 +98,10 @@ namespace ProjectSentinel
         {
 
         }
+
+        private void FlashcardButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
