@@ -93,5 +93,10 @@ namespace ProjectSentinel
             SidePanel1.Top = HomeButton.Top;
             HomeControl.BringToFront();
         }
+
+        private void HomeControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
