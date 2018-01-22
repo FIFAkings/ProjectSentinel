@@ -53,8 +53,9 @@
             this.ToDoButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.homeControl1 = new ProjectSentinel.HomeControl();
-            this.toDoControl1 = new ProjectSentinel.ToDoControl();
+            this.HomeControl = new ProjectSentinel.HomeControl();
+            this.ToDoControl = new ProjectSentinel.ToDoControl();
+            this.FlashcardControl = new ProjectSentinel.FlashcardControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -353,36 +354,46 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.toDoControl1);
-            this.panel9.Controls.Add(this.homeControl1);
+            this.panel9.Controls.Add(this.FlashcardControl);
+            this.panel9.Controls.Add(this.HomeControl);
+            this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(902, 549);
             this.panel9.TabIndex = 2;
             // 
-            // homeControl1
+            // HomeControl
             // 
-            this.homeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.homeControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeControl1.Location = new System.Drawing.Point(0, 0);
-            this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(902, 549);
-            this.homeControl1.TabIndex = 1;
+            this.HomeControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HomeControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HomeControl.Location = new System.Drawing.Point(0, 0);
+            this.HomeControl.Name = "HomeControl";
+            this.HomeControl.Size = new System.Drawing.Size(902, 549);
+            this.HomeControl.TabIndex = 1;
             // 
-            // toDoControl1
+            // ToDoControl
             // 
-            this.toDoControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toDoControl1.Location = new System.Drawing.Point(0, -3);
-            this.toDoControl1.Name = "toDoControl1";
-            this.toDoControl1.Size = new System.Drawing.Size(902, 549);
-            this.toDoControl1.TabIndex = 2;
+            this.ToDoControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ToDoControl.Location = new System.Drawing.Point(0, 0);
+            this.ToDoControl.Name = "ToDoControl";
+            this.ToDoControl.Size = new System.Drawing.Size(902, 549);
+            this.ToDoControl.TabIndex = 0;
+            this.ToDoControl.Load += new System.EventHandler(this.ToDoControl_Load);
+            // 
+            // FlashcardControl
+            // 
+            this.FlashcardControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FlashcardControl.Location = new System.Drawing.Point(0, 0);
+            this.FlashcardControl.Name = "FlashcardControl";
+            this.FlashcardControl.Size = new System.Drawing.Size(902, 549);
+            this.FlashcardControl.TabIndex = 2;
             // 
             // MainScreenActivity
             // 
             this.ClientSize = new System.Drawing.Size(1108, 601);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreenActivity";
@@ -443,7 +454,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel9;
-        private HomeControl homeControl1;
-        private ToDoControl toDoControl1;
+        private HomeControl HomeControl;
+        private ToDoControl ToDoControl;
+        private FlashcardControl FlashcardControl;
     }
 }

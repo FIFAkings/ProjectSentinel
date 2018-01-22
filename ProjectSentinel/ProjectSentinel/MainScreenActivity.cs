@@ -17,13 +17,15 @@ namespace ProjectSentinel
         {
             InitializeComponent();
             this.Show();
+            HomeControl.BringToFront();
+
         }
 
         public MainScreenActivity(User user)
         {
             appUser = user;
             InitializeComponent();
-            homeControl1.BringToFront();
+            
         }
 
         private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
@@ -78,14 +80,14 @@ namespace ProjectSentinel
         {
             SidePanel1.Height = ToDoButton.Height;
             SidePanel1.Top = ToDoButton.Top;
-            toDoControl1.BringToFront();
+            ToDoControl.BringToFront();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             SidePanel1.Height = HomeButton.Height;
             SidePanel1.Top = HomeButton.Top;
-            homeControl1.BringToFront();
+            HomeControl.BringToFront();
             
         }
 
@@ -95,6 +97,13 @@ namespace ProjectSentinel
         }
 
         private void FlashcardButton_Click(object sender, EventArgs e)
+        {
+            SidePanel1.Height = FlashcardButton.Height;
+            SidePanel1.Top = FlashcardButton.Top;
+            FlashcardControl.BringToFront();
+        }
+
+        private void ToDoControl_Load(object sender, EventArgs e)
         {
 
         }
