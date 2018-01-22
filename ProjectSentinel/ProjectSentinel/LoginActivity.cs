@@ -20,21 +20,23 @@ namespace ProjectSentinel
         private void userRegisterButtonLoginActivity_Click(object sender, EventArgs e)
         {
             RegisterActivity ra = new RegisterActivity();
+            this.Close();
             Application.ThreadExit += (s, es) =>
             {
                 Application.Run(ra);
             };
-            this.Close();
+            
         }
 
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
             MainScreenActivity ma = new MainScreenActivity();
+            this.Close();
             Application.ThreadExit += (s, es) =>
             {
                 Application.Run(ma);
             };
-            this.Close();
+            
             }
         }
 }
