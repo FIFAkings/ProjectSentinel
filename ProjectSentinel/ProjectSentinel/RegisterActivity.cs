@@ -85,11 +85,14 @@ namespace ProjectSentinel
             user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, userPasswordInputRegisterActivity.Text, userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);
             user.LoggedIn = true;
-            Properties.Settings.Default.UserLoggedInBetweenSessions = true;
+            Properties.Settings.Default.UserLoggedInBetweenSessions = user.LoggedIn;
             Properties.Settings.Default.Save();
-            MainScreenActivity activity = new MainScreenActivity(user, userAcademicInstitution, userAddress);
-            activity.Show();
-            this.Hide();
+            MainScreenActivity activity = new MainScreenActivity(user);
+            Application.ThreadExit += (s, es) =>
+            {
+                Application.Run(activity);
+            };            
+            this.Close();
         }
     }
 }
