@@ -26,10 +26,10 @@ namespace ProjectSentinel
             LoginActivity la = new LoginActivity();
             MainScreenActivity ma = new MainScreenActivity();
             if (Properties.Settings.Default.UserLoggedInBetweenSessions)
-                Application.Run(new MainScreenActivity());
+                Application.Run(ma);
             else
             {
-                Application.Run();
+                Application.Run(ma);
                 ma.Hide();
                 la.Show();
             }

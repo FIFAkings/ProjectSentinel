@@ -53,8 +53,8 @@
             this.ToDoButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.ToDoControl = new ProjectSentinel.ToDoControl();
             this.HomeControl = new ProjectSentinel.HomeControl();
+            this.ToDoControl = new ProjectSentinel.ToDoControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -151,9 +151,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(42, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 28);
+            this.label1.Size = new System.Drawing.Size(130, 28);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Welcome User";
+            this.label1.Text = "Welcome ";
             // 
             // panel6
             // 
@@ -354,19 +354,19 @@
             this.panel9.Size = new System.Drawing.Size(902, 549);
             this.panel9.TabIndex = 2;
             // 
-            // ToDoControl
-            // 
-            this.ToDoControl.Location = new System.Drawing.Point(0, 0);
-            this.ToDoControl.Name = "ToDoControl";
-            this.ToDoControl.Size = new System.Drawing.Size(902, 549);
-            this.ToDoControl.TabIndex = 0;
-            // 
             // HomeControl
             // 
             this.HomeControl.Location = new System.Drawing.Point(-3, 0);
             this.HomeControl.Name = "HomeControl";
             this.HomeControl.Size = new System.Drawing.Size(902, 549);
             this.HomeControl.TabIndex = 1;
+            // 
+            // ToDoControl
+            // 
+            this.ToDoControl.Location = new System.Drawing.Point(0, 0);
+            this.ToDoControl.Name = "ToDoControl";
+            this.ToDoControl.Size = new System.Drawing.Size(902, 549);
+            this.ToDoControl.TabIndex = 0;
             // 
             // MainScreenActivity
             // 

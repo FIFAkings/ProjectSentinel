@@ -40,7 +40,7 @@ namespace ProjectSentinel
         {
             LoginActivity ma = new LoginActivity();
             ma.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void MainScreenActivity_Load_1(object sender, EventArgs e)
