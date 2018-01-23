@@ -48,7 +48,9 @@ namespace ProjectSentinel
             this.Close();
         }
 
-        public static void AuxiliaryThreadingMethod() { }
+        public static void AuxiliaryThreadingMethod() {
+            Application.Run(new MainScreenActivity());
+        }
 
         [STAThread]
         private void userRegisterButtonRegisterActivity_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace ProjectSentinel
             Thread thread = new Thread(threadStart);
             thread.Start();
             this.Close();
-
+            Application.Exit();
         }
     }
 }
