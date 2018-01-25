@@ -41,15 +41,12 @@ namespace ProjectSentinel
         private void userRegisterButtonBack_Click(object sender, EventArgs e)
         {
             LoginActivity ra = new LoginActivity();
-            Application.ThreadExit += (s, es) =>
-            {
-                Application.Run(ra);
-            };
+            ra.Show();
             this.Close();
         }
 
-        public static void AuxiliaryThreadingMethod() {
-            Application.Run(new MainScreenActivity());
+        public static void AuxiliaryThreadingMethod(User user) {
+            Application.Run(new MainScreenActivity(user));
         }
 
         [STAThread]
@@ -77,8 +74,8 @@ namespace ProjectSentinel
                 //Application.Run(activity);
                 //activity.Show();
             };*/
-            ThreadStart threadStart = new ThreadStart(AuxiliaryThreadingMethod);
-            Thread thread = new Thread(threadStart);
+            //ThreadStart threadStart = new ThreadStart();
+            Thread thread = new Thread(() => AuxiliaryThreadingMethod(user));
             thread.Start();
             this.Close();
             Application.Exit();
