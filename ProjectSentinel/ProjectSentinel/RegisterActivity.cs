@@ -60,7 +60,8 @@ namespace ProjectSentinel
             user.LoggedIn = true;
             Properties.Settings.Default.UserLoggedInBetweenSessions = user.LoggedIn;
             Properties.Settings.Default.Save();
-            Properties.Settings.Default.Upgrade();
+            Properties.Settings.Default.Reload();
+            //Properties.Settings.Default.Upgrade();
             /*Application.ThreadExit += (s, es) =>
             {
                 Application.EnableVisualStyles();

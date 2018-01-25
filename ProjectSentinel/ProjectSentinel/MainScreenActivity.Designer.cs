@@ -354,7 +354,7 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.FlashcardControl);
+//            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Controls.Add(this.HomeControl);
             this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);

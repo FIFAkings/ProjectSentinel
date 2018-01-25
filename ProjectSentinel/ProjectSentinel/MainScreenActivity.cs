@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjectSentinel
 {
@@ -28,11 +22,22 @@ namespace ProjectSentinel
             
         }
 
+        public static void AuxiliaryThreadingMethod()
+        {
+            Application.Run(new LoginActivity());
+        }
+
         private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
         {
-            LoginActivity ma = new LoginActivity();
-            ma.Show();
-            this.Hide();
+            Properties.Settings.Default.UserLoggedInBetweenSessions = false;
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+            //Properties.Settings.Default.Upgrade();
+            ThreadStart threadStart = new ThreadStart(AuxiliaryThreadingMethod);
+            Thread thread = new Thread(threadStart);
+            thread.Start();
+            this.Close();
+            Application.Exit();
         }
 
         private void MainScreenActivity_Load_1(object sender, EventArgs e)
