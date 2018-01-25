@@ -55,6 +55,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.HomeControl = new ProjectSentinel.HomeControl();
             this.ToDoControl = new ProjectSentinel.ToDoControl();
+            this.FlashcardControl = new ProjectSentinel.FlashcardControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -83,6 +84,7 @@
             this.userLogoutbuttonMainScreenActivity.FlatAppearance.BorderSize = 0;
             this.userLogoutbuttonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogoutbuttonMainScreenActivity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userLogoutbuttonMainScreenActivity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.userLogoutbuttonMainScreenActivity.Location = new System.Drawing.Point(743, 0);
             this.userLogoutbuttonMainScreenActivity.Name = "userLogoutbuttonMainScreenActivity";
             this.userLogoutbuttonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
@@ -96,6 +98,7 @@
             this.MyProfileButon.FlatAppearance.BorderSize = 0;
             this.MyProfileButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyProfileButon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MyProfileButon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MyProfileButon.Location = new System.Drawing.Point(555, 0);
             this.MyProfileButon.Name = "MyProfileButon";
             this.MyProfileButon.Size = new System.Drawing.Size(94, 59);
@@ -109,6 +112,7 @@
             this.SettingsButton.FlatAppearance.BorderSize = 0;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SettingsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SettingsButton.Location = new System.Drawing.Point(649, 0);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(94, 59);
@@ -122,6 +126,7 @@
             this.NewsButton.FlatAppearance.BorderSize = 0;
             this.NewsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NewsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.NewsButton.Location = new System.Drawing.Point(461, 0);
             this.NewsButton.Name = "NewsButton";
             this.NewsButton.Size = new System.Drawing.Size(94, 59);
@@ -149,6 +154,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(42, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 28);
@@ -316,6 +322,7 @@
             this.FlashcardButton.TabIndex = 5;
             this.FlashcardButton.Text = "   Flashcard";
             this.FlashcardButton.UseVisualStyleBackColor = true;
+            this.FlashcardButton.Click += new System.EventHandler(this.FlashcardButton_Click);
             // 
             // ToDoButton
             // 
@@ -347,6 +354,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Controls.Add(this.HomeControl);
             this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
@@ -356,25 +364,36 @@
             // 
             // HomeControl
             // 
+            this.HomeControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HomeControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeControl.Location = new System.Drawing.Point(0, 0);
             this.HomeControl.Name = "HomeControl";
-            this.HomeControl.Size = new System.Drawing.Size(912, 549);
+            this.HomeControl.Size = new System.Drawing.Size(902, 549);
             this.HomeControl.TabIndex = 1;
-            this.HomeControl.Load += new System.EventHandler(this.HomeControl_Load);
             // 
             // ToDoControl
             // 
+            this.ToDoControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ToDoControl.Location = new System.Drawing.Point(0, 0);
             this.ToDoControl.Name = "ToDoControl";
             this.ToDoControl.Size = new System.Drawing.Size(902, 549);
             this.ToDoControl.TabIndex = 0;
+            this.ToDoControl.Load += new System.EventHandler(this.ToDoControl_Load);
+            // 
+            // FlashcardControl
+            // 
+            this.FlashcardControl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FlashcardControl.Location = new System.Drawing.Point(0, 0);
+            this.FlashcardControl.Name = "FlashcardControl";
+            this.FlashcardControl.Size = new System.Drawing.Size(902, 549);
+            this.FlashcardControl.TabIndex = 2;
             // 
             // MainScreenActivity
             // 
             this.ClientSize = new System.Drawing.Size(1108, 601);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreenActivity";
@@ -435,7 +454,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel9;
-        private ToDoControl ToDoControl;
         private HomeControl HomeControl;
+        private ToDoControl ToDoControl;
+        private FlashcardControl FlashcardControl;
     }
 }

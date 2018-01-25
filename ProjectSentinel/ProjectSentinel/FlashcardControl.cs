@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectSentinel
 {
-    public partial class ToDoControl : UserControl
+    public partial class FlashcardControl : UserControl
     {
-        public ToDoControl()
+        public FlashcardControl()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
