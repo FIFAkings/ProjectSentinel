@@ -11,6 +11,7 @@ namespace ProjectSentinel
         {
             InitializeComponent();
             this.Show();
+            appUser.loadUserFromTheDatabase(Properties.Settings.Default.LoggedUserId);
             HomeControl.BringToFront();
 
         }

@@ -46,5 +46,17 @@ namespace ProjectSentinel.Properties {
                 this["ApplicationFirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int LoggedUserId {
+            get {
+                return ((int)(this["LoggedUserId"]));
+            }
+            set {
+                this["LoggedUserId"] = value;
+            }
+        }
     }
 }
