@@ -25,15 +25,8 @@ namespace ProjectSentinel
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Properties.Settings.Default.UserLoggedInBetweenSessions) { Application.Run(new MainScreenActivity(/*user*/));}
-            else
-            {
-                
-                LoginActivity la = new LoginActivity();
-                la.Show();
-                Application.Run();
-
-            }
+            if (Properties.Settings.Default.UserLoggedInBetweenSessions) {Application.Run(new MainScreenActivity(/*user*/));}
+            else {Application.Run(new LoginActivity());}
         }
     }
 }

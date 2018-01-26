@@ -1,8 +1,11 @@
 ﻿using System;
 using Mono.Data.Sqlite;
+//using System.Configuration;
 
 namespace ProjectSentinel
 {
+
+    //[SettingsSerializeAs(SettingsSerializeAs.Xml)]
     public class User
     {
 
@@ -65,5 +68,64 @@ namespace ProjectSentinel
             databaseConnection.Close();
         }
         
+        public void loadUserFromTheDatabase(int userId)
+        {
+
+            // using Database and its Readers this way is an awful programming practice, but time and consistency of code are forcing us to do it this way
+
+            int auxiliaryAddressId, auxiliaryInstitutionId, auxiliaryInstitutionAddressId;
+            auxiliaryAddressId = auxiliaryInstitutionId = auxiliaryInstitutionAddressId = -1;
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT * FROM USER WHERE ID='"+ userId +"';";
+            SqliteDataReader readerUser = sqlReadCommand.ExecuteReader();
+            while (readerUser.Read())
+            {
+                this.username = readerUser.GetString(1);
+                this.userEmail = readerUser.GetString(2);
+                this.userFirstName = readerUser.GetString(3);
+                this.userLastName = readerUser.GetString(4);
+                this.userPhoneNumber = readerUser.GetString(5);
+                this.userDateOfBirth = readerUser.GetDateTime(6);
+                auxiliaryAddressId = readerUser.GetInt32(7);
+                auxiliaryInstitutionId = readerUser.GetInt32(8);
+            }
+            readerUser.Close();
+            /* We are now entering unnecessarily redundant layers of database interaction, indiciating that our chosen way to do this is not optimal.
+             Nonetheless, we'll keep it this way, so we can save time for more demanding tasks awaiting us in the future. */
+            sqlReadCommand.CommandText = "SELECT * FROM ADDRESS WHERE ID='" + auxiliaryAddressId + "';";
+            SqliteDataReader readerAddress = sqlReadCommand.ExecuteReader();
+            while (readerAddress.Read())
+            {
+                this.userAddress.Street = readerAddress.GetString(1);
+                this.userAddress.City = readerAddress.GetString(2);
+                this.userAddress.Country = readerAddress.GetString(3);
+                this.userAddress.HouseNumber = readerAddress.GetInt32(4);
+                this.userAddress.Zipcode = readerAddress.GetInt32(5);
+            }
+            readerAddress.Close();
+            sqlReadCommand.CommandText = "SELECT * FROM INSTITUTION WHERE ID='" + auxiliaryInstitutionId + "';";
+            SqliteDataReader readerInstitution = sqlReadCommand.ExecuteReader();
+            {
+                this.userInstitution.InstitutionName = readerInstitution.GetString(1);
+                auxiliaryInstitutionAddressId = readerInstitution.GetInt32(2);
+                this.userInstitution.InstitutionEstablished = readerInstitution.GetDateTime(3);
+            }
+            sqlReadCommand.CommandText = "SELECT * FROM ADDRESS WHERE ID='" + auxiliaryInstitutionAddressId + "';";
+            SqliteDataReader readerInstitutionAddress = sqlReadCommand.ExecuteReader();
+            {
+                this.userInstitution.InstitutionAddress.Street = readerInstitutionAddress.GetString(1);
+                this.userInstitution.InstitutionAddress.City = readerInstitutionAddress.GetString(2);
+                this.userInstitution.InstitutionAddress.Country = readerInstitutionAddress.GetString(3);
+                this.userInstitution.InstitutionAddress.HouseNumber = readerInstitutionAddress.GetInt32(4);
+                this.userInstitution.InstitutionAddress.Zipcode = readerInstitutionAddress.GetInt32(5);
+            }
+            readerInstitutionAddress.Close();
+            sqlReadCommand.Dispose();
+            databaseConnection.Close();
+        }
+
     }
 }
