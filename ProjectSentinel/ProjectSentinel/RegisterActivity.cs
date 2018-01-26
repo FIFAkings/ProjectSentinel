@@ -59,6 +59,7 @@ namespace ProjectSentinel
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex+1);
             user.LoggedIn = true;
             Properties.Settings.Default.UserLoggedInBetweenSessions = user.LoggedIn;
+            Properties.Settings.Default.LoggedUserId = User.getUserDatabaseRecordID();
             Properties.Settings.Default.Save();
             Properties.Settings.Default.Reload();
             //Properties.Settings.Default.Upgrade();

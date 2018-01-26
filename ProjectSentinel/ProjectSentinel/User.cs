@@ -28,6 +28,8 @@ namespace ProjectSentinel
         public Institution UserInstitution { get { return this.userInstitution; } set { this.userInstitution = value; } }
         public bool LoggedIn { get { return this.loggedIn; } set { this.loggedIn = value; } }
 
+        public User() { }
+
         public User(String un, String ufn, String uln, String pw, String pn, String email, DateTime dob, Address address, Institution inst)
         {
             username = un;
@@ -62,13 +64,13 @@ namespace ProjectSentinel
             sqlUserTableCommand.ExecuteNonQuery();
             sqlUserTableCommand.Dispose();
             SqliteCommand sqlInsertUserCommand = databaseConnection.CreateCommand();
-            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+this.userDateOfBirth+"', '"+addressId+"', '"+institutionId+"');";
+            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+this.userDateOfBirth+"', '"+addressId+"', '"+institutionId+"');";
             sqlInsertUserCommand.ExecuteNonQuery();
             sqlInsertUserCommand.Dispose();
             databaseConnection.Close();
         }
         
-        public void loadUserFromTheDatabase(int userId)
+        public void loadUserFromDatabase(int userId)
         {
 
             // using Database and its Readers this way is an awful programming practice, but time and consistency of code are forcing us to do it this way
@@ -88,7 +90,7 @@ namespace ProjectSentinel
                 this.userFirstName = readerUser.GetString(3);
                 this.userLastName = readerUser.GetString(4);
                 this.userPhoneNumber = readerUser.GetString(5);
-                this.userDateOfBirth = readerUser.GetDateTime(6);
+                this.userDateOfBirth = Convert.ToDateTime(readerUser.GetString(6));
                 auxiliaryAddressId = readerUser.GetInt32(7);
                 auxiliaryInstitutionId = readerUser.GetInt32(8);
             }
@@ -99,6 +101,7 @@ namespace ProjectSentinel
             SqliteDataReader readerAddress = sqlReadCommand.ExecuteReader();
             while (readerAddress.Read())
             {
+                this.userAddress = new Address(); 
                 this.userAddress.Street = readerAddress.GetString(1);
                 this.userAddress.City = readerAddress.GetString(2);
                 this.userAddress.Country = readerAddress.GetString(3);
@@ -108,14 +111,19 @@ namespace ProjectSentinel
             readerAddress.Close();
             sqlReadCommand.CommandText = "SELECT * FROM INSTITUTION WHERE ID='" + auxiliaryInstitutionId + "';";
             SqliteDataReader readerInstitution = sqlReadCommand.ExecuteReader();
+            while(readerInstitution.Read())
             {
+                this.userInstitution = new Institution();
                 this.userInstitution.InstitutionName = readerInstitution.GetString(1);
                 auxiliaryInstitutionAddressId = readerInstitution.GetInt32(2);
-                this.userInstitution.InstitutionEstablished = readerInstitution.GetDateTime(3);
+                this.userInstitution.InstitutionEstablished = Convert.ToDateTime(readerInstitution.GetString(3));
             }
+            readerInstitution.Close();
             sqlReadCommand.CommandText = "SELECT * FROM ADDRESS WHERE ID='" + auxiliaryInstitutionAddressId + "';";
             SqliteDataReader readerInstitutionAddress = sqlReadCommand.ExecuteReader();
+            while(readerInstitutionAddress.Read())
             {
+                this.userInstitution.InstitutionAddress = new Address();
                 this.userInstitution.InstitutionAddress.Street = readerInstitutionAddress.GetString(1);
                 this.userInstitution.InstitutionAddress.City = readerInstitutionAddress.GetString(2);
                 this.userInstitution.InstitutionAddress.Country = readerInstitutionAddress.GetString(3);
@@ -125,6 +133,22 @@ namespace ProjectSentinel
             readerInstitutionAddress.Close();
             sqlReadCommand.Dispose();
             databaseConnection.Close();
+        }
+
+        public static int getUserDatabaseRecordID()
+        {
+            int id = -1;
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT ID FROM USER WHERE ID=(SELECT MAX(ID) FROM USER);";
+            SqliteDataReader reader = sqlReadCommand.ExecuteReader();
+            while (reader.Read()) { id = Convert.ToInt32(reader.GetValue(0)); }
+            sqlReadCommand.Dispose();
+            reader.Close();
+            databaseConnection.Close();
+            return id;
         }
 
     }

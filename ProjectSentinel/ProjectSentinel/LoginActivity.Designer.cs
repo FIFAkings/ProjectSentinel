@@ -33,7 +33,6 @@
             this.userPasswrodLabelLoginActivity = new System.Windows.Forms.Label();
             this.userPasswordInputLoginActivity = new System.Windows.Forms.TextBox();
             this.userUsernameInputLoginActivity = new System.Windows.Forms.TextBox();
-            this.forgotPasswordLabelLoginActivity = new System.Windows.Forms.Label();
             this.userLoginButtonLoginActivity = new System.Windows.Forms.Button();
             this.userRegisterButtonLoginActivity = new System.Windows.Forms.Button();
             this.ProjectSentinelTempLoginActivity = new System.Windows.Forms.PictureBox();
@@ -47,7 +46,7 @@
             this.userUsernameLabelLoginActivity.Location = new System.Drawing.Point(31, 56);
             this.userUsernameLabelLoginActivity.Name = "userUsernameLabelLoginActivity";
             this.userUsernameLabelLoginActivity.Size = new System.Drawing.Size(61, 13);
-            this.userUsernameLabelLoginActivity.TabIndex = 0;
+            this.userUsernameLabelLoginActivity.TabIndex = 5;
             this.userUsernameLabelLoginActivity.Text = "Username: ";
             // 
             // userPasswrodLabelLoginActivity
@@ -56,40 +55,30 @@
             this.userPasswrodLabelLoginActivity.Location = new System.Drawing.Point(31, 99);
             this.userPasswrodLabelLoginActivity.Name = "userPasswrodLabelLoginActivity";
             this.userPasswrodLabelLoginActivity.Size = new System.Drawing.Size(59, 13);
-            this.userPasswrodLabelLoginActivity.TabIndex = 1;
+            this.userPasswrodLabelLoginActivity.TabIndex = 6;
             this.userPasswrodLabelLoginActivity.Text = "Password: ";
-            //this.userPasswrodLabelLoginActivity.Click += new System.EventHandler(this.label2_Click);
             // 
             // userPasswordInputLoginActivity
             // 
             this.userPasswordInputLoginActivity.Location = new System.Drawing.Point(96, 96);
             this.userPasswordInputLoginActivity.Name = "userPasswordInputLoginActivity";
             this.userPasswordInputLoginActivity.Size = new System.Drawing.Size(146, 20);
-            this.userPasswordInputLoginActivity.TabIndex = 2;
+            this.userPasswordInputLoginActivity.TabIndex = 1;
+            this.userPasswordInputLoginActivity.UseSystemPasswordChar = true;
             // 
             // userUsernameInputLoginActivity
             // 
             this.userUsernameInputLoginActivity.Location = new System.Drawing.Point(96, 53);
             this.userUsernameInputLoginActivity.Name = "userUsernameInputLoginActivity";
             this.userUsernameInputLoginActivity.Size = new System.Drawing.Size(146, 20);
-            this.userUsernameInputLoginActivity.TabIndex = 3;
-            // 
-            // forgotPasswordLabelLoginActivity
-            // 
-            this.forgotPasswordLabelLoginActivity.AutoSize = true;
-            this.forgotPasswordLabelLoginActivity.Location = new System.Drawing.Point(125, 119);
-            this.forgotPasswordLabelLoginActivity.Name = "forgotPasswordLabelLoginActivity";
-            this.forgotPasswordLabelLoginActivity.Size = new System.Drawing.Size(117, 13);
-            this.forgotPasswordLabelLoginActivity.TabIndex = 4;
-            this.forgotPasswordLabelLoginActivity.Text = "Forgot your password ?";
-            //this.forgotPasswordLabelLoginActivity.Click += new System.EventHandler(this.label3_Click);
+            this.userUsernameInputLoginActivity.TabIndex = 0;
             // 
             // userLoginButtonLoginActivity
             // 
             this.userLoginButtonLoginActivity.Location = new System.Drawing.Point(34, 190);
             this.userLoginButtonLoginActivity.Name = "userLoginButtonLoginActivity";
             this.userLoginButtonLoginActivity.Size = new System.Drawing.Size(87, 23);
-            this.userLoginButtonLoginActivity.TabIndex = 5;
+            this.userLoginButtonLoginActivity.TabIndex = 2;
             this.userLoginButtonLoginActivity.Text = "Log In";
             this.userLoginButtonLoginActivity.UseVisualStyleBackColor = true;
             this.userLoginButtonLoginActivity.Click += new System.EventHandler(this.userLoginButtonLoginActivity_Click);
@@ -99,7 +88,7 @@
             this.userRegisterButtonLoginActivity.Location = new System.Drawing.Point(155, 190);
             this.userRegisterButtonLoginActivity.Name = "userRegisterButtonLoginActivity";
             this.userRegisterButtonLoginActivity.Size = new System.Drawing.Size(87, 23);
-            this.userRegisterButtonLoginActivity.TabIndex = 6;
+            this.userRegisterButtonLoginActivity.TabIndex = 3;
             this.userRegisterButtonLoginActivity.Text = "Register";
             this.userRegisterButtonLoginActivity.UseVisualStyleBackColor = true;
             this.userRegisterButtonLoginActivity.Click += new System.EventHandler(this.userRegisterButtonLoginActivity_Click);
@@ -120,7 +109,7 @@
             this.notAMemberLabelLoginActivity.Location = new System.Drawing.Point(160, 174);
             this.notAMemberLabelLoginActivity.Name = "notAMemberLabelLoginActivity";
             this.notAMemberLabelLoginActivity.Size = new System.Drawing.Size(82, 13);
-            this.notAMemberLabelLoginActivity.TabIndex = 8;
+            this.notAMemberLabelLoginActivity.TabIndex = 4;
             this.notAMemberLabelLoginActivity.Text = "Not a member ?";
             // 
             // LoginActivity
@@ -132,7 +121,6 @@
             this.Controls.Add(this.ProjectSentinelTempLoginActivity);
             this.Controls.Add(this.userRegisterButtonLoginActivity);
             this.Controls.Add(this.userLoginButtonLoginActivity);
-            this.Controls.Add(this.forgotPasswordLabelLoginActivity);
             this.Controls.Add(this.userUsernameInputLoginActivity);
             this.Controls.Add(this.userPasswordInputLoginActivity);
             this.Controls.Add(this.userPasswrodLabelLoginActivity);
@@ -140,7 +128,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginActivity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Log In | Project Sentinel";
             ((System.ComponentModel.ISupportInitialize)(this.ProjectSentinelTempLoginActivity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,7 +140,6 @@
         private System.Windows.Forms.Label userPasswrodLabelLoginActivity;
         private System.Windows.Forms.TextBox userPasswordInputLoginActivity;
         private System.Windows.Forms.TextBox userUsernameInputLoginActivity;
-        private System.Windows.Forms.Label forgotPasswordLabelLoginActivity;
         private System.Windows.Forms.Button userLoginButtonLoginActivity;
         private System.Windows.Forms.Button userRegisterButtonLoginActivity;
         private System.Windows.Forms.PictureBox ProjectSentinelTempLoginActivity;

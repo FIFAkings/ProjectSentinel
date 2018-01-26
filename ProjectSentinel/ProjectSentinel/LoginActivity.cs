@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ProjectSentinel
 {
     public partial class LoginActivity : Form
     {
+        int userId = -1;
+        User appUser = new User();
         public LoginActivity()
         {
             InitializeComponent();
@@ -26,12 +22,19 @@ namespace ProjectSentinel
             
         }
 
+        public static void AuxiliaryThreadingMethod(User user)
+        {
+            Application.Run(new MainScreenActivity(user));
+        }
+
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
-            MainScreenActivity ma = new MainScreenActivity();
+            appUser.loadUserFromDatabase(userId);
+            Thread thread = new Thread(() => AuxiliaryThreadingMethod(appUser));
+            thread.Start();
             this.Close();
-            ma.Show();            
-            }
+            Application.Exit();
         }
+    }
 }
 
