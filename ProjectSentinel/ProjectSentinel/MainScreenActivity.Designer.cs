@@ -354,7 +354,6 @@
             // 
             // panel9
             // 
-//            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Controls.Add(this.HomeControl);
             this.panel9.Controls.Add(this.ToDoControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
@@ -398,7 +397,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreenActivity";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Project Sentinel";
+            this.Text = "You Can Learn Anything | Project Sentinel";
             this.Load += new System.EventHandler(this.MainScreenActivity_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);

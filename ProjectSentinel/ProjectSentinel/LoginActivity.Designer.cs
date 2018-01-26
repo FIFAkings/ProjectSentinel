@@ -128,6 +128,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginActivity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Log In | Project Sentinel";
             ((System.ComponentModel.ISupportInitialize)(this.ProjectSentinelTempLoginActivity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
