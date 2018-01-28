@@ -11,7 +11,7 @@ namespace ProjectSentinel
         /// </summary>
     static void Main()
         {
-            if (Properties.Settings.Default.ApplicationFirstRun)
+            if(Properties.Settings.Default.ApplicationFirstRun)
             {
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstitutionAddresses();
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstituions();

@@ -117,8 +117,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 260);
-            this.Controls.Add(this.notAMemberLabelLoginActivity);
             this.Controls.Add(this.ProjectSentinelTempLoginActivity);
+            this.Controls.Add(this.notAMemberLabelLoginActivity);
             this.Controls.Add(this.userRegisterButtonLoginActivity);
             this.Controls.Add(this.userLoginButtonLoginActivity);
             this.Controls.Add(this.userUsernameInputLoginActivity);

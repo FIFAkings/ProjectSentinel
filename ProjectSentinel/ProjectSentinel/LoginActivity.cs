@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -30,10 +31,18 @@ namespace ProjectSentinel
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
             appUser.loadUserFromDatabase(userId);
-            Thread thread = new Thread(() => AuxiliaryThreadingMethod(appUser));
-            thread.Start();
-            this.Close();
-            Application.Exit();
+            if(appUser.UserPassword == Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), RegisterActivity.SaltArray)))
+            {
+                Thread thread = new Thread(() => AuxiliaryThreadingMethod(appUser));
+                thread.Start();
+                this.Close();
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("Username or Password do not match our records. Try again or register.", "Failed to Log In | Project Sentinel");
+            }
+            
         }
     }
 }

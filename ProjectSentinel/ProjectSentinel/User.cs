@@ -19,7 +19,7 @@ namespace ProjectSentinel
         public String Username { get { return this.username; } set { this.username = value; } }
         public String UserFirstName { get { return this.userFirstName; } set { this.userFirstName = value; } }
         public String UserLastName { get { return this.userLastName; } set { this.userLastName = value; } }
-        public String UserPassword { get { return this.userPassword; } set { this.userPassword = value; } }
+        public String UserPassword { get { return this.userPassword; }  set { this.userPassword = value; } }
         public String UserPhoneNumber { get { return this.userPhoneNumber; } set { this.userPhoneNumber = value; } }
         public String UserEmail { get { return this.userEmail; } set { this.userEmail = value; } }
         public DateTime UserDateOfBirth { get { return this.userDateOfBirth; } set { this.userDateOfBirth = value; } }
@@ -60,11 +60,11 @@ namespace ProjectSentinel
             SqliteConnection databaseConnection = new SqliteConnection(cn);
             databaseConnection.Open();
             SqliteCommand sqlUserTableCommand = databaseConnection.CreateCommand();
-            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) unique not null, userEmail varchar(77) not null, userFirstName varchar(111), userLastName varchar(333), userPhoneNumber varchar(21), userDateOfBirth datetime, address_id integer not null, institution_id integer not null, foreign key (address_id) references address(id), foreign key (institution_id) references institution(id));";
+            sqlUserTableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS USER (id integer primary key autoincrement, username varchar(33) unique not null, userEmail varchar(77) not null, userPassword varchar(999) not null, userFirstName varchar(111), userLastName varchar(333), userPhoneNumber varchar(21), userDateOfBirth datetime, address_id integer not null, institution_id integer not null, foreign key (address_id) references address(id), foreign key (institution_id) references institution(id));";
             sqlUserTableCommand.ExecuteNonQuery();
             sqlUserTableCommand.Dispose();
             SqliteCommand sqlInsertUserCommand = databaseConnection.CreateCommand();
-            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+this.userDateOfBirth+"', '"+addressId+"', '"+institutionId+"');";
+            sqlInsertUserCommand.CommandText = "INSERT INTO USER (username, userEmail, userPassword, userFirstName, userLastName, userPhoneNumber, userDateOfBirth, address_id, institution_id) VALUES ('"+this.username+"', '"+this.userEmail+"', '"+ this.userPassword +"', '"+this.userFirstName+"', '"+this.userLastName+"', '"+this.userPhoneNumber+"', '"+this.userDateOfBirth+"', '"+addressId+"', '"+institutionId+"');";
             sqlInsertUserCommand.ExecuteNonQuery();
             sqlInsertUserCommand.Dispose();
             databaseConnection.Close();
@@ -87,12 +87,13 @@ namespace ProjectSentinel
             {
                 this.username = readerUser.GetString(1);
                 this.userEmail = readerUser.GetString(2);
-                this.userFirstName = readerUser.GetString(3);
-                this.userLastName = readerUser.GetString(4);
-                this.userPhoneNumber = readerUser.GetString(5);
-                this.userDateOfBirth = Convert.ToDateTime(readerUser.GetString(6));
-                auxiliaryAddressId = readerUser.GetInt32(7);
-                auxiliaryInstitutionId = readerUser.GetInt32(8);
+                this.userPassword = readerUser.GetString(3);
+                this.userFirstName = readerUser.GetString(4);
+                this.userLastName = readerUser.GetString(5);
+                this.userPhoneNumber = readerUser.GetString(6);
+                this.userDateOfBirth = Convert.ToDateTime(readerUser.GetString(7));
+                auxiliaryAddressId = readerUser.GetInt32(8);
+                auxiliaryInstitutionId = readerUser.GetInt32(9);
             }
             readerUser.Close();
             /* We are now entering unnecessarily redundant layers of database interaction, indiciating that our chosen way to do this is not optimal.
@@ -150,6 +151,6 @@ namespace ProjectSentinel
             databaseConnection.Close();
             return id;
         }
-
-    }
+        }
 }
+

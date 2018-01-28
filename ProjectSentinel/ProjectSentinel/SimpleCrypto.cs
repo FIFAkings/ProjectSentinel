@@ -13,7 +13,7 @@ namespace ProjectSentinel
         // code copied from:
         // Dorrans, B.: Beginning ASP.NET Security
 
-        static byte[] GenerateSaltedHash(byte[] plainText, byte[] salt)
+        public static byte[] GenerateSaltedHash(byte[] plainText, byte[] salt)
         {
             HashAlgorithm algorithm = new SHA256Managed();
 
@@ -48,6 +48,23 @@ namespace ProjectSentinel
             }
 
             return true;
+        }
+
+        public static byte[] getSalt()
+        {
+            var random = new RNGCryptoServiceProvider();
+
+            // Maximum length of salt
+            int max_length = 32;
+
+            // Empty salt array
+            byte[] salt = new byte[max_length];
+
+            // Build the random bytes
+            random.GetNonZeroBytes(salt);
+
+            // Return the string encoded salt
+            return salt;
         }
     }
 }
