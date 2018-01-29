@@ -137,7 +137,7 @@ namespace ProjectSentinel
             databaseConnection.Close();
         }
 
-        public static int getUserDatabaseRecordID()
+        public static int getLastUserDatabaseRecordID()
         {
             int id = -1;
             String cn = "URI=file:ProjectSentinel.db";

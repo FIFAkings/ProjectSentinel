@@ -29,10 +29,16 @@ namespace ProjectSentinel
 
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), SimpleCrypto.Salt)), User.loadPasswordFromDatabase(userUsernameInputLoginActivity.Text));
+            // MessageBox initally used for debugging purposes:
+            // MessageBox.Show(Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), SimpleCrypto.Salt)), User.loadPasswordFromDatabase(userUsernameInputLoginActivity.Text));
             if (Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), SimpleCrypto.Salt)) == User.loadPasswordFromDatabase(userUsernameInputLoginActivity.Text))
             {
                 appUser.loadUserFromDatabase(User.getUserDatabaseRecordLoginId(userUsernameInputLoginActivity.Text));
+                appUser.LoggedIn = true;
+                Properties.Settings.Default.UserLoggedInBetweenSessions = appUser.LoggedIn;
+                Properties.Settings.Default.LoggedUserId = User.getUserDatabaseRecordLoginId(userUsernameInputLoginActivity.Text);
+                Properties.Settings.Default.Save();
+                Properties.Settings.Default.Reload();
                 Thread thread = new Thread(() => AuxiliaryThreadingMethod(appUser));
                 thread.Start();
                 this.Close();

@@ -16,11 +16,19 @@ namespace ProjectSentinel
         public RegisterActivity()
         {
             InitializeComponent();
+            this.FormClosing += RegisterActivity_FormClosing;
         }
 
         private void RegisterActivity_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegisterActivity_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //  MessageBox used for debugging purposes:
+            //  MessageBox.Show("You are closing.","CLOSE MESSAGE:");
+            Application.Exit();
         }
 
         private void userHouseNumberNumericRegisterActivity_ValueChanged(object sender, EventArgs e)
@@ -29,7 +37,7 @@ namespace ProjectSentinel
             if (userHouseNumberNumericRegisterActivity.Value >= 1000000000)
             {
                 //changed my mind, didn't change the object name (this has nothing to do with Silicon Valley)
-                mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Text = "Hopefully not. \nSM: INGbTATMOUx(^)E.";
+                mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Text = "NO. \nSM: INGbTATMOUx(^)E.";
                 t.Tick += (s, ea) =>
                 {
                     mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Hide();
@@ -115,7 +123,7 @@ namespace ProjectSentinel
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex + 1);
             user.LoggedIn = true;
             Properties.Settings.Default.UserLoggedInBetweenSessions = user.LoggedIn;
-            Properties.Settings.Default.LoggedUserId = User.getUserDatabaseRecordID();
+            Properties.Settings.Default.LoggedUserId = User.getLastUserDatabaseRecordID();
             Properties.Settings.Default.Save();
             Properties.Settings.Default.Reload();
             //Properties.Settings.Default.Upgrade();
