@@ -10,6 +10,8 @@ namespace ProjectSentinel
     public static class SimpleCrypto
     {
 
+        public static byte[] Salt = Encoding.ASCII.GetBytes("p_aScMb/Tthul");
+
         // code copied from:
         // Dorrans, B.: Beginning ASP.NET Security
 
@@ -48,23 +50,6 @@ namespace ProjectSentinel
             }
 
             return true;
-        }
-
-        public static byte[] getSalt()
-        {
-            var random = new RNGCryptoServiceProvider();
-
-            // Maximum length of salt
-            int max_length = 32;
-
-            // Empty salt array
-            byte[] salt = new byte[max_length];
-
-            // Build the random bytes
-            random.GetNonZeroBytes(salt);
-
-            // Return the string encoded salt
-            return salt;
         }
     }
 }

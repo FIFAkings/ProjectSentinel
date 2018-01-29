@@ -7,7 +7,6 @@ namespace ProjectSentinel
 {
     public partial class LoginActivity : Form
     {
-        int userId = -1;
         User appUser = new User();
         public LoginActivity()
         {
@@ -30,9 +29,10 @@ namespace ProjectSentinel
 
         private void userLoginButtonLoginActivity_Click(object sender, EventArgs e)
         {
-            appUser.loadUserFromDatabase(userId);
-            if(appUser.UserPassword == Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), RegisterActivity.SaltArray)))
+            MessageBox.Show(Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), SimpleCrypto.Salt)), User.loadPasswordFromDatabase(userUsernameInputLoginActivity.Text));
+            if (Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputLoginActivity.Text), SimpleCrypto.Salt)) == User.loadPasswordFromDatabase(userUsernameInputLoginActivity.Text))
             {
+                appUser.loadUserFromDatabase(User.getUserDatabaseRecordLoginId(userUsernameInputLoginActivity.Text));
                 Thread thread = new Thread(() => AuxiliaryThreadingMethod(appUser));
                 thread.Start();
                 this.Close();

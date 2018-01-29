@@ -1,5 +1,6 @@
 ﻿using System;
 using Mono.Data.Sqlite;
+using System.Text;
 //using System.Configuration;
 
 namespace ProjectSentinel
@@ -151,6 +152,82 @@ namespace ProjectSentinel
             databaseConnection.Close();
             return id;
         }
+
+        public static int getUserDatabaseRecordLoginId(string username)
+        {
+            int id = -1;
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT ID FROM USER WHERE username ='"+username+"';";
+            SqliteDataReader reader = sqlReadCommand.ExecuteReader();
+            while (reader.Read()) { id = Convert.ToInt32(reader.GetValue(0)); }
+            sqlReadCommand.Dispose();
+            reader.Close();
+            databaseConnection.Close();
+            return id;
         }
+
+        public static bool usernameExists(string username)
+        {
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand command = databaseConnection.CreateCommand();
+            command.CommandText = "SELECT COUNT(*) FROM USER WHERE username='" + username + "';";
+            var result = command.ExecuteScalar();
+            if (result != null)
+            {
+                databaseConnection.Close();
+                command.Dispose();
+                return true;
+            }
+            else
+            {
+                command.Dispose();
+                databaseConnection.Close();
+                return false;
+            }
+        }
+
+        public static bool emailExists(string email)
+        {
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand command = databaseConnection.CreateCommand();
+            command.CommandText = "SELECT COUNT(*) FROM USER WHERE userEmail='" + email + "';";
+            var result = command.ExecuteScalar();
+            if (result != null)
+            {
+                databaseConnection.Close();
+                command.Dispose();
+                return true;
+            }
+            else
+            {
+                command.Dispose();
+                databaseConnection.Close();
+                return false;
+            }
+        }
+
+        public static string loadPasswordFromDatabase(string username)
+        {
+            string password = "";
+            String cn = "URI=file:ProjectSentinel.db";
+            SqliteConnection databaseConnection = new SqliteConnection(cn);
+            databaseConnection.Open();
+            SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
+            sqlReadCommand.CommandText = "SELECT * FROM USER WHERE USERNAME = '"+username+"';";
+            SqliteDataReader reader = sqlReadCommand.ExecuteReader();
+            while (reader.Read()) { password = Convert.ToString(reader.GetValue(3)); }
+            sqlReadCommand.Dispose();
+            reader.Close();
+            databaseConnection.Close();
+            return password;
+        }
+    }
 }
 

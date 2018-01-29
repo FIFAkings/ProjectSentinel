@@ -12,7 +12,6 @@ namespace ProjectSentinel
         Institution userAcademicInstitution;
         Address userAddress;
         User user;
-        public static byte[] SaltArray = SimpleCrypto.getSalt();
 
         public RegisterActivity()
         {
@@ -78,9 +77,9 @@ namespace ProjectSentinel
                 {
                     if (isValidEmail(userEmailInputRegisterActivity.Text))
                     {
-                        if (emailExists(userEmailInputRegisterActivity.Text))
+                        if (User.emailExists(userEmailInputRegisterActivity.Text))
                         {
-                            if (usernameExists(userUserNameInputRegisterActivity.Text))
+                            if (User.usernameExists(userUserNameInputRegisterActivity.Text))
                             {
                                 registerAndLogIn();
                             }
@@ -112,7 +111,7 @@ namespace ProjectSentinel
             userAddress = new Address(userAddressStreetInputRegisterActivity.Text, userAddressCityInputRegisterActivity.Text, userAddressCountryInputRegisterActivity.Text, (ushort)Int32.Parse(userHouseNumberNumericRegisterActivity.Value.ToString()), Int32.Parse(userAddressZipcodeInputRegisterActivity.Text.ToString()));
             userAddress.addAddressToDatabase();
             userAcademicInstitution = new Institution(Institution.getInstitutionName(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionAddress(userInstitutionComboBoxRegisterActivity.SelectedIndex), Institution.getInstitutionFoundingDate(userInstitutionComboBoxRegisterActivity.SelectedIndex));
-            user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputRegisterActivity.Text), SimpleCrypto.getSalt())), userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
+            user = new User(userUserNameInputRegisterActivity.Text, userFirstNameInputRegisterActivity.Text, userLastNameInputRegisterActivity.Text, Convert.ToBase64String(SimpleCrypto.GenerateSaltedHash(Encoding.ASCII.GetBytes(userPasswordInputRegisterActivity.Text), SimpleCrypto.Salt)), userPhoneNumberInputRegisterActivity.Text, userEmailInputRegisterActivity.Text, userDOBInputRegisterActivity.Value, userAddress, userAcademicInstitution);
             user.addUserToDatabase(userAddress.getAddressDatabaseRecordID(), userInstitutionComboBoxRegisterActivity.SelectedIndex + 1);
             user.LoggedIn = true;
             Properties.Settings.Default.UserLoggedInBetweenSessions = user.LoggedIn;
@@ -140,49 +139,6 @@ namespace ProjectSentinel
             Application.Exit();
         }
 
-        bool usernameExists(string username)
-        {
-            String cn = "URI=file:ProjectSentinel.db";
-            SqliteConnection databaseConnection = new SqliteConnection(cn);
-            databaseConnection.Open();
-            SqliteCommand command = databaseConnection.CreateCommand();
-            command.CommandText = "SELECT COUNT(*) FROM USER WHERE username='" + username + "';";
-            var result = command.ExecuteScalar();
-            if (result != null)
-            {
-                databaseConnection.Close();
-                command.Dispose();
-                return true;
-            }
-            else
-            {
-                command.Dispose();
-                databaseConnection.Close();
-                return false;
-            }       
-        }
-
-        bool emailExists(string email)
-        {
-            String cn = "URI=file:ProjectSentinel.db";
-            SqliteConnection databaseConnection = new SqliteConnection(cn);
-            databaseConnection.Open();
-            SqliteCommand command = databaseConnection.CreateCommand();
-            command.CommandText = "SELECT COUNT(*) FROM USER WHERE userEmail='" + email + "';";
-            var result = command.ExecuteScalar();
-            if (result != null)
-            {
-                databaseConnection.Close();
-                command.Dispose();
-                return true;
-            }
-            else
-            {
-                command.Dispose();
-                databaseConnection.Close();
-                return false;
-            }
-        }
 
         // This method is fairly limited in its function, permitting some invalid strings to pass as valid, but it is better than having no control at all.
         bool isValidEmail(string email)
