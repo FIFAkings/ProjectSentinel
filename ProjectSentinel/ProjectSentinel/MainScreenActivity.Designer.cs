@@ -72,9 +72,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(842, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(843, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -354,8 +354,10 @@
             // 
             // panel9
             // 
+//            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Controls.Add(this.HomeControl);
             this.panel9.Controls.Add(this.ToDoControl);
+            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(902, 549);
