@@ -72,9 +72,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(843, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(842, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(51, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -354,10 +354,8 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Controls.Add(this.HomeControl);
             this.panel9.Controls.Add(this.ToDoControl);
-            this.panel9.Controls.Add(this.FlashcardControl);
             this.panel9.Location = new System.Drawing.Point(206, 53);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(902, 549);
@@ -399,7 +397,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreenActivity";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Project Sentinel";
+            this.Text = "You Can Learn Anything | Project Sentinel";
             this.Load += new System.EventHandler(this.MainScreenActivity_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);

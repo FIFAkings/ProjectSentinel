@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using System.IO;
+using System;
 
 namespace ProjectSentinel
 {
@@ -11,10 +9,9 @@ namespace ProjectSentinel
         /// <summary>
         /// Welcome to Project Sentinel v0.1! We've been procrastinating on developing it for a long time, but we're doing our best to make up for it.
         /// </summary>
-        [STAThread]
-        static void Main()
+    static void Main()
         {
-            if (Properties.Settings.Default.ApplicationFirstRun)
+            if(Properties.Settings.Default.ApplicationFirstRun)
             {
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstitutionAddresses();
                 DefaultDatabaseValues.fillDatabaseWithDefaultInstituions();

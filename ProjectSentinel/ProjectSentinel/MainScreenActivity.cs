@@ -6,12 +6,12 @@ namespace ProjectSentinel
 {
     public partial class MainScreenActivity : Form
     {
-        User appUser;
+        User appUser = new User();
         public MainScreenActivity()
         {
             InitializeComponent();
             this.Show();
-            appUser.loadUserFromTheDatabase(Properties.Settings.Default.LoggedUserId);
+            appUser.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
             HomeControl.BringToFront();
 
         }

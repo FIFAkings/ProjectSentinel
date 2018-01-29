@@ -15,6 +15,7 @@ namespace ProjectSentinel
         public int HouseNumber { get { return this.houseNumber; } set { this.houseNumber = value; } }
         public int Zipcode { get { return this.zipcode; } set { this.zipcode = value; } }
 
+        public Address() { }
 
         public Address(string str, string cty, string ctry, int numb, int zip)
         {
@@ -52,7 +53,7 @@ namespace ProjectSentinel
         }
 
        public int getAddressDatabaseRecordID() {
-            int id = 0;
+            int id = -1;
             String cn = "URI=file:ProjectSentinel.db";
             SqliteConnection databaseConnection = new SqliteConnection(cn);
             databaseConnection.Open();
@@ -62,6 +63,7 @@ namespace ProjectSentinel
             while (reader.Read()) { id = Convert.ToInt32(reader.GetValue(0)); }
             sqlReadCommand.Dispose();
             databaseConnection.Close();
+            reader.Close();
             return id;
         }
 
