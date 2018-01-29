@@ -40,7 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -106,11 +106,29 @@
     <Compile Include="Course.cs" />
     <Compile Include="Faculty.cs" />
     <Compile Include="Flashcard.cs" />
+    <Compile Include="FlashcardBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FlashcardBack.Designer.cs">
+      <DependentUpon>FlashcardBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="FlashcardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FlashcardControl.Designer.cs">
       <DependentUpon>FlashcardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlashcardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashcardForm.Designer.cs">
+      <DependentUpon>FlashcardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlashcardFront.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FlashcardFront.Designer.cs">
+      <DependentUpon>FlashcardFront.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeControl.cs">
       <SubType>UserControl</SubType>
@@ -147,9 +165,24 @@
     <Compile Include="ToDoControl.Designer.cs">
       <DependentUpon>ToDoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToDoform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToDoform.Designer.cs">
+      <DependentUpon>ToDoform.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="FlashcardBack.resx">
+      <DependentUpon>FlashcardBack.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlashcardControl.resx">
       <DependentUpon>FlashcardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashcardForm.resx">
+      <DependentUpon>FlashcardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashcardFront.resx">
+      <DependentUpon>FlashcardFront.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
@@ -174,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToDoControl.resx">
       <DependentUpon>ToDoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoform.resx">
+      <DependentUpon>ToDoform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

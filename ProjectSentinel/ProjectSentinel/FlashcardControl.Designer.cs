@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlashcardControl));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Create = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -47,16 +47,6 @@
             this.panel1.Size = new System.Drawing.Size(180, 549);
             this.panel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(15, 372);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Recently Used";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -67,8 +57,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Cards";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(15, 372);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Recently Used";
+            // 
             // Create
             // 
+            this.Create.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Create.FlatAppearance.BorderSize = 0;
             this.Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Create.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -78,9 +79,11 @@
             this.Create.TabIndex = 3;
             this.Create.Text = "            Create";
             this.Create.UseVisualStyleBackColor = true;
+            this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(80, 92);
             this.pictureBox1.Name = "pictureBox1";

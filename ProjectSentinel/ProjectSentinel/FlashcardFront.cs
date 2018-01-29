@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectSentinel
 {
-    public partial class FlashcardControl : UserControl
+    public partial class FlashcardFront : UserControl
     {
-        public FlashcardControl()
+        public FlashcardFront()
         {
             InitializeComponent();
-        }
-
-        private void Create_Click(object sender, EventArgs e)
-        {
-            FlashcardForm ra = new FlashcardForm();
-            ra.Show();
         }
     }
 }

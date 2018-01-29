@@ -12,7 +12,7 @@ namespace ProjectSentinel
             InitializeComponent();
             this.Show();
             appUser.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
-            HomeControl.BringToFront();
+            HomeControlMainScreenActivity.BringToFront();
             this.FormClosing += MainScreenActivity_FormClosing;
         }
 
@@ -90,16 +90,16 @@ namespace ProjectSentinel
 
         private void ToDoButton_Click(object sender, EventArgs e)
         {
-            SidePanel1.Height = ToDoButton.Height;
-            SidePanel1.Top = ToDoButton.Top;
-            ToDoControl.BringToFront();
+            SidePanel1.Height = ToDoButtonMainScreenActivity.Height;
+            SidePanel1.Top = ToDoButtonMainScreenActivity.Top;
+            ToDoControlMainScreenActivity.BringToFront();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            SidePanel1.Height = HomeButton.Height;
-            SidePanel1.Top = HomeButton.Top;
-            HomeControl.BringToFront();
+            SidePanel1.Height = HomeButtonMainScreenActivity.Height;
+            SidePanel1.Top = HomeButtonMainScreenActivity.Top;
+            HomeControlMainScreenActivity.BringToFront();
             
         }
 
@@ -110,9 +110,9 @@ namespace ProjectSentinel
 
         private void FlashcardButton_Click(object sender, EventArgs e)
         {
-            SidePanel1.Height = FlashcardButton.Height;
-            SidePanel1.Top = FlashcardButton.Top;
-            FlashcardControl.BringToFront();
+            SidePanel1.Height = FlashcardButtonMainScreenActivity.Height;
+            SidePanel1.Top = FlashcardButtonMainScreenActivity.Top;
+            FlashcardControlMainScreenActivity.BringToFront();
         }
 
         private void ToDoControl_Load(object sender, EventArgs e)
