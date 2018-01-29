@@ -13,19 +13,24 @@ namespace ProjectSentinel
             this.Show();
             appUser.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
             HomeControl.BringToFront();
-
+            this.FormClosing += MainScreenActivity_FormClosing;
         }
 
         public MainScreenActivity(User user)
         {
             appUser = user;
             InitializeComponent();
-            
+            this.FormClosing += MainScreenActivity_FormClosing;
         }
 
         public static void AuxiliaryThreadingMethod()
         {
             Application.Run(new LoginActivity());
+        }
+
+        private void MainScreenActivity_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void userLogoutbuttonMainScreenActivity_Click(object sender, EventArgs e)
@@ -62,6 +67,7 @@ namespace ProjectSentinel
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(appUser.Username, "USER TEST!!!");
            /* NewsActivity n = new NewsActivity();
             n.Show();
             this.Close();*/
