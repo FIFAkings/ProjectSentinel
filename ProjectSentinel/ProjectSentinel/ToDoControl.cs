@@ -12,8 +12,16 @@ namespace ProjectSentinel
 {
     public partial class ToDoControl : UserControl
     {
+        User user;
+
         public ToDoControl()
         {
+            InitializeComponent();
+        }
+        
+        public ToDoControl(User user)
+        {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -31,7 +39,7 @@ namespace ProjectSentinel
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ToDoForm ra = new ToDoForm();
+            ToDoForm ra = new ToDoForm(user);
             ra.Show();
 
         }
