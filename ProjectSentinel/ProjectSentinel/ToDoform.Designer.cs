@@ -168,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToDoForm";
-            this.Text = "ToDoForm";
+            this.Text = "Add a task | Project Sentinel";
             this.ResumeLayout(false);
             this.PerformLayout();
 

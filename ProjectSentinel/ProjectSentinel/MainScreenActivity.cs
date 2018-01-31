@@ -115,9 +115,9 @@ namespace ProjectSentinel
             FlashcardControlMainScreenActivity.BringToFront();
         }
 
-        private void ToDoControl_Load(object sender, EventArgs e)
+        /*private void ToDoControl_Load(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
 }

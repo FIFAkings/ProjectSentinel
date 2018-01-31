@@ -1,9 +1,11 @@
 ﻿using Mono.Data.Sqlite;
+using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectSentinel
 {
@@ -43,7 +45,7 @@ namespace ProjectSentinel
             this.done = false;
         }
 
-        public void addToDoToDatabase(int userId)
+        public void addToDoToDatabase(User user)
         {
             String cn = "URI=file:ProjectSentinel.db";
             SqliteConnection databaseConnection = new SqliteConnection(cn);
@@ -53,13 +55,14 @@ namespace ProjectSentinel
             sqlToDoTableCommand.ExecuteNonQuery();
             sqlToDoTableCommand.Dispose();
             SqliteCommand sqlInsertToDoCommand = databaseConnection.CreateCommand();
-            sqlInsertToDoCommand.CommandText = "INSERT INTO TODO (description, priority, dateToFinish, user_id) VALUES ('" + this.description + "', '" + this.priorityLevel + "', '" + this.dateToFinish + "', '" + userId + "');";
+            sqlInsertToDoCommand.CommandText = "INSERT INTO TODO (description, priority, dateToFinish, user_id) VALUES ('" + this.description + "', '" + this.priorityLevel + "', '" + this.dateToFinish + "', '" + Properties.Settings.Default.LoggedUserId + "');";
             sqlInsertToDoCommand.ExecuteNonQuery();
             sqlInsertToDoCommand.Dispose();
             databaseConnection.Close();
+            MessageBox.Show("Dear "+user.Username+ ", this task has been added to your to do list successfully! Add a new task or go back.", "You're doing great, "+user.UserFirstName+"! | Project Sentinel");
         }
 
-        public List<ToDo> returnToDoListForCurrentUser(int userId)
+        public static List<ToDo> returnToDoListForCurrentUser(int userId)
         {
             List<ToDo> list = new List<ToDo>();
             String cn = "URI=file:ProjectSentinel.db";
@@ -68,13 +71,18 @@ namespace ProjectSentinel
             SqliteCommand sqlReadCommand = databaseConnection.CreateCommand();
             sqlReadCommand.CommandText = "SELECT * FROM TODO WHERE USER_ID='" + userId + "';";
             SqliteDataReader reader = sqlReadCommand.ExecuteReader();
-            while (reader.Read())
-            {
-                this.description = reader.GetString(1);
-                this.priorityLevel = reader.GetInt32(2);
-                this.dateToFinish = Convert.ToDateTime(reader.GetString(3));
-                list.Add(this);
-            }
+
+                while (reader.Read())
+                {
+                    ToDo task = new ToDo();
+                    task.Description = reader.GetString(1);
+                    task.PriorityLevel = reader.GetInt32(2);
+                    task.DateToFinish = Convert.ToDateTime(reader.GetString(3));
+                    list.Add(task);
+                }
+
+            
+            
             sqlReadCommand.Dispose();
             reader.Close();
             databaseConnection.Close();

@@ -39,7 +39,7 @@ namespace ProjectSentinel
                 toDo = new ToDo(textBox1.Text, 2, FinishDateToDoForm.Value);
             else
                 toDo = new ToDo(textBox1.Text, 3, FinishDateToDoForm.Value);
-            toDo.addToDoToDatabase();
+            toDo.addToDoToDatabase(user);
         }
     }
 }

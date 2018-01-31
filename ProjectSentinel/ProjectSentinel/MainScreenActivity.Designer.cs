@@ -2,6 +2,7 @@
 {
     partial class MainScreenActivity
     {
+        User user = new User();
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            user.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreenActivity));
             this.UserIconMainScreenActivity = new System.Windows.Forms.PictureBox();
             this.userLogoutbuttonMainScreenActivity = new System.Windows.Forms.Button();
@@ -102,7 +104,7 @@
             this.MyProfileButonMainScreenActivity.Name = "MyProfileButonMainScreenActivity";
             this.MyProfileButonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
             this.MyProfileButonMainScreenActivity.TabIndex = 2;
-            this.MyProfileButonMainScreenActivity.Text = "MyProfile";
+            this.MyProfileButonMainScreenActivity.Text = user.Username;
             this.MyProfileButonMainScreenActivity.UseVisualStyleBackColor = true;
             this.MyProfileButonMainScreenActivity.Click += new System.EventHandler(this.MyProfileButon_Click);
             // 
@@ -143,7 +145,7 @@
             this.WelcomeLabelMainScreenActivity.Name = "WelcomeLabelMainScreenActivity";
             this.WelcomeLabelMainScreenActivity.Size = new System.Drawing.Size(130, 28);
             this.WelcomeLabelMainScreenActivity.TabIndex = 4;
-            this.WelcomeLabelMainScreenActivity.Text = "Welcome ";
+            this.WelcomeLabelMainScreenActivity.Text = "Dear "+user.UserFirstName+", happy learning!";
             // 
             // SidePanelMainScreenActivity
             // 
@@ -363,7 +365,7 @@
             this.ToDoControlMainScreenActivity.Name = "ToDoControlMainScreenActivity";
             this.ToDoControlMainScreenActivity.Size = new System.Drawing.Size(902, 549);
             this.ToDoControlMainScreenActivity.TabIndex = 0;
-            this.ToDoControlMainScreenActivity.Load += new System.EventHandler(this.ToDoControl_Load);
+            //this.ToDoControlMainScreenActivity.Load += new System.EventHandler(this.ToDoControl_Load);
             // 
             // FlashcardControlMainScreenActivity
             // 

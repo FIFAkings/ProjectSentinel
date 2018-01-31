@@ -8,6 +8,7 @@ namespace ProjectSentinel
     {
         /// <summary>
         /// Welcome to Project Sentinel v0.1! We've been procrastinating on developing it for a long time, but we're doing our best to make up for it.
+        /// We like spaghetti, so we made spaghetti code. *wink* *wink* *StaringImploringly*
         /// </summary>
     static void Main()
         {
