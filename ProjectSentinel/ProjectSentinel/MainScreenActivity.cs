@@ -14,6 +14,7 @@ namespace ProjectSentinel
             appUser.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
             HomeControlMainScreenActivity.BringToFront();
             this.FormClosing += MainScreenActivity_FormClosing;
+            TopPanel1.Hide();
         }
 
         public MainScreenActivity(User user)
@@ -53,24 +54,28 @@ namespace ProjectSentinel
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            /*SettingsActivity sa = new SettingsActivity();
-            sa.Show();
-            this.Close();*/
+            SidePanel1.Hide();
+            TopPanel1.Show();
+            TopPanel1.Width = SettingsButtonMainScreenActivity.Width;
+            TopPanel1.Left = SettingsButtonMainScreenActivity.Left;
+            MyProfileControlMainScreenActivity.BringToFront();
         }
 
-        private void MyProfileButon_Click(object sender, EventArgs e)
+        private void MyProfileButton_Click(object sender, EventArgs e)
         {
-           /* MyProfileActivity mpa = new MyProfileActivity();
-            mpa.Show();
-            this.Close();*/
+            SidePanel1.Hide();
+            TopPanel1.Show();
+            TopPanel1.Width = MyProfileButtonMainScreenActivity.Width;
+            TopPanel1.Left = MyProfileButtonMainScreenActivity.Left;
+            SettingsControlMainScreenActivity.BringToFront();
         }
 
-        private void NewsButton_Click(object sender, EventArgs e)
+            private void NewsButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(appUser.Username, "USER TEST!!!");
-           /* NewsActivity n = new NewsActivity();
-            n.Show();
-            this.Close();*/
+            /* NewsActivity n = new NewsActivity();
+             n.Show();
+             this.Close();*/
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -90,6 +95,8 @@ namespace ProjectSentinel
 
         private void ToDoButton_Click(object sender, EventArgs e)
         {
+            SidePanel1.Show();
+            TopPanel1.Hide();
             SidePanel1.Height = ToDoButtonMainScreenActivity.Height;
             SidePanel1.Top = ToDoButtonMainScreenActivity.Top;
             ToDoControlMainScreenActivity.BringToFront();
@@ -97,10 +104,12 @@ namespace ProjectSentinel
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            SidePanel1.Show();
+            TopPanel1.Hide();
             SidePanel1.Height = HomeButtonMainScreenActivity.Height;
             SidePanel1.Top = HomeButtonMainScreenActivity.Top;
             HomeControlMainScreenActivity.BringToFront();
-            
+
         }
 
         private void HomeControl_Load(object sender, EventArgs e)
@@ -110,12 +119,19 @@ namespace ProjectSentinel
 
         private void FlashcardButton_Click(object sender, EventArgs e)
         {
+            SidePanel1.Show();
+            TopPanel1.Hide();
             SidePanel1.Height = FlashcardButtonMainScreenActivity.Height;
             SidePanel1.Top = FlashcardButtonMainScreenActivity.Top;
             FlashcardControlMainScreenActivity.BringToFront();
         }
 
         private void ToDoControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CourseButtonMainScreenActivity_Click(object sender, EventArgs e)
         {
 
         }

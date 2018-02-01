@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreenActivity));
             this.UserIconMainScreenActivity = new System.Windows.Forms.PictureBox();
             this.userLogoutbuttonMainScreenActivity = new System.Windows.Forms.Button();
-            this.MyProfileButonMainScreenActivity = new System.Windows.Forms.Button();
+            this.MyProfileButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.SettingsButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.TopPanelMainScreenActivity = new System.Windows.Forms.Panel();
+            this.TopPanel1 = new System.Windows.Forms.Panel();
             this.WelcomeLabelMainScreenActivity = new System.Windows.Forms.Label();
             this.SidePanelMainScreenActivity = new System.Windows.Forms.Panel();
             this.SidePanel1 = new System.Windows.Forms.Panel();
@@ -52,9 +53,11 @@
             this.ToDoButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.HomeButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.MainPanelMainScreenActivity = new System.Windows.Forms.Panel();
+            this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
             this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
             this.ToDoControlMainScreenActivity = new ProjectSentinel.ToDoControl();
             this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
+            this.MyProfileControlMainScreenActivity = new ProjectSentinel.MyProfileControl();
             ((System.ComponentModel.ISupportInitialize)(this.UserIconMainScreenActivity)).BeginInit();
             this.TopPanelMainScreenActivity.SuspendLayout();
             this.SidePanelMainScreenActivity.SuspendLayout();
@@ -92,19 +95,19 @@
             this.userLogoutbuttonMainScreenActivity.UseVisualStyleBackColor = true;
             this.userLogoutbuttonMainScreenActivity.Click += new System.EventHandler(this.userLogoutbuttonMainScreenActivity_Click);
             // 
-            // MyProfileButonMainScreenActivity
+            // MyProfileButtonMainScreenActivity
             // 
-            this.MyProfileButonMainScreenActivity.FlatAppearance.BorderSize = 0;
-            this.MyProfileButonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyProfileButonMainScreenActivity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MyProfileButonMainScreenActivity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MyProfileButonMainScreenActivity.Location = new System.Drawing.Point(555, 0);
-            this.MyProfileButonMainScreenActivity.Name = "MyProfileButonMainScreenActivity";
-            this.MyProfileButonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
-            this.MyProfileButonMainScreenActivity.TabIndex = 2;
-            this.MyProfileButonMainScreenActivity.Text = "MyProfile";
-            this.MyProfileButonMainScreenActivity.UseVisualStyleBackColor = true;
-            this.MyProfileButonMainScreenActivity.Click += new System.EventHandler(this.MyProfileButon_Click);
+            this.MyProfileButtonMainScreenActivity.FlatAppearance.BorderSize = 0;
+            this.MyProfileButtonMainScreenActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyProfileButtonMainScreenActivity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MyProfileButtonMainScreenActivity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MyProfileButtonMainScreenActivity.Location = new System.Drawing.Point(555, 0);
+            this.MyProfileButtonMainScreenActivity.Name = "MyProfileButtonMainScreenActivity";
+            this.MyProfileButtonMainScreenActivity.Size = new System.Drawing.Size(94, 59);
+            this.MyProfileButtonMainScreenActivity.TabIndex = 2;
+            this.MyProfileButtonMainScreenActivity.Text = "MyProfile";
+            this.MyProfileButtonMainScreenActivity.UseVisualStyleBackColor = true;
+            this.MyProfileButtonMainScreenActivity.Click += new System.EventHandler(this.MyProfileButton_Click);
             // 
             // SettingsButtonMainScreenActivity
             // 
@@ -123,9 +126,10 @@
             // TopPanelMainScreenActivity
             // 
             this.TopPanelMainScreenActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(15)))), ((int)(((byte)(51)))));
+            this.TopPanelMainScreenActivity.Controls.Add(this.TopPanel1);
             this.TopPanelMainScreenActivity.Controls.Add(this.WelcomeLabelMainScreenActivity);
             this.TopPanelMainScreenActivity.Controls.Add(this.SettingsButtonMainScreenActivity);
-            this.TopPanelMainScreenActivity.Controls.Add(this.MyProfileButonMainScreenActivity);
+            this.TopPanelMainScreenActivity.Controls.Add(this.MyProfileButtonMainScreenActivity);
             this.TopPanelMainScreenActivity.Controls.Add(this.userLogoutbuttonMainScreenActivity);
             this.TopPanelMainScreenActivity.Controls.Add(this.UserIconMainScreenActivity);
             this.TopPanelMainScreenActivity.Location = new System.Drawing.Point(206, 0);
@@ -133,6 +137,14 @@
             this.TopPanelMainScreenActivity.Size = new System.Drawing.Size(902, 56);
             this.TopPanelMainScreenActivity.TabIndex = 0;
             this.TopPanelMainScreenActivity.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // TopPanel1
+            // 
+            this.TopPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.TopPanel1.Location = new System.Drawing.Point(649, 0);
+            this.TopPanel1.Name = "TopPanel1";
+            this.TopPanel1.Size = new System.Drawing.Size(94, 8);
+            this.TopPanel1.TabIndex = 4;
             // 
             // WelcomeLabelMainScreenActivity
             // 
@@ -293,6 +305,7 @@
             this.CourseButtonMainScreenActivity.TabIndex = 6;
             this.CourseButtonMainScreenActivity.Text = "   Course";
             this.CourseButtonMainScreenActivity.UseVisualStyleBackColor = true;
+            this.CourseButtonMainScreenActivity.Click += new System.EventHandler(this.CourseButtonMainScreenActivity_Click);
             // 
             // FlashcardButtonMainScreenActivity
             // 
@@ -339,13 +352,22 @@
             // MainPanelMainScreenActivity
             // 
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.ToDoControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.FlashcardControlMainScreenActivity);
+            this.MainPanelMainScreenActivity.Controls.Add(this.SettingsControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Location = new System.Drawing.Point(206, 53);
             this.MainPanelMainScreenActivity.Name = "MainPanelMainScreenActivity";
             this.MainPanelMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.MainPanelMainScreenActivity.TabIndex = 2;
+            // 
+            // SettingsControlMainScreenActivity
+            // 
+            this.SettingsControlMainScreenActivity.Location = new System.Drawing.Point(-3, 0);
+            this.SettingsControlMainScreenActivity.Name = "SettingsControlMainScreenActivity";
+            this.SettingsControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
+            this.SettingsControlMainScreenActivity.TabIndex = 3;
             // 
             // HomeControlMainScreenActivity
             // 
@@ -372,6 +394,13 @@
             this.FlashcardControlMainScreenActivity.Name = "FlashcardControlMainScreenActivity";
             this.FlashcardControlMainScreenActivity.Size = new System.Drawing.Size(902, 549);
             this.FlashcardControlMainScreenActivity.TabIndex = 2;
+            // 
+            // MyProfileControlMainScreenActivity
+            // 
+            this.MyProfileControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.MyProfileControlMainScreenActivity.Name = "MyProfileControlMainScreenActivity";
+            this.MyProfileControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
+            this.MyProfileControlMainScreenActivity.TabIndex = 4;
             // 
             // MainScreenActivity
             // 
@@ -419,7 +448,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox UserIconMainScreenActivity;
         private System.Windows.Forms.Button userLogoutbuttonMainScreenActivity;
-        private System.Windows.Forms.Button MyProfileButonMainScreenActivity;
+        private System.Windows.Forms.Button MyProfileButtonMainScreenActivity;
         private System.Windows.Forms.Button SettingsButtonMainScreenActivity;
         private System.Windows.Forms.Panel TopPanelMainScreenActivity;
         private System.Windows.Forms.Label WelcomeLabelMainScreenActivity;
@@ -443,5 +472,8 @@
         private HomeControl HomeControlMainScreenActivity;
         private ToDoControl ToDoControlMainScreenActivity;
         private FlashcardControl FlashcardControlMainScreenActivity;
+        private SettingsControl SettingsControlMainScreenActivity;
+        private System.Windows.Forms.Panel TopPanel1;
+        private MyProfileControl MyProfileControlMainScreenActivity;
     }
 }
