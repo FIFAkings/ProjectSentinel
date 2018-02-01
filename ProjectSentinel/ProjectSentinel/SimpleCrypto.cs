@@ -35,7 +35,7 @@ namespace ProjectSentinel
         }
 
 
-        // Currently unused as direct comparison of the strings in the LoginActivity seemed as a more pragmatic, albeit slightly less secure solution at the time of development.
+        // Currently unused because direct comparison of strings in the LoginActivity seemed as a more pragmatic, albeit slightly less secure solution at the time of development.
         // For this project's purposes, high security is not a top priority.
         // We'll leave the method definition here in case we want to use it in the later development stages.
         public static bool CompareByteArrays(byte[] array1, byte[] array2)

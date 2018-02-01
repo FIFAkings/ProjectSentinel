@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSentinel", "ProjectSentinel\ProjectSentinel.csproj", "{8A79BC06-C56C-4FEF-BFA1-37150E678ED5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C179436-EFAE-4758-8F71-28329196A839}"
+	ProjectSection(SolutionItems) = preProject
+		ProjectSentinel\bin\Debug\sqlite3.dll = ProjectSentinel\bin\Debug\sqlite3.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -38,7 +38,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.userDOBInputRegisterActivity = new System.Windows.Forms.DateTimePicker();
+            this.FinishDateToDoForm = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +91,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Add Task";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -141,13 +142,13 @@
             this.radioButton3.Text = "High";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // userDOBInputRegisterActivity
+            // FinishDateToDoForm
             // 
-            this.userDOBInputRegisterActivity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userDOBInputRegisterActivity.Location = new System.Drawing.Point(109, 205);
-            this.userDOBInputRegisterActivity.Name = "userDOBInputRegisterActivity";
-            this.userDOBInputRegisterActivity.Size = new System.Drawing.Size(207, 23);
-            this.userDOBInputRegisterActivity.TabIndex = 12;
+            this.FinishDateToDoForm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FinishDateToDoForm.Location = new System.Drawing.Point(109, 205);
+            this.FinishDateToDoForm.Name = "FinishDateToDoForm";
+            this.FinishDateToDoForm.Size = new System.Drawing.Size(207, 23);
+            this.FinishDateToDoForm.TabIndex = 12;
             // 
             // ToDoForm
             // 
@@ -155,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(386, 374);
-            this.Controls.Add(this.userDOBInputRegisterActivity);
+            this.Controls.Add(this.FinishDateToDoForm);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -167,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToDoForm";
-            this.Text = "ToDoForm";
+            this.Text = "Add a task | Project Sentinel";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +185,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.DateTimePicker userDOBInputRegisterActivity;
+        private System.Windows.Forms.DateTimePicker FinishDateToDoForm;
     }
 }
