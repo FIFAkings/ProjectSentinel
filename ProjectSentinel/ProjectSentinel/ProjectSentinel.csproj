@@ -177,6 +177,12 @@
     <Compile Include="ToDoControl.Designer.cs">
       <DependentUpon>ToDoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToDoControlTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToDoControlTest.Designer.cs">
+      <DependentUpon>ToDoControlTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToDoform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToDoControl.resx">
       <DependentUpon>ToDoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoControlTest.resx">
+      <DependentUpon>ToDoControlTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToDoform.resx">
       <DependentUpon>ToDoform.cs</DependentUpon>

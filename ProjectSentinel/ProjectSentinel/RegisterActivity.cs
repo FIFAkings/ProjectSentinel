@@ -63,6 +63,7 @@ namespace ProjectSentinel
 
         private void userRegisterButtonRegisterActivity_Click(object sender, EventArgs e)
         {
+                        
             //Properties.Settings.Default.ApplicationFirstRun = true;
             if (Properties.Settings.Default.ApplicationFirstRun)
             {

@@ -53,6 +53,7 @@
             this.ToDoButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.HomeButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.MainPanelMainScreenActivity = new System.Windows.Forms.Panel();
+            this.ToDoControlTestMainScreenActivity = new ProjectSentinel.ToDoControlTest();
             this.MyProfileControlMainScreenActivity = new ProjectSentinel.MyProfileControl();
             this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
             this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
@@ -351,6 +352,7 @@
             // MainPanelMainScreenActivity
             // 
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainPanelMainScreenActivity.Controls.Add(this.ToDoControlTestMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.FlashcardControlMainScreenActivity);
@@ -359,6 +361,15 @@
             this.MainPanelMainScreenActivity.Name = "MainPanelMainScreenActivity";
             this.MainPanelMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.MainPanelMainScreenActivity.TabIndex = 2;
+            // 
+            // ToDoControlTestMainScreenActivity
+            // 
+            this.ToDoControlTestMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ToDoControlTestMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.ToDoControlTestMainScreenActivity.Name = "ToDoControlTestMainScreenActivity";
+            this.ToDoControlTestMainScreenActivity.Size = new System.Drawing.Size(902, 549);
+            this.ToDoControlTestMainScreenActivity.TabIndex = 5;
+            this.ToDoControlTestMainScreenActivity.Load += new System.EventHandler(this.ToDoControlTestMainScreenActivity_Load);
             // 
             // MyProfileControlMainScreenActivity
             // 
@@ -399,7 +410,7 @@
             this.Controls.Add(this.TopPanelMainScreenActivity);
             this.Controls.Add(this.MainPanelMainScreenActivity);
             this.Controls.Add(this.SidePanelMainScreenActivity);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreenActivity";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -464,5 +475,6 @@
         private SettingsControl SettingsControlMainScreenActivity;
         private System.Windows.Forms.Panel TopPanel1;
         private MyProfileControl MyProfileControlMainScreenActivity;
+        private ToDoControlTest ToDoControlTestMainScreenActivity;
     }
 }
