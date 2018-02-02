@@ -495,6 +495,7 @@
         private SettingsControl SettingsControlMainScreenActivity;
         private System.Windows.Forms.Panel TopPanel1;
         private MyProfileControl MyProfileControlMainScreenActivity;
+        //see this line
         private ToDoControlTest ToDoControlTestMainScreenActivity;
         private CourseControl CourseControlMainScreenActivity;
         private ScheduleControl ScheduleControlMainScreenActivity;
