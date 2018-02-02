@@ -58,6 +58,8 @@
             this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
             this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
             this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
+            this.CourseControlMainScreenActivity = new ProjectSentinel.CourseControl();
+            this.ScheduleControlMainScreenActivity = new ProjectSentinel.ScheduleControl();
             ((System.ComponentModel.ISupportInitialize)(this.UserIconMainScreenActivity)).BeginInit();
             this.TopPanelMainScreenActivity.SuspendLayout();
             this.SidePanelMainScreenActivity.SuspendLayout();
@@ -248,6 +250,7 @@
             this.ScheduleButtonMainScreenActivity.TabIndex = 7;
             this.ScheduleButtonMainScreenActivity.Text = "   Schedule";
             this.ScheduleButtonMainScreenActivity.UseVisualStyleBackColor = true;
+            this.ScheduleButtonMainScreenActivity.Click += new System.EventHandler(this.ScheduleButtonMainScreenActivity_Click);
             // 
             // SidePanel3MainScreenActivity
             // 
@@ -352,6 +355,8 @@
             // MainPanelMainScreenActivity
             // 
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainPanelMainScreenActivity.Controls.Add(this.ScheduleControlMainScreenActivity);
+            this.MainPanelMainScreenActivity.Controls.Add(this.CourseControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.ToDoControlTestMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
@@ -401,6 +406,20 @@
             this.SettingsControlMainScreenActivity.Name = "SettingsControlMainScreenActivity";
             this.SettingsControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
             this.SettingsControlMainScreenActivity.TabIndex = 3;
+            // 
+            // CourseControlMainScreenActivity
+            // 
+            this.CourseControlMainScreenActivity.Location = new System.Drawing.Point(0, 3);
+            this.CourseControlMainScreenActivity.Name = "CourseControlMainScreenActivity";
+            this.CourseControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
+            this.CourseControlMainScreenActivity.TabIndex = 6;
+            // 
+            // ScheduleControlMainScreenActivity
+            // 
+            this.ScheduleControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.ScheduleControlMainScreenActivity.Name = "ScheduleControlMainScreenActivity";
+            this.ScheduleControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
+            this.ScheduleControlMainScreenActivity.TabIndex = 7;
             // 
             // MainScreenActivity
             // 
@@ -476,5 +495,7 @@
         private System.Windows.Forms.Panel TopPanel1;
         private MyProfileControl MyProfileControlMainScreenActivity;
         private ToDoControlTest ToDoControlTestMainScreenActivity;
+        private CourseControl CourseControlMainScreenActivity;
+        private ScheduleControl ScheduleControlMainScreenActivity;
     }
 }

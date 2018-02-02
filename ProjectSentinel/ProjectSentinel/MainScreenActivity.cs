@@ -133,12 +133,25 @@ namespace ProjectSentinel
 
         private void CourseButtonMainScreenActivity_Click(object sender, EventArgs e)
         {
-
+            SidePanel1.Show();
+            TopPanel1.Hide();
+            SidePanel1.Height = CourseButtonMainScreenActivity.Height;
+            SidePanel1.Top = CourseButtonMainScreenActivity.Top;
+            CourseControlMainScreenActivity.BringToFront();
         }
 
         private void ToDoControlTestMainScreenActivity_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ScheduleButtonMainScreenActivity_Click(object sender, EventArgs e)
+        {
+            SidePanel1.Show();
+            TopPanel1.Hide();
+            SidePanel1.Height = ScheduleButtonMainScreenActivity.Height;
+            SidePanel1.Top = ScheduleButtonMainScreenActivity.Top;
+            ScheduleControlMainScreenActivity.BringToFront();
         }
     }
 }
