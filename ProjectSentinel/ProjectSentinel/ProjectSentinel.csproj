@@ -102,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="CourseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseControl.Designer.cs">
+      <DependentUpon>CourseControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DefaultDatabaseValues.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Faculty.cs" />
@@ -163,6 +169,12 @@
     <Compile Include="Institution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScheduleControl.Designer.cs">
+      <DependentUpon>ScheduleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +202,9 @@
       <DependentUpon>ToDoform.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="CourseControl.resx">
+      <DependentUpon>CourseControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlashcardBack.resx">
       <DependentUpon>FlashcardBack.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterActivity.resx">
       <DependentUpon>RegisterActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleControl.resx">
+      <DependentUpon>ScheduleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
