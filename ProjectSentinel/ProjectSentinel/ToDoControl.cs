@@ -52,6 +52,7 @@ namespace ProjectSentinel
         {
             //loadTasksToControl();
             ToDoForm ra = new ToDoForm(user);
+
             ra.Show();
 
         }
