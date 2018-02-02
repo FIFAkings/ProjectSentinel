@@ -40,7 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -177,6 +177,12 @@
     <Compile Include="ToDoControl.Designer.cs">
       <DependentUpon>ToDoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToDoControlTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToDoControlTest.Designer.cs">
+      <DependentUpon>ToDoControlTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToDoform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToDoControl.resx">
       <DependentUpon>ToDoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoControlTest.resx">
+      <DependentUpon>ToDoControlTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToDoform.resx">
       <DependentUpon>ToDoform.cs</DependentUpon>
