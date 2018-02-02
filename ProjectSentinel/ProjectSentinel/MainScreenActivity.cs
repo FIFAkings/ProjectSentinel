@@ -99,7 +99,7 @@ namespace ProjectSentinel
             TopPanel1.Hide();
             SidePanel1.Height = ToDoButtonMainScreenActivity.Height;
             SidePanel1.Top = ToDoButtonMainScreenActivity.Top;
-            ToDoControlTestMainScreenActivity.BringToFront();
+            ToDoControlTestMainScreenActivity1.BringToFront();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

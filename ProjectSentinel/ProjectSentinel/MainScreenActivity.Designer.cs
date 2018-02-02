@@ -59,6 +59,7 @@
             this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
             this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
             this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
+            this.ToDoControlTestMainScreenActivity1 = new ProjectSentinel.ToDoControlTest();
             ((System.ComponentModel.ISupportInitialize)(this.UserIconMainScreenActivity)).BeginInit();
             this.TopPanelMainScreenActivity.SuspendLayout();
             this.SidePanelMainScreenActivity.SuspendLayout();
@@ -354,12 +355,13 @@
             // MainPanelMainScreenActivity
             // 
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainPanelMainScreenActivity.Controls.Add(this.ScheduleControlMainScreenActivity);
+            this.MainPanelMainScreenActivity.Controls.Add(this.ToDoControlTestMainScreenActivity1);
             this.MainPanelMainScreenActivity.Controls.Add(this.CourseControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.FlashcardControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.SettingsControlMainScreenActivity);
+            this.MainPanelMainScreenActivity.Controls.Add(this.ScheduleControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Location = new System.Drawing.Point(206, 53);
             this.MainPanelMainScreenActivity.Name = "MainPanelMainScreenActivity";
             this.MainPanelMainScreenActivity.Size = new System.Drawing.Size(902, 530);
@@ -367,7 +369,7 @@
             // 
             // ScheduleControlMainScreenActivity
             // 
-            this.ScheduleControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.ScheduleControlMainScreenActivity.Location = new System.Drawing.Point(0, 3);
             this.ScheduleControlMainScreenActivity.Name = "ScheduleControlMainScreenActivity";
             this.ScheduleControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.ScheduleControlMainScreenActivity.TabIndex = 7;
@@ -409,6 +411,14 @@
             this.SettingsControlMainScreenActivity.Name = "SettingsControlMainScreenActivity";
             this.SettingsControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
             this.SettingsControlMainScreenActivity.TabIndex = 3;
+            // 
+            // ToDoControlTestMainScreenActivity1
+            // 
+            this.ToDoControlTestMainScreenActivity1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ToDoControlTestMainScreenActivity1.Location = new System.Drawing.Point(0, 3);
+            this.ToDoControlTestMainScreenActivity1.Name = "ToDoControlTestMainScreenActivity1";
+            this.ToDoControlTestMainScreenActivity1.Size = new System.Drawing.Size(902, 527);
+            this.ToDoControlTestMainScreenActivity1.TabIndex = 8;
             // 
             // MainScreenActivity
             // 
@@ -480,7 +490,7 @@
         private System.Windows.Forms.PictureBox HomeIconMainScreenActivity;
         private System.Windows.Forms.Panel MainPanelMainScreenActivity;
         private HomeControl HomeControlMainScreenActivity;
-        private ToDoControl ToDoControlMainScreenActivity;
+        //private ToDoControl ToDoControlMainScreenActivity;
         private FlashcardControl FlashcardControlMainScreenActivity;
         private SettingsControl SettingsControlMainScreenActivity;
         private System.Windows.Forms.Panel TopPanel1;
@@ -488,5 +498,6 @@
         private ToDoControlTest ToDoControlTestMainScreenActivity;
         private CourseControl CourseControlMainScreenActivity;
         private ScheduleControl ScheduleControlMainScreenActivity;
+        private ToDoControlTest ToDoControlTestMainScreenActivity1;
     }
 }

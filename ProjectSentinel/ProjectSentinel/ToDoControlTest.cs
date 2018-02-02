@@ -12,12 +12,12 @@ namespace ProjectSentinel
 {
     public partial class ToDoControlTest : UserControl
     {
-        User user = new User();
+       User user = new User();
 
         public ToDoControlTest()
         {
             InitializeComponent();
-            user.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
+           user.loadUserFromDatabase(Properties.Settings.Default.LoggedUserId);
         }
 
         private void button3_Click(object sender, EventArgs e)
