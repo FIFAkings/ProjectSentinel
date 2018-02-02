@@ -53,11 +53,10 @@
             this.ToDoButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.HomeButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.MainPanelMainScreenActivity = new System.Windows.Forms.Panel();
-            this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
-            this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
-            this.ToDoControlMainScreenActivity = new ProjectSentinel.ToDoControl();
-            this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
             this.MyProfileControlMainScreenActivity = new ProjectSentinel.MyProfileControl();
+            this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
+            this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
+            this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
             ((System.ComponentModel.ISupportInitialize)(this.UserIconMainScreenActivity)).BeginInit();
             this.TopPanelMainScreenActivity.SuspendLayout();
             this.SidePanelMainScreenActivity.SuspendLayout();
@@ -354,7 +353,6 @@
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
-            this.MainPanelMainScreenActivity.Controls.Add(this.ToDoControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.FlashcardControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.SettingsControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Location = new System.Drawing.Point(206, 53);
@@ -362,12 +360,12 @@
             this.MainPanelMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.MainPanelMainScreenActivity.TabIndex = 2;
             // 
-            // SettingsControlMainScreenActivity
+            // MyProfileControlMainScreenActivity
             // 
-            this.SettingsControlMainScreenActivity.Location = new System.Drawing.Point(-3, 0);
-            this.SettingsControlMainScreenActivity.Name = "SettingsControlMainScreenActivity";
-            this.SettingsControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
-            this.SettingsControlMainScreenActivity.TabIndex = 3;
+            this.MyProfileControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.MyProfileControlMainScreenActivity.Name = "MyProfileControlMainScreenActivity";
+            this.MyProfileControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
+            this.MyProfileControlMainScreenActivity.TabIndex = 4;
             // 
             // HomeControlMainScreenActivity
             // 
@@ -378,15 +376,6 @@
             this.HomeControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.HomeControlMainScreenActivity.TabIndex = 1;
             // 
-            // ToDoControlMainScreenActivity
-            // 
-            this.ToDoControlMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ToDoControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
-            this.ToDoControlMainScreenActivity.Name = "ToDoControlMainScreenActivity";
-            this.ToDoControlMainScreenActivity.Size = new System.Drawing.Size(902, 549);
-            this.ToDoControlMainScreenActivity.TabIndex = 0;
-            this.ToDoControlMainScreenActivity.Load += new System.EventHandler(this.ToDoControl_Load);
-            // 
             // FlashcardControlMainScreenActivity
             // 
             this.FlashcardControlMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -395,12 +384,12 @@
             this.FlashcardControlMainScreenActivity.Size = new System.Drawing.Size(902, 549);
             this.FlashcardControlMainScreenActivity.TabIndex = 2;
             // 
-            // MyProfileControlMainScreenActivity
+            // SettingsControlMainScreenActivity
             // 
-            this.MyProfileControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
-            this.MyProfileControlMainScreenActivity.Name = "MyProfileControlMainScreenActivity";
-            this.MyProfileControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
-            this.MyProfileControlMainScreenActivity.TabIndex = 4;
+            this.SettingsControlMainScreenActivity.Location = new System.Drawing.Point(-3, 0);
+            this.SettingsControlMainScreenActivity.Name = "SettingsControlMainScreenActivity";
+            this.SettingsControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
+            this.SettingsControlMainScreenActivity.TabIndex = 3;
             // 
             // MainScreenActivity
             // 
