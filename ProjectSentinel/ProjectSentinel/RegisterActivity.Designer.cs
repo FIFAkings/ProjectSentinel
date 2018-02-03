@@ -67,170 +67,191 @@
             // 
             // userFirstNameInputRegisterActivity
             // 
-            this.userFirstNameInputRegisterActivity.Location = new System.Drawing.Point(190, 25);
+            this.userFirstNameInputRegisterActivity.Location = new System.Drawing.Point(76, 187);
+            this.userFirstNameInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userFirstNameInputRegisterActivity.Name = "userFirstNameInputRegisterActivity";
-            this.userFirstNameInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userFirstNameInputRegisterActivity.Size = new System.Drawing.Size(168, 23);
             this.userFirstNameInputRegisterActivity.TabIndex = 4;
             // 
             // userLastNameInputRegisterActivity
             // 
-            this.userLastNameInputRegisterActivity.Location = new System.Drawing.Point(190, 64);
+            this.userLastNameInputRegisterActivity.Location = new System.Drawing.Point(281, 187);
+            this.userLastNameInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userLastNameInputRegisterActivity.Name = "userLastNameInputRegisterActivity";
-            this.userLastNameInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userLastNameInputRegisterActivity.Size = new System.Drawing.Size(167, 23);
             this.userLastNameInputRegisterActivity.TabIndex = 5;
             // 
             // userAddressStreetInputRegisterActivity
             // 
-            this.userAddressStreetInputRegisterActivity.Location = new System.Drawing.Point(190, 105);
+            this.userAddressStreetInputRegisterActivity.Location = new System.Drawing.Point(76, 244);
+            this.userAddressStreetInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userAddressStreetInputRegisterActivity.Name = "userAddressStreetInputRegisterActivity";
-            this.userAddressStreetInputRegisterActivity.Size = new System.Drawing.Size(149, 20);
+            this.userAddressStreetInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userAddressStreetInputRegisterActivity.TabIndex = 6;
             // 
             // userAddressCityInputRegisterActivity
             // 
-            this.userAddressCityInputRegisterActivity.Location = new System.Drawing.Point(190, 144);
+            this.userAddressCityInputRegisterActivity.Location = new System.Drawing.Point(281, 244);
+            this.userAddressCityInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userAddressCityInputRegisterActivity.Name = "userAddressCityInputRegisterActivity";
-            this.userAddressCityInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressCityInputRegisterActivity.Size = new System.Drawing.Size(167, 23);
             this.userAddressCityInputRegisterActivity.TabIndex = 8;
             // 
             // userAddressZipcodeInputRegisterActivity
             // 
-            this.userAddressZipcodeInputRegisterActivity.Location = new System.Drawing.Point(190, 183);
+            this.userAddressZipcodeInputRegisterActivity.Location = new System.Drawing.Point(558, 363);
+            this.userAddressZipcodeInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userAddressZipcodeInputRegisterActivity.Name = "userAddressZipcodeInputRegisterActivity";
-            this.userAddressZipcodeInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressZipcodeInputRegisterActivity.Size = new System.Drawing.Size(132, 23);
             this.userAddressZipcodeInputRegisterActivity.TabIndex = 9;
             // 
             // userAddressCountryInputRegisterActivity
             // 
-            this.userAddressCountryInputRegisterActivity.Location = new System.Drawing.Point(190, 222);
+            this.userAddressCountryInputRegisterActivity.Location = new System.Drawing.Point(740, 244);
+            this.userAddressCountryInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userAddressCountryInputRegisterActivity.Name = "userAddressCountryInputRegisterActivity";
-            this.userAddressCountryInputRegisterActivity.Size = new System.Drawing.Size(100, 20);
+            this.userAddressCountryInputRegisterActivity.Size = new System.Drawing.Size(170, 23);
             this.userAddressCountryInputRegisterActivity.TabIndex = 10;
             // 
             // userPhoneNumberInputRegisterActivity
             // 
-            this.userPhoneNumberInputRegisterActivity.Location = new System.Drawing.Point(345, 25);
+            this.userPhoneNumberInputRegisterActivity.Location = new System.Drawing.Point(678, 67);
+            this.userPhoneNumberInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userPhoneNumberInputRegisterActivity.Name = "userPhoneNumberInputRegisterActivity";
-            this.userPhoneNumberInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userPhoneNumberInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userPhoneNumberInputRegisterActivity.TabIndex = 12;
             // 
             // userFirstNameLabelRegisterActivity
             // 
             this.userFirstNameLabelRegisterActivity.AutoSize = true;
-            this.userFirstNameLabelRegisterActivity.Location = new System.Drawing.Point(187, 9);
+            this.userFirstNameLabelRegisterActivity.Location = new System.Drawing.Point(73, 166);
+            this.userFirstNameLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userFirstNameLabelRegisterActivity.Name = "userFirstNameLabelRegisterActivity";
-            this.userFirstNameLabelRegisterActivity.Size = new System.Drawing.Size(63, 13);
+            this.userFirstNameLabelRegisterActivity.Size = new System.Drawing.Size(83, 17);
             this.userFirstNameLabelRegisterActivity.TabIndex = 7;
             this.userFirstNameLabelRegisterActivity.Text = "First Name: ";
             // 
             // userLastNameLabelRegisterActivity
             // 
             this.userLastNameLabelRegisterActivity.AutoSize = true;
-            this.userLastNameLabelRegisterActivity.Location = new System.Drawing.Point(187, 48);
+            this.userLastNameLabelRegisterActivity.Location = new System.Drawing.Point(277, 166);
+            this.userLastNameLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLastNameLabelRegisterActivity.Name = "userLastNameLabelRegisterActivity";
-            this.userLastNameLabelRegisterActivity.Size = new System.Drawing.Size(61, 13);
+            this.userLastNameLabelRegisterActivity.Size = new System.Drawing.Size(81, 17);
             this.userLastNameLabelRegisterActivity.TabIndex = 8;
             this.userLastNameLabelRegisterActivity.Text = "Last Name:";
             // 
             // userPhoneNumberLabelRegisterActivity
             // 
             this.userPhoneNumberLabelRegisterActivity.AutoSize = true;
-            this.userPhoneNumberLabelRegisterActivity.Location = new System.Drawing.Point(342, 9);
+            this.userPhoneNumberLabelRegisterActivity.Location = new System.Drawing.Point(674, 46);
+            this.userPhoneNumberLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userPhoneNumberLabelRegisterActivity.Name = "userPhoneNumberLabelRegisterActivity";
-            this.userPhoneNumberLabelRegisterActivity.Size = new System.Drawing.Size(81, 13);
+            this.userPhoneNumberLabelRegisterActivity.Size = new System.Drawing.Size(109, 17);
             this.userPhoneNumberLabelRegisterActivity.TabIndex = 9;
             this.userPhoneNumberLabelRegisterActivity.Text = "Phone Number:";
             // 
             // userAddressCityLabelRegisterActivity
             // 
             this.userAddressCityLabelRegisterActivity.AutoSize = true;
-            this.userAddressCityLabelRegisterActivity.Location = new System.Drawing.Point(187, 128);
+            this.userAddressCityLabelRegisterActivity.Location = new System.Drawing.Point(277, 223);
+            this.userAddressCityLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAddressCityLabelRegisterActivity.Name = "userAddressCityLabelRegisterActivity";
-            this.userAddressCityLabelRegisterActivity.Size = new System.Drawing.Size(27, 13);
+            this.userAddressCityLabelRegisterActivity.Size = new System.Drawing.Size(37, 17);
             this.userAddressCityLabelRegisterActivity.TabIndex = 11;
             this.userAddressCityLabelRegisterActivity.Text = "City:";
             // 
             // userAddressStreetLabelRegisterActivity
             // 
             this.userAddressStreetLabelRegisterActivity.AutoSize = true;
-            this.userAddressStreetLabelRegisterActivity.Location = new System.Drawing.Point(187, 89);
+            this.userAddressStreetLabelRegisterActivity.Location = new System.Drawing.Point(72, 223);
+            this.userAddressStreetLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAddressStreetLabelRegisterActivity.Name = "userAddressStreetLabelRegisterActivity";
-            this.userAddressStreetLabelRegisterActivity.Size = new System.Drawing.Size(38, 13);
+            this.userAddressStreetLabelRegisterActivity.Size = new System.Drawing.Size(48, 17);
             this.userAddressStreetLabelRegisterActivity.TabIndex = 12;
             this.userAddressStreetLabelRegisterActivity.Text = "Street:";
             // 
             // userAddressHouseNumberLabelRegisterActivity
             // 
             this.userAddressHouseNumberLabelRegisterActivity.AutoSize = true;
-            this.userAddressHouseNumberLabelRegisterActivity.Location = new System.Drawing.Point(342, 89);
+            this.userAddressHouseNumberLabelRegisterActivity.Location = new System.Drawing.Point(463, 224);
+            this.userAddressHouseNumberLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAddressHouseNumberLabelRegisterActivity.Name = "userAddressHouseNumberLabelRegisterActivity";
-            this.userAddressHouseNumberLabelRegisterActivity.Size = new System.Drawing.Size(81, 13);
+            this.userAddressHouseNumberLabelRegisterActivity.Size = new System.Drawing.Size(107, 17);
             this.userAddressHouseNumberLabelRegisterActivity.TabIndex = 14;
             this.userAddressHouseNumberLabelRegisterActivity.Text = "House Number:";
             // 
             // userAddressCountryLabelRegisterActivity
             // 
             this.userAddressCountryLabelRegisterActivity.AutoSize = true;
-            this.userAddressCountryLabelRegisterActivity.Location = new System.Drawing.Point(187, 206);
+            this.userAddressCountryLabelRegisterActivity.Location = new System.Drawing.Point(736, 223);
+            this.userAddressCountryLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAddressCountryLabelRegisterActivity.Name = "userAddressCountryLabelRegisterActivity";
-            this.userAddressCountryLabelRegisterActivity.Size = new System.Drawing.Size(46, 13);
+            this.userAddressCountryLabelRegisterActivity.Size = new System.Drawing.Size(63, 17);
             this.userAddressCountryLabelRegisterActivity.TabIndex = 15;
             this.userAddressCountryLabelRegisterActivity.Text = "Country:";
             // 
             // userAddressZipcodeLabelRegisterActivity
             // 
             this.userAddressZipcodeLabelRegisterActivity.AutoSize = true;
-            this.userAddressZipcodeLabelRegisterActivity.Location = new System.Drawing.Point(187, 167);
+            this.userAddressZipcodeLabelRegisterActivity.Location = new System.Drawing.Point(554, 342);
+            this.userAddressZipcodeLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAddressZipcodeLabelRegisterActivity.Name = "userAddressZipcodeLabelRegisterActivity";
-            this.userAddressZipcodeLabelRegisterActivity.Size = new System.Drawing.Size(49, 13);
+            this.userAddressZipcodeLabelRegisterActivity.Size = new System.Drawing.Size(64, 17);
             this.userAddressZipcodeLabelRegisterActivity.TabIndex = 16;
             this.userAddressZipcodeLabelRegisterActivity.Text = "Zipcode:";
             // 
             // userDOBLabelRegisterActivity
             // 
             this.userDOBLabelRegisterActivity.AutoSize = true;
-            this.userDOBLabelRegisterActivity.Location = new System.Drawing.Point(187, 249);
+            this.userDOBLabelRegisterActivity.Location = new System.Drawing.Point(71, 298);
+            this.userDOBLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userDOBLabelRegisterActivity.Name = "userDOBLabelRegisterActivity";
-            this.userDOBLabelRegisterActivity.Size = new System.Drawing.Size(69, 13);
+            this.userDOBLabelRegisterActivity.Size = new System.Drawing.Size(92, 17);
             this.userDOBLabelRegisterActivity.TabIndex = 17;
             this.userDOBLabelRegisterActivity.Text = "Date of Birth:";
             // 
             // userDOBInputRegisterActivity
             // 
-            this.userDOBInputRegisterActivity.Location = new System.Drawing.Point(190, 265);
+            this.userDOBInputRegisterActivity.Location = new System.Drawing.Point(75, 319);
+            this.userDOBInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userDOBInputRegisterActivity.Name = "userDOBInputRegisterActivity";
-            this.userDOBInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userDOBInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userDOBInputRegisterActivity.TabIndex = 11;
             // 
             // userAcademicInstitutionLabelRegisterActivity
             // 
             this.userAcademicInstitutionLabelRegisterActivity.AutoSize = true;
-            this.userAcademicInstitutionLabelRegisterActivity.Location = new System.Drawing.Point(342, 48);
+            this.userAcademicInstitutionLabelRegisterActivity.Location = new System.Drawing.Point(72, 357);
+            this.userAcademicInstitutionLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userAcademicInstitutionLabelRegisterActivity.Name = "userAcademicInstitutionLabelRegisterActivity";
-            this.userAcademicInstitutionLabelRegisterActivity.Size = new System.Drawing.Size(105, 13);
+            this.userAcademicInstitutionLabelRegisterActivity.Size = new System.Drawing.Size(145, 17);
             this.userAcademicInstitutionLabelRegisterActivity.TabIndex = 19;
             this.userAcademicInstitutionLabelRegisterActivity.Text = "Academic Institution:";
             // 
             // userUserNameLabelRegisterActivity
             // 
             this.userUserNameLabelRegisterActivity.AutoSize = true;
-            this.userUserNameLabelRegisterActivity.Location = new System.Drawing.Point(12, 167);
+            this.userUserNameLabelRegisterActivity.Location = new System.Drawing.Point(278, 46);
+            this.userUserNameLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userUserNameLabelRegisterActivity.Name = "userUserNameLabelRegisterActivity";
-            this.userUserNameLabelRegisterActivity.Size = new System.Drawing.Size(118, 13);
+            this.userUserNameLabelRegisterActivity.Size = new System.Drawing.Size(160, 17);
             this.userUserNameLabelRegisterActivity.TabIndex = 20;
             this.userUserNameLabelRegisterActivity.Text = "Choose your username:";
             // 
             // userPasswordLabelRegisterActivity
             // 
             this.userPasswordLabelRegisterActivity.AutoSize = true;
-            this.userPasswordLabelRegisterActivity.Location = new System.Drawing.Point(12, 206);
+            this.userPasswordLabelRegisterActivity.Location = new System.Drawing.Point(72, 105);
+            this.userPasswordLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userPasswordLabelRegisterActivity.Name = "userPasswordLabelRegisterActivity";
-            this.userPasswordLabelRegisterActivity.Size = new System.Drawing.Size(117, 13);
+            this.userPasswordLabelRegisterActivity.Size = new System.Drawing.Size(159, 17);
             this.userPasswordLabelRegisterActivity.TabIndex = 21;
             this.userPasswordLabelRegisterActivity.Text = "Choose your password:";
             // 
             // userInstitutionComboBoxRegisterActivity
             // 
+            this.userInstitutionComboBoxRegisterActivity.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.userInstitutionComboBoxRegisterActivity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.userInstitutionComboBoxRegisterActivity.FormattingEnabled = true;
             this.userInstitutionComboBoxRegisterActivity.Items.AddRange(new object[] {
@@ -242,31 +263,35 @@
             "Sveučilište u Splitu ",
             "Sveučilište u Zadru ",
             "Sveučilište u Zagrebu"});
-            this.userInstitutionComboBoxRegisterActivity.Location = new System.Drawing.Point(345, 64);
+            this.userInstitutionComboBoxRegisterActivity.Location = new System.Drawing.Point(76, 378);
+            this.userInstitutionComboBoxRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userInstitutionComboBoxRegisterActivity.Name = "userInstitutionComboBoxRegisterActivity";
-            this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(220, 21);
+            this.userInstitutionComboBoxRegisterActivity.Size = new System.Drawing.Size(292, 25);
             this.userInstitutionComboBoxRegisterActivity.TabIndex = 13;
             // 
             // userUserNameInputRegisterActivity
             // 
-            this.userUserNameInputRegisterActivity.Location = new System.Drawing.Point(15, 183);
+            this.userUserNameInputRegisterActivity.Location = new System.Drawing.Point(279, 67);
+            this.userUserNameInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userUserNameInputRegisterActivity.Name = "userUserNameInputRegisterActivity";
-            this.userUserNameInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userUserNameInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userUserNameInputRegisterActivity.TabIndex = 1;
             // 
             // userPasswordInputRegisterActivity
             // 
-            this.userPasswordInputRegisterActivity.Location = new System.Drawing.Point(15, 222);
+            this.userPasswordInputRegisterActivity.Location = new System.Drawing.Point(76, 126);
+            this.userPasswordInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userPasswordInputRegisterActivity.Name = "userPasswordInputRegisterActivity";
-            this.userPasswordInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userPasswordInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userPasswordInputRegisterActivity.TabIndex = 2;
             this.userPasswordInputRegisterActivity.UseSystemPasswordChar = true;
             // 
             // userRegisterButtonRegisterActivity
             // 
-            this.userRegisterButtonRegisterActivity.Location = new System.Drawing.Point(395, 316);
+            this.userRegisterButtonRegisterActivity.Location = new System.Drawing.Point(365, 521);
+            this.userRegisterButtonRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userRegisterButtonRegisterActivity.Name = "userRegisterButtonRegisterActivity";
-            this.userRegisterButtonRegisterActivity.Size = new System.Drawing.Size(75, 23);
+            this.userRegisterButtonRegisterActivity.Size = new System.Drawing.Size(100, 30);
             this.userRegisterButtonRegisterActivity.TabIndex = 15;
             this.userRegisterButtonRegisterActivity.Text = "Register";
             this.userRegisterButtonRegisterActivity.UseVisualStyleBackColor = true;
@@ -274,30 +299,33 @@
             // 
             // userHouseNumberNumericRegisterActivity
             // 
-            this.userHouseNumberNumericRegisterActivity.Location = new System.Drawing.Point(345, 105);
+            this.userHouseNumberNumericRegisterActivity.Location = new System.Drawing.Point(466, 245);
+            this.userHouseNumberNumericRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userHouseNumberNumericRegisterActivity.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.userHouseNumberNumericRegisterActivity.Name = "userHouseNumberNumericRegisterActivity";
-            this.userHouseNumberNumericRegisterActivity.Size = new System.Drawing.Size(38, 20);
+            this.userHouseNumberNumericRegisterActivity.Size = new System.Drawing.Size(51, 23);
             this.userHouseNumberNumericRegisterActivity.TabIndex = 7;
             this.userHouseNumberNumericRegisterActivity.ValueChanged += new System.EventHandler(this.userHouseNumberNumericRegisterActivity_ValueChanged);
             // 
             // mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity
             // 
             this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.AutoSize = true;
-            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Location = new System.Drawing.Point(411, 55);
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Location = new System.Drawing.Point(164, 366);
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Name = "mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity";
-            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Size = new System.Drawing.Size(0, 13);
+            this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.Size = new System.Drawing.Size(0, 17);
             this.mildlyEntertainingSiliconValleyReferenceLabelRegisterActivity.TabIndex = 28;
             // 
             // userRegisterButtonBack
             // 
-            this.userRegisterButtonBack.Location = new System.Drawing.Point(275, 316);
+            this.userRegisterButtonBack.Location = new System.Drawing.Point(76, 521);
+            this.userRegisterButtonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userRegisterButtonBack.Name = "userRegisterButtonBack";
-            this.userRegisterButtonBack.Size = new System.Drawing.Size(75, 23);
+            this.userRegisterButtonBack.Size = new System.Drawing.Size(100, 30);
             this.userRegisterButtonBack.TabIndex = 14;
             this.userRegisterButtonBack.Text = "Back";
             this.userRegisterButtonBack.UseVisualStyleBackColor = true;
@@ -306,51 +334,57 @@
             // userEmailLabelRegisterActivity
             // 
             this.userEmailLabelRegisterActivity.AutoSize = true;
-            this.userEmailLabelRegisterActivity.Location = new System.Drawing.Point(12, 128);
+            this.userEmailLabelRegisterActivity.Location = new System.Drawing.Point(71, 46);
+            this.userEmailLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userEmailLabelRegisterActivity.Name = "userEmailLabelRegisterActivity";
-            this.userEmailLabelRegisterActivity.Size = new System.Drawing.Size(85, 13);
+            this.userEmailLabelRegisterActivity.Size = new System.Drawing.Size(115, 17);
             this.userEmailLabelRegisterActivity.TabIndex = 30;
             this.userEmailLabelRegisterActivity.Text = "Enter your email:";
             // 
             // userEmailInputRegisterActivity
             // 
-            this.userEmailInputRegisterActivity.Location = new System.Drawing.Point(15, 144);
+            this.userEmailInputRegisterActivity.Location = new System.Drawing.Point(75, 67);
+            this.userEmailInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userEmailInputRegisterActivity.Name = "userEmailInputRegisterActivity";
-            this.userEmailInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userEmailInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userEmailInputRegisterActivity.TabIndex = 0;
             // 
             // userRepeatPasswordInputRegisterActivity
             // 
-            this.userRepeatPasswordInputRegisterActivity.Location = new System.Drawing.Point(15, 268);
+            this.userRepeatPasswordInputRegisterActivity.Location = new System.Drawing.Point(278, 126);
+            this.userRepeatPasswordInputRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userRepeatPasswordInputRegisterActivity.Name = "userRepeatPasswordInputRegisterActivity";
-            this.userRepeatPasswordInputRegisterActivity.Size = new System.Drawing.Size(128, 20);
+            this.userRepeatPasswordInputRegisterActivity.Size = new System.Drawing.Size(169, 23);
             this.userRepeatPasswordInputRegisterActivity.TabIndex = 3;
             this.userRepeatPasswordInputRegisterActivity.UseSystemPasswordChar = true;
             // 
             // userRepeatPasswordLabelRegisterActivity
             // 
             this.userRepeatPasswordLabelRegisterActivity.AutoSize = true;
-            this.userRepeatPasswordLabelRegisterActivity.Location = new System.Drawing.Point(15, 249);
+            this.userRepeatPasswordLabelRegisterActivity.Location = new System.Drawing.Point(278, 102);
+            this.userRepeatPasswordLabelRegisterActivity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userRepeatPasswordLabelRegisterActivity.Name = "userRepeatPasswordLabelRegisterActivity";
-            this.userRepeatPasswordLabelRegisterActivity.Size = new System.Drawing.Size(116, 13);
+            this.userRepeatPasswordLabelRegisterActivity.Size = new System.Drawing.Size(156, 17);
             this.userRepeatPasswordLabelRegisterActivity.TabIndex = 32;
             this.userRepeatPasswordLabelRegisterActivity.Text = "Repeat your password:";
             // 
             // ProjectSentinelTempLoginActivity
             // 
             this.ProjectSentinelTempLoginActivity.Image = ((System.Drawing.Image)(resources.GetObject("ProjectSentinelTempLoginActivity.Image")));
-            this.ProjectSentinelTempLoginActivity.Location = new System.Drawing.Point(15, 9);
+            this.ProjectSentinelTempLoginActivity.Location = new System.Drawing.Point(807, 96);
+            this.ProjectSentinelTempLoginActivity.Margin = new System.Windows.Forms.Padding(4);
             this.ProjectSentinelTempLoginActivity.Name = "ProjectSentinelTempLoginActivity";
-            this.ProjectSentinelTempLoginActivity.Size = new System.Drawing.Size(124, 114);
+            this.ProjectSentinelTempLoginActivity.Size = new System.Drawing.Size(144, 140);
             this.ProjectSentinelTempLoginActivity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ProjectSentinelTempLoginActivity.TabIndex = 34;
+            this.ProjectSentinelTempLoginActivity.TabIndex = 33;
             this.ProjectSentinelTempLoginActivity.TabStop = false;
             // 
             // RegisterActivity
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 351);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1059, 592);
             this.Controls.Add(this.ProjectSentinelTempLoginActivity);
             this.Controls.Add(this.userRepeatPasswordLabelRegisterActivity);
             this.Controls.Add(this.userRepeatPasswordInputRegisterActivity);
@@ -383,7 +417,9 @@
             this.Controls.Add(this.userAddressStreetInputRegisterActivity);
             this.Controls.Add(this.userLastNameInputRegisterActivity);
             this.Controls.Add(this.userFirstNameInputRegisterActivity);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegisterActivity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Registration | Project Sentinel";
