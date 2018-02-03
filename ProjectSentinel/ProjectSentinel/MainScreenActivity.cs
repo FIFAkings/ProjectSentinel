@@ -100,6 +100,7 @@ namespace ProjectSentinel
             SidePanel1.Height = ToDoButtonMainScreenActivity.Height;
             SidePanel1.Top = ToDoButtonMainScreenActivity.Top;
             ToDoControlTestMainScreenActivity1.BringToFront();
+            //for so called Radola
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
