@@ -62,6 +62,18 @@ namespace ProjectSentinel
             loadTasksSevenDaysToControl();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ToDoForm ra = new ToDoForm(user);
+
+            ra.Show();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+           
+        }
+
         private void loadTasksToControl()
         {
             CheckBox checkBox = null;

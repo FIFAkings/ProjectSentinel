@@ -20,7 +20,13 @@ namespace ProjectSentinel
         private void Create_Click(object sender, EventArgs e)
         {
             FlashcardForm ra = new FlashcardForm();
-            ra.Show();
+            ra.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FlashcardForm ra = new FlashcardForm();
+            ra.ShowDialog();
         }
     }
 }

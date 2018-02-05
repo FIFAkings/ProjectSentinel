@@ -73,7 +73,7 @@
             this.Create.FlatAppearance.BorderSize = 0;
             this.Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Create.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Create.Location = new System.Drawing.Point(80, 92);
+            this.Create.Location = new System.Drawing.Point(94, 99);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(140, 50);
             this.Create.TabIndex = 3;
@@ -85,12 +85,13 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 112);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FlashcardControl
             // 
@@ -98,9 +99,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Create);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Create);
             this.Name = "FlashcardControl";
             this.Size = new System.Drawing.Size(902, 549);
             this.panel1.ResumeLayout(false);
