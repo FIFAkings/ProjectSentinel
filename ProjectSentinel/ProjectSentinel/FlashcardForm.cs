@@ -21,5 +21,21 @@ namespace ProjectSentinel
         {
 
         }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void FrontFlashcardButtonFlashcardForm_Click(object sender, EventArgs e)
+        {
+            FlashFront.BringToFront();
+
+        }
+
+        private void FrontcardBackFlashcardForm_Click(object sender, EventArgs e)
+        {
+            FlashBack.BringToFront();
+        }
     }
 }

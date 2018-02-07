@@ -40,6 +40,7 @@ namespace ProjectSentinel
             else
                 toDo = new ToDo(textBox1.Text, 3, FinishDateToDoForm.Value);
             toDo.addToDoToDatabase(user);
+            this.Close();
         }
     }
 }

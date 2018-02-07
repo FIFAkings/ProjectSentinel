@@ -28,32 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlashcardForm));
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flashcardFront1 = new ProjectSentinel.FlashcardFront();
-            this.flashcardBack1 = new ProjectSentinel.FlashcardBack();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FlashFront = new ProjectSentinel.FlashcardFront();
+            this.FlashBack = new ProjectSentinel.FlashcardBack();
+            this.FrontFlashcardButtonFlashcardForm = new System.Windows.Forms.Button();
+            this.FrontcardBackFlashcardForm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(45, 499);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 47);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -61,7 +47,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(223, 499);
+            this.button1.Location = new System.Drawing.Point(147, 491);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 47);
             this.button1.TabIndex = 17;
@@ -106,40 +92,58 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.flashcardFront1);
-            this.groupBox1.Controls.Add(this.flashcardBack1);
+            this.groupBox1.Controls.Add(this.FlashFront);
+            this.groupBox1.Controls.Add(this.FlashBack);
             this.groupBox1.Location = new System.Drawing.Point(73, 161);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(239, 271);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
-            // flashcardFront1
+            // FlashFront
             // 
-            this.flashcardFront1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(118)))));
-            this.flashcardFront1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flashcardFront1.Location = new System.Drawing.Point(0, 0);
-            this.flashcardFront1.Name = "flashcardFront1";
-            this.flashcardFront1.Size = new System.Drawing.Size(239, 271);
-            this.flashcardFront1.TabIndex = 0;
+            this.FlashFront.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(118)))));
+            this.FlashFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FlashFront.Location = new System.Drawing.Point(0, 0);
+            this.FlashFront.Name = "FlashFront";
+            this.FlashFront.Size = new System.Drawing.Size(239, 271);
+            this.FlashFront.TabIndex = 0;
             // 
-            // flashcardBack1
+            // FlashBack
             // 
-            this.flashcardBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(118)))));
-            this.flashcardBack1.Location = new System.Drawing.Point(0, 0);
-            this.flashcardBack1.Name = "flashcardBack1";
-            this.flashcardBack1.Size = new System.Drawing.Size(239, 271);
-            this.flashcardBack1.TabIndex = 1;
+            this.FlashBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(225)))), ((int)(((byte)(118)))));
+            this.FlashBack.Location = new System.Drawing.Point(0, 0);
+            this.FlashBack.Name = "FlashBack";
+            this.FlashBack.Size = new System.Drawing.Size(239, 271);
+            this.FlashBack.TabIndex = 1;
             // 
-            // pictureBox1
+            // FrontFlashcardButtonFlashcardForm
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(266, 438);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.FrontFlashcardButtonFlashcardForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FrontFlashcardButtonFlashcardForm.FlatAppearance.BorderSize = 0;
+            this.FrontFlashcardButtonFlashcardForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FrontFlashcardButtonFlashcardForm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FrontFlashcardButtonFlashcardForm.Location = new System.Drawing.Point(73, 438);
+            this.FrontFlashcardButtonFlashcardForm.Name = "FrontFlashcardButtonFlashcardForm";
+            this.FrontFlashcardButtonFlashcardForm.Size = new System.Drawing.Size(66, 29);
+            this.FrontFlashcardButtonFlashcardForm.TabIndex = 23;
+            this.FrontFlashcardButtonFlashcardForm.Text = "Front";
+            this.FrontFlashcardButtonFlashcardForm.UseVisualStyleBackColor = true;
+            this.FrontFlashcardButtonFlashcardForm.Click += new System.EventHandler(this.FrontFlashcardButtonFlashcardForm_Click);
+            // 
+            // FrontcardBackFlashcardForm
+            // 
+            this.FrontcardBackFlashcardForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FrontcardBackFlashcardForm.FlatAppearance.BorderSize = 0;
+            this.FrontcardBackFlashcardForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FrontcardBackFlashcardForm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FrontcardBackFlashcardForm.Location = new System.Drawing.Point(246, 438);
+            this.FrontcardBackFlashcardForm.Name = "FrontcardBackFlashcardForm";
+            this.FrontcardBackFlashcardForm.Size = new System.Drawing.Size(66, 29);
+            this.FrontcardBackFlashcardForm.TabIndex = 24;
+            this.FrontcardBackFlashcardForm.Text = "Back";
+            this.FrontcardBackFlashcardForm.UseVisualStyleBackColor = true;
+            this.FrontcardBackFlashcardForm.Click += new System.EventHandler(this.FrontcardBackFlashcardForm_Click);
             // 
             // FlashcardForm
             // 
@@ -147,11 +151,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(388, 560);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.FrontcardBackFlashcardForm);
+            this.Controls.Add(this.FrontFlashcardButtonFlashcardForm);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -159,22 +163,21 @@
             this.Text = "FlashcardForm";
             this.Load += new System.EventHandler(this.FlashcardForm_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private FlashcardFront flashcardFront1;
-        private FlashcardBack flashcardBack1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private FlashcardFront FlashFront;
+        private FlashcardBack FlashBack;
+        private System.Windows.Forms.Button FrontFlashcardButtonFlashcardForm;
+        private System.Windows.Forms.Button FrontcardBackFlashcardForm;
     }
 }

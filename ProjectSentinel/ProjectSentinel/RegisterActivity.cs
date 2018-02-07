@@ -162,6 +162,11 @@ namespace ProjectSentinel
                 return false;
             }
         }
+
+        private void userUserNameInputRegisterActivity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
