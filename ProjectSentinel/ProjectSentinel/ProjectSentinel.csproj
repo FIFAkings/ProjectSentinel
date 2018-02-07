@@ -160,6 +160,18 @@
     <Compile Include="MyProfileControl.Designer.cs">
       <DependentUpon>MyProfileControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyProfileEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyProfileEditControl.Designer.cs">
+      <DependentUpon>MyProfileEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfileEditForm.Designer.cs">
+      <DependentUpon>MyProfileEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyProfileControl.resx">
       <DependentUpon>MyProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfileEditControl.resx">
+      <DependentUpon>MyProfileEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfileEditForm.resx">
+      <DependentUpon>MyProfileEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

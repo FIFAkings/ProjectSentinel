@@ -16,5 +16,20 @@ namespace ProjectSentinel
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditButtonMyProfileControl_Click(object sender, EventArgs e)
+        {
+            MyProfileEditForm ra = new MyProfileEditForm();
+            ra.ShowDialog();
+        }
+
+  
+
     }
 }
+

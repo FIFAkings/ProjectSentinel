@@ -393,6 +393,7 @@
             this.RegisterButtonRegisterActivity.TabIndex = 101;
             this.RegisterButtonRegisterActivity.Text = "Register";
             this.RegisterButtonRegisterActivity.UseVisualStyleBackColor = true;
+            this.RegisterButtonRegisterActivity.Click += new System.EventHandler(this.RegisterButtonRegisterActivity_Click);
             // 
             // RegisterActivity
             // 

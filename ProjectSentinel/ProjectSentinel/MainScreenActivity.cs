@@ -52,22 +52,14 @@ namespace ProjectSentinel
 
         }
 
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            SidePanel1.Hide();
-            TopPanel1.Show();
-            TopPanel1.Width = SettingsButtonMainScreenActivity.Width;
-            TopPanel1.Left = SettingsButtonMainScreenActivity.Left;
-            MyProfileControlMainScreenActivity.BringToFront();
-        }
-
+    
         private void MyProfileButton_Click(object sender, EventArgs e)
         {
             SidePanel1.Hide();
             TopPanel1.Show();
             TopPanel1.Width = MyProfileButtonMainScreenActivity.Width;
             TopPanel1.Left = MyProfileButtonMainScreenActivity.Left;
-            SettingsControlMainScreenActivity.BringToFront();
+            MyProfileControlMainScreenActivity.BringToFront();
         }
 
             private void NewsButton_Click(object sender, EventArgs e)
@@ -153,6 +145,11 @@ namespace ProjectSentinel
             SidePanel1.Height = ScheduleButtonMainScreenActivity.Height;
             SidePanel1.Top = ScheduleButtonMainScreenActivity.Top;
             ScheduleControlMainScreenActivity.BringToFront();
+        }
+
+        private void MyProfileEditControlMainScreenActivity_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }

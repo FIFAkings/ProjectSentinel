@@ -31,7 +31,7 @@ namespace ProjectSentinel
             Application.Exit();
         }
 
-        private void userHouseNumberNumericRegisterActivity_ValueChanged(object sender, EventArgs e)
+       /* private void userHouseNumberNumericRegisterActivity_ValueChanged(object sender, EventArgs e)
         {
             var t = new System.Windows.Forms.Timer() { Interval = 333 };
             if (userHouseNumberNumericRegisterActivity.Value >= 1000000000)
@@ -47,7 +47,7 @@ namespace ProjectSentinel
             }
 
 
-        }
+        }*/
 
         private void userRegisterButtonBack_Click(object sender, EventArgs e)
         {
@@ -164,6 +164,11 @@ namespace ProjectSentinel
         }
 
         private void userUserNameInputRegisterActivity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterButtonRegisterActivity_Click(object sender, EventArgs e)
         {
 
         }

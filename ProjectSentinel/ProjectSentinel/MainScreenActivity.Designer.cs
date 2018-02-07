@@ -52,12 +52,14 @@
             this.ToDoButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.HomeButtonMainScreenActivity = new System.Windows.Forms.Button();
             this.MainPanelMainScreenActivity = new System.Windows.Forms.Panel();
-            this.CourseControlMainScreenActivity = new ProjectSentinel.CourseControl();
-            this.MyProfileControlMainScreenActivity = new ProjectSentinel.MyProfileControl();
+            this.MyProfileEditControl1 = new ProjectSentinel.MyProfileEditControl();
             this.HomeControlMainScreenActivity = new ProjectSentinel.HomeControl();
             this.FlashcardControlMainScreenActivity = new ProjectSentinel.FlashcardControl();
             this.SettingsControlMainScreenActivity = new ProjectSentinel.SettingsControl();
             this.ScheduleControlMainScreenActivity = new ProjectSentinel.ScheduleControl();
+            this.CourseControlMainScreenActivity = new ProjectSentinel.CourseControl();
+            this.MyProfileControlMainScreenActivity = new ProjectSentinel.MyProfileControl();
+            this.myProfileEditControl2 = new ProjectSentinel.MyProfileEditControl();
             ((System.ComponentModel.ISupportInitialize)(this.UserIconMainScreenActivity)).BeginInit();
             this.TopPanelMainScreenActivity.SuspendLayout();
             this.SidePanelMainScreenActivity.SuspendLayout();
@@ -338,30 +340,26 @@
             // MainPanelMainScreenActivity
             // 
             this.MainPanelMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainPanelMainScreenActivity.Controls.Add(this.myProfileEditControl2);
+            this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
+            this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileEditControl1);
             this.MainPanelMainScreenActivity.Controls.Add(this.HomeControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.FlashcardControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.SettingsControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.ScheduleControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Controls.Add(this.CourseControlMainScreenActivity);
-            this.MainPanelMainScreenActivity.Controls.Add(this.MyProfileControlMainScreenActivity);
             this.MainPanelMainScreenActivity.Location = new System.Drawing.Point(206, 53);
             this.MainPanelMainScreenActivity.Name = "MainPanelMainScreenActivity";
             this.MainPanelMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.MainPanelMainScreenActivity.TabIndex = 2;
             // 
-            // CourseControlMainScreenActivity
+            // MyProfileEditControl1
             // 
-            this.CourseControlMainScreenActivity.Location = new System.Drawing.Point(0, 3);
-            this.CourseControlMainScreenActivity.Name = "CourseControlMainScreenActivity";
-            this.CourseControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
-            this.CourseControlMainScreenActivity.TabIndex = 6;
-            // 
-            // MyProfileControlMainScreenActivity
-            // 
-            this.MyProfileControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
-            this.MyProfileControlMainScreenActivity.Name = "MyProfileControlMainScreenActivity";
-            this.MyProfileControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
-            this.MyProfileControlMainScreenActivity.TabIndex = 4;
+            this.MyProfileEditControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MyProfileEditControl1.Location = new System.Drawing.Point(0, 3);
+            this.MyProfileEditControl1.Name = "MyProfileEditControl1";
+            this.MyProfileEditControl1.Size = new System.Drawing.Size(902, 524);
+            this.MyProfileEditControl1.TabIndex = 8;
             // 
             // HomeControlMainScreenActivity
             // 
@@ -393,6 +391,29 @@
             this.ScheduleControlMainScreenActivity.Name = "ScheduleControlMainScreenActivity";
             this.ScheduleControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
             this.ScheduleControlMainScreenActivity.TabIndex = 7;
+            // 
+            // CourseControlMainScreenActivity
+            // 
+            this.CourseControlMainScreenActivity.Location = new System.Drawing.Point(0, 3);
+            this.CourseControlMainScreenActivity.Name = "CourseControlMainScreenActivity";
+            this.CourseControlMainScreenActivity.Size = new System.Drawing.Size(902, 527);
+            this.CourseControlMainScreenActivity.TabIndex = 6;
+            // 
+            // MyProfileControlMainScreenActivity
+            // 
+            this.MyProfileControlMainScreenActivity.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MyProfileControlMainScreenActivity.Location = new System.Drawing.Point(0, 0);
+            this.MyProfileControlMainScreenActivity.Name = "MyProfileControlMainScreenActivity";
+            this.MyProfileControlMainScreenActivity.Size = new System.Drawing.Size(902, 530);
+            this.MyProfileControlMainScreenActivity.TabIndex = 4;
+            // 
+            // myProfileEditControl2
+            // 
+            this.myProfileEditControl2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.myProfileEditControl2.Location = new System.Drawing.Point(0, 3);
+            this.myProfileEditControl2.Name = "myProfileEditControl2";
+            this.myProfileEditControl2.Size = new System.Drawing.Size(902, 524);
+            this.myProfileEditControl2.TabIndex = 9;
             // 
             // MainScreenActivity
             // 
@@ -473,5 +494,7 @@
         private CourseControl CourseControlMainScreenActivity;
         private ScheduleControl ScheduleControlMainScreenActivity;
         private ToDoControlTest ToDoControlTestMainScreenActivity1;
+        private MyProfileEditControl MyProfileEditControl1;
+        private MyProfileEditControl myProfileEditControl2;
     }
 }
